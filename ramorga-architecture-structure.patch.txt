@@ -1,0 +1,170 @@
+diff --git a/00_overview/README.md b/00_overview/README.md
+new file mode 100644
+index 0000000..1111111
+--- /dev/null
++++ b/00_overview/README.md
+@@ -0,0 +1,16 @@
++# 00_overview
++
++This folder provides the meta‑architecture for RAMORGA:
++- purpose of the architecture layer,
++- scope and boundaries,
++- repository structure,
++- architectural layers (theory → architecture → engine),
++- rules for documentation and change control.
++
++This is the entry point for understanding the RAMORGA architecture.
+
+diff --git a/07_glossary/README.md b/07_glossary/README.md
+new file mode 100644
+index 0000000..2222222
+--- /dev/null
++++ b/07_glossary/README.md
+@@ -0,0 +1,17 @@
++# 07_glossary
++
++Glossary of architectural terms used in RAMORGA:
++- field,
++- coherence,
++- tension loop,
++- meniscus,
++- C/G/S modules,
++- regulatory hooks,
++- invariants.
++
++This glossary ensures consistent terminology across the architecture.
+
+diff --git a/08_changelog/CHANGELOG.md b/08_changelog/CHANGELOG.md
+new file mode 100644
+index 0000000..3333333
+--- /dev/null
++++ b/08_changelog/CHANGELOG.md
+@@ -0,0 +1,12 @@
++# Changelog — RAMORGA Architecture
++
++All notable changes to the RAMORGA architecture will be documented here.
++
++Format:
++- version,
++- date,
++- summary of changes,
++- affected modules or invariants.
+
+diff --git a/09_principles/README.md b/09_principles/README.md
+new file mode 100644
+index 0000000..4444444
+--- /dev/null
++++ b/09_principles/README.md
+@@ -0,0 +1,20 @@
++# 09_principles
++
++Core architectural principles of RAMORGA:
++- non-agentive system behavior,
++- homeostatic regulation,
++- invariants as primary constraints,
++- separation of theory, architecture, and implementation,
++- declarative architecture (no executable code),
++- safety through structure, not heuristics.
++
++These principles guide all architectural decisions.
+
+diff --git a/10_nfr/README.md b/10_nfr/README.md
+new file mode 100644
+index 0000000..5555555
+--- /dev/null
++++ b/10_nfr/README.md
+@@ -0,0 +1,17 @@
++# 10_nfr
++
++Non-functional requirements for RAMORGA:
++- safety,
++- coherence stability,
++- predictability,
++- resilience,
++- transparency,
++- modularity.
++
++These requirements define system qualities beyond functional behavior.
+
+diff --git a/11_adr/README.md b/11_adr/README.md
+new file mode 100644
+index 0000000..6666666
+--- /dev/null
++++ b/11_adr/README.md
+@@ -0,0 +1,16 @@
++# 11_adr
++
++Architecture Decision Records (ADR) for RAMORGA.
++
++Each ADR documents:
++- context,
++- decision,
++- rationale,
++- consequences.
++
++This folder ensures traceability of architectural decisions.
+
+diff --git a/12_architecture_tests/README.md b/12_architecture_tests/README.md
+new file mode 100644
+index 0000000..7777777
+--- /dev/null
++++ b/12_architecture_tests/README.md
+@@ -0,0 +1,18 @@
++# 12_architecture_tests
++
++Tests validating architectural compliance:
++- invariant validation,
++- interface compliance,
++- module contract consistency,
++- safety rule enforcement.
++
++These tests ensure the implementation conforms to the architecture.
+
+diff --git a/13_security/README.md b/13_security/README.md
+new file mode 100644
+index 0000000..8888888
+--- /dev/null
++++ b/13_security/README.md
+@@ -0,0 +1,19 @@
++# 13_security
++
++Security model for RAMORGA:
++- homeostatic safety,
++- regulatory boundaries,
++- invariant-based protection,
++- failure containment,
++- interface-level safety constraints.
++
++This folder defines the system's security architecture.
+
+diff --git a/14_integration/README.md b/14_integration/README.md
+new file mode 100644
+index 0000000..9999999
+--- /dev/null
++++ b/14_integration/README.md
+@@ -0,0 +1,17 @@
++# 14_integration
++
++Integration model for RAMORGA:
++- external system interfaces,
++- data exchange rules,
++- integration boundaries,
++- safety constraints during integration.
++
++This folder defines how RAMORGA interacts with external systems.
+
+diff --git a/15_versioning/README.md b/15_versioning/README.md
+new file mode 100644
+index 0000000..aaaaaaa
+--- /dev/null
++++ b/15_versioning/README.md
+@@ -0,0 +1,17 @@
++# 15_versioning
++
++Versioning model for RAMORGA:
++- versioning of architecture,
++- versioning of contracts,
++- versioning of invariants,
++- compatibility rules.
++
++Defines how architectural evolution is managed.
