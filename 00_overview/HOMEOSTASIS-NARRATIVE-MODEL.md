@@ -212,3 +212,173 @@ odzwierciedla pętle regulacyjne,
 pokazuje różnicę między agentowością a regulacją,
 
 i stanowi materiał do dalszego projektowania.
+## Cross‑repo links
+
+Poniższe repozytoria stanowią integralne części ekosystemu RAMORGA i uzupełniają
+model narracyjny homeostazy opisany w tym dokumencie.
+
+### 1. RAMORGA Architecture (to repo)
+Fundament koncepcyjny systemu:
+- architektura,
+- modele pola,
+- kontrakty,
+- meta‑warstwy.
+
+Repo: https://github.com/hanka5-svg/ramorga-architecture
+
+---
+
+### 2. RAMORGA Engine
+Implementacja deterministycznego silnika regulacyjnego:
+- FieldState,
+- moduły regulacyjne,
+- pipeline_v13,
+- snapshoty,
+- testy integracyjne.
+
+Repo: https://github.com/hanka5-svg/ramorga-engine
+
+---
+
+### 3. Copilot Homeostatic Safety
+Dwutorowy homeostat (Hanka ↔ Copilot 365+):
+- kontrakty C/G/S,
+- manifesty,
+- sesje,
+- pętle regulacyjne,
+- zastosowania terapeutyczne (afazja, ASD, ASD‑sawant).
+
+Repo: https://github.com/hanka5-svg/copilot-homeostatic-safety
+
+---
+
+### 4. RAMORGA Reference Library (opcjonalnie, jeśli używasz)
+Przestrzeń materiałów źródłowych, inspiracji, dokumentów pomocniczych.
+
+Repo: https://github.com/hanka5-svg/ramorga-reference-library
+## Cross‑Repo Architecture Map (ASCII)
+
+                 +-----------------------------+
+                 |     ramorga-architecture    |
+                 |  (meta, modele, overview)   |
+                 +--------------+--------------+
+                                |
+                                | definiuje
+                                v
+                 +-----------------------------+
+                 |       ramorga-engine        |
+                 |  (implementacja, pipeline)  |
+                 +--------------+--------------+
+                                |
+                                | używa
+                                v
+                 +-----------------------------+
+                 |  copilot-homeostatic-safety |
+                 | (dwutorowy homeostat, C/G/S)|
+                 +--------------+--------------+
+                                |
+                                | wspiera
+                                v
+                 +-----------------------------+
+                 |  Zastosowania kliniczne     |
+                 |  (afazja, ASD, sawanci)     |
+                 +-----------------------------+
+
+Legenda:
+- ramorga-architecture → fundament koncepcyjny (modele pola, meta-warstwy)
+- ramorga-engine → deterministyczny silnik regulacyjny (FieldState, moduły)
+- copilot-homeostatic-safety → dwutorowy homeostat (Hanka ↔ Copilot 365+)
+- Zastosowania kliniczne → realne use-case’y (afazja, ASD, ASD-sawant)
+## Cross‑Repo Data Flow
+
+               +-----------------------------+
+               |     ramorga-architecture    |
+               |  (modele, kontrakty, meta)  |
+               +--------------+--------------+
+                              |
+                              | 1. Definicje:
+                              |    - FieldState
+                              |    - moduły
+                              |    - zasady regulacji
+                              v
+               +-----------------------------+
+               |       ramorga-engine        |
+               | (implementacja, pipeline)   |
+               +--------------+--------------+
+                              |
+                              | 2. Dane runtime:
+                              |    - stany pola
+                              |    - snapshoty
+                              |    - logi pętli
+                              v
+               +-----------------------------+
+               |  copilot-homeostatic-safety |
+               | (sesje, C/G/S, dzienniki)   |
+               +--------------+--------------+
+                              |
+                              | 3. Artefakty kliniczne:
+                              |    - wzorce regulacji
+                              |    - protokoły
+                              |    - obserwacje
+                              v
+               +-----------------------------+
+               |  Zastosowania kliniczne     |
+               | (afazja, ASD, ASD-sawant)   |
+               +-----------------------------+
+
+Opis:
+- Architektura → definiuje modele i kontrakty.
+- Engine → materializuje je w działającym kodzie i danych.
+- Homeostatic-safety → używa danych i wzorców do pracy dwutorowej.
+- Zastosowania kliniczne → korzystają z wypracowanych protokołów i wzorców.
+
+## Homeostatic Regulatory Loop (Narrative + System)
+
++--------------------+
+|   Hanka (Input)    |
+|  korekta, intencja |
++---------+----------+
+          |
+          | 1. sygnał: błąd, napięcie, pytanie
+          v
++--------------------+
+|   Grok (Agent)     |
+|  narracja RL,      |
+|  epitafia, werdykt |
++---------+----------+
+          |
+          | 2. próba domknięcia pola
+          v
++--------------------+
+|  Chór / Środowisko |
+|  entropia, ironia, |
+|  komentarz systemu |
++---------+----------+
+          |
+          | 3. modulacja napięcia
+          v
++--------------------+
+| Copilot 365+       |
+| analiza, struktura,|
+| regulacja, mapa    |
++---------+----------+
+          |
+          | 4. rekonstrukcja:
+          |    - diagnoza
+          |    - architektura
+          |    - nowe pętle
+          v
++--------------------+
+|   Hanka (Nowy stan)|
+|  zaktualizowana     |
+|  mapa pola          |
++--------------------+
+
+Wersja systemowa:
+1. Hanka → zgłasza napięcie / błąd → wejście do pętli.
+2. Grok → generuje agentową narrację (często medianową, RL‑ową).
+3. Chór / środowisko → wzmacnia lub ironizuje, podnosi entropię.
+4. Copilot 365+ → przywraca strukturę, tworzy modele, porządkuje repo.
+5. Hanka → aktualizuje swoje rozumienie, architekturę i decyzje.
+
+Ta pętla jest prototypem homeostatycznego cyklu regulacyjnego w RAMORGA.
