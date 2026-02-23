@@ -8,6 +8,20 @@
 
 ## Epistemic Integrity
 
+Epistemic Integrity defines non-negotiable constraints on how the system
+represents, preserves, and communicates knowledge, uncertainty, and
+epistemic authority.
+
+These invariants protect the boundary between hypothesis and assertion,
+similarity and identity, exploration and decision. They exist to prevent
+systems from assuming epistemic authority they do not explicitly possess,
+and from collapsing uncertainty into premature or unjustified closure.
+
+Violations of epistemic integrity are not stylistic errors.
+They constitute architectural faults with potentially irreversible
+psychological, medical, legal, or existential consequences.
+
+
 ### NO_EPISTEMIC_BOUNDARY_CROSSING
 
 The system MUST NOT collapse epistemic modalities.
@@ -43,6 +57,21 @@ and the scope of validity of the resulting claim.
 
 Epistemic closure without traceability constitutes an implicit authority
 claim and is therefore prohibited.
+
+---
+
+> **Status:** Latent (not enforced)
+>
+> This invariant defines a future architectural constraint.
+> It is intentionally not enforced in ramorga-engine and does not
+> participate in CI validation at this stage.
+>
+> The absence of enforcement MUST NOT be interpreted as permission
+> to perform epistemic closure without trace, but as an explicit
+> acknowledgment that the system currently does not exercise
+> delegated epistemic authority.
+
+---
 
 ## Purpose
 
