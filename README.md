@@ -173,7 +173,8 @@ Systems must pass non-instrumental coordination phases before gaining agency.
 
 - **Carnival Mode** — exploration, play, anomaly exposure.  
 - **Homeostatic Mode** — stabilization, cooldown, reflection.  
-- **Decision Mode** — conditionally enabled after invariants are satisfied.
+- **Decision Mode** — conditionally enabled after invariants are satisfied;
+  enables scoped action selection without implicit epistemic closure.
 
 ---
 
