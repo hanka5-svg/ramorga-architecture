@@ -1,9 +1,96 @@
-# 12_architecture_tests
+# RAMORGA — Architecture Test Suite
 
-Tests validating architectural compliance:
-- invariant validation,
-- interface compliance,
-- module contract consistency,
-- safety rule enforcement.
+This directory defines the architectural validation layer for RAMORGA.  
+It does not test implementation.  
+It tests **architecture as a field**: its invariants, continuity, and resistance to deformation.
 
-These tests ensure the implementation conforms to the architecture.
+The purpose of this suite is to ensure that any subsystem operating within RAMORGA preserves:
+
+- multidimensional field integrity,
+- non-deforming reduction,
+- contract consistency,
+- relational symmetry,
+- and end-to-end architectural coherence.
+
+---
+
+## Structure
+
+12_architecture_tests/
+│
+├── README.md                         ← overview (this file)
+│
+├── invariants/                       ← architectural invariants
+│   └── invariants.md
+│
+├── bdd/                              ← Gherkin BDD tests
+│   └── bdd_tests.md
+│
+├── contracts/                        ← module-level contracts
+│   └── module_contracts.md
+│
+├── failure/                          ← failure propagation & decisions
+│   ├── failure_propagation.md
+│   └── engineer_decision_layer.md
+│
+└── diagrams/                         ← PlantUML diagrams
+├── invariant_dependencies.puml
+├── module_contracts.puml
+├── failure_paths.puml
+└── engineer_decision_layer.puml
+
+
+---
+
+## Overview
+
+RAMORGA architecture is defined by **10 invariants** that govern:
+
+1. superposition preservation  
+2. human-initiated measurement  
+3. non-deforming reduction  
+4. architectural non-deformation  
+5. integrity-preserving dimensional descent  
+6. human agency support  
+7. relational symmetry  
+8. bridge architecture  
+9. constellation integrity  
+10. end-to-end architectural thesis
+
+Each invariant has:
+
+- a formal definition  
+- a contract  
+- BDD tests  
+- diagrammatic representation  
+- failure propagation rules  
+- engineer decision logic (EDL)
+
+---
+
+## How to Use This Suite
+
+1. Validate invariants before implementing modules.  
+2. Use BDD tests to verify architectural behavior.  
+3. Use module contracts to ensure interface consistency.  
+4. Use failure propagation maps to detect drift.  
+5. Use EDL to classify and respond to violations.  
+6. Use diagrams to maintain architectural clarity.
+
+---
+
+## Purpose
+
+This suite ensures that RAMORGA remains:
+
+- coherent,  
+- invariant-driven,  
+- resistant to deformation,  
+- relationally symmetric,  
+- and architecturally sound.
+
+It is the **core compliance layer** for the entire system.
+
+
+
+
