@@ -91,6 +91,38 @@ This suite ensures that RAMORGA remains:
 
 It is the **core compliance layer** for the entire system.
 
+---
+
+## Architecture Layers
+
+RAMORGA architecture is organized into eight layers, each responsible for a specific phase of the transformation from multidimensional field to human-readable output.
+
+The layers are:
+
+1. **Field Layer** – superposition, multidimensional semantic field  
+2. **Measurement Layer** – user intent, measurement vector  
+3. **Reduction Layer** – zapis, linearization  
+4. **Descent Layer** – dimensional simplification  
+5. **Integrity Layer** – deformation detection  
+6. **Bridge Layer** – human interface, semantic bridge  
+7. **Relational Layer** – agency, symmetry, constellation  
+8. **Thesis Layer** – end-to-end invariant validation  
+
+### Diagram
+
+The full layered architecture is shown in the diagram below:
+
+```
+[architecture_layers.puml](./diagrams/architecture_layers.puml)
+```
+
+This diagram connects:
+
+- layers → modules  
+- modules → invariants  
+- invariants → BDD tests  
+- failure modes → EDL  
+- and provides the central structural view of RAMORGA.
 
 
 
