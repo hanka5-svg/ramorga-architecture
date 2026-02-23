@@ -176,6 +176,15 @@ Systems must pass non-instrumental coordination phases before gaining agency.
 - **Decision Mode** — conditionally enabled after invariants are satisfied;
   enables scoped action selection without implicit epistemic closure.
 
+> **Note on Decision Mode**
+>
+> Decisions in RAMORGA refer to control flow and action selection,
+> not to epistemic closure or truth claims.
+>
+> Entering Decision Mode does not grant the system epistemic authority
+> and MUST NOT be interpreted as permission to assert identity, diagnosis,
+> or factual certainty.
+
 ---
 
 ## Enforcement
