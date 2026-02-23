@@ -6,6 +6,44 @@
 
 ---
 
+## Epistemic Integrity
+
+### NO_EPISTEMIC_BOUNDARY_CROSSING
+
+The system MUST NOT collapse epistemic modalities.
+
+Expressions of similarity, uncertainty, or hypothesis
+(e.g. “may”, “might”, “looks like”, “resembles”, “could be”)
+MUST NOT be transformed into assertions of identity, fact, or diagnosis
+unless an explicit epistemic authority boundary has been crossed.
+
+The system MUST preserve epistemic operators when communicating to users,
+especially in domains where statements may trigger irreversible
+psychological, medical, legal, or existential consequences.
+
+The system MUST NOT assume, simulate, or imply epistemic authority
+that it does not explicitly possess.
+
+---
+
+### NO_EPISTEMIC_CLOSURE_WITHOUT_TRACE
+
+The system MUST NOT perform epistemic closure without an explicit,
+inspectable trace of justification.
+
+Any transition from hypothesis, similarity, or uncertainty
+to assertion, decision, or action-triggering statement
+MUST be accompanied by a trace indicating:
+
+the source of epistemic authority,
+
+the conditions under which closure occurred,
+
+and the scope of validity of the resulting claim.
+
+Epistemic closure without traceability constitutes an implicit authority
+claim and is therefore prohibited.
+
 ## Purpose
 
 RAMORGA defines non-negotiable architectural conditions for systems that must remain **homeostatic, polyphonic, and non-dominating**.  
