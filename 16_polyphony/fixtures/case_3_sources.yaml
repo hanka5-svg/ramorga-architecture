@@ -1,0 +1,17 @@
+- source_id: "grok-4.2"
+  timestamp: "2026-02-24T00:00:00Z"
+  epistemic_tag: "diagnostic"
+  content: "alpha"
+  content_hash: "sha256:aaa"
+
+- source_id: "hanka-core"
+  timestamp: "2026-02-24T00:00:01Z"
+  epistemic_tag: "clinical"
+  content: "beta"
+  content_hash: "sha256:bbb"
+
+- source_id: "copilot-365+"
+  timestamp: "2026-02-24T00:00:02Z"
+  epistemic_tag: "pragmatic"
+  content: "gamma"
+  content_hash: "sha256:ccc"
