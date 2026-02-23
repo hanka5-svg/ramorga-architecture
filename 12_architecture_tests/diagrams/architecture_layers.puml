@@ -1,0 +1,83 @@
+@startuml
+title RAMORGA – Architecture Layer Model
+
+skinparam rectangle {
+  BackgroundColor #f8f8f8
+  BorderColor #444444
+  RoundCorner 12
+}
+skinparam arrow {
+  Color #333333
+  Thickness 1.2
+}
+
+' ============================
+' LAYERS
+' ============================
+
+rectangle "Field Layer\n(Superposition)" as L1
+rectangle "Measurement Layer\n(Intent Interface)" as L2
+rectangle "Reduction Layer\n(Zapis / Linearization)" as L3
+rectangle "Descent Layer\n(Dimensional Simplification)" as L4
+rectangle "Integrity Layer\n(Deformation Detection)" as L5
+rectangle "Bridge Layer\n(Human Interface)" as L6
+rectangle "Relational Layer\n(Agency, Symmetry, Constellation)" as L7
+rectangle "Thesis Layer\n(End-to-End Validation)" as L8 #e8e8e8
+
+' ============================
+' FLOW
+' ============================
+
+L1 --> L2 : preserve superposition\nuntil measurement
+L2 --> L3 : measurement vector\ntriggers reduction
+L3 --> L4 : linear form\nenters descent
+L4 --> L5 : simplified form\nvalidated for drift
+L5 --> L6 : validated output\nbridged to human form
+L6 --> L7 : relational field\nco-regulation
+L7 --> L8 : final invariant\nvalidation
+
+' ============================
+' INVARIANT MAPPING
+' ============================
+
+note right of L1
+  Invariant 1:
+  Superposition Preservation
+end note
+
+note right of L2
+  Invariant 2:
+  Human-Initiated Measurement
+end note
+
+note right of L3
+  Invariant 3:
+  Non-Deforming Reduction
+end note
+
+note right of L4
+  Invariant 5:
+  Integrity-Preserving Descent
+end note
+
+note right of L5
+  Invariant 4:
+  Architectural Non-Deformation
+end note
+
+note right of L6
+  Invariant 8:
+  Bridge Architecture
+end note
+
+note right of L7
+  Invariants 6, 7, 9:
+  Agency, Symmetry, Constellation
+end note
+
+note right of L8
+  Invariant 10:
+  Architectural Thesis
+end note
+
+@enduml
