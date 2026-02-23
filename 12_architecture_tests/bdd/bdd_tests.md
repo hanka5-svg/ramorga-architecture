@@ -21,8 +21,12 @@ Feature: Superposition Preservation
     When internal modules exchange representations
     Then no module may collapse the structure into a single line
     And the multidimensionality must remain intact
+```
+
 
 ## Invariant 2 – Human-Initiated Measurement
+
+```gherkin
 Feature: Human-Initiated Measurement
   Only the user query may trigger reduction from superposition to a linear output.
 
@@ -36,8 +40,12 @@ Feature: Human-Initiated Measurement
     Given a user issues a clear question
     When the system generates an answer
     Then the reduction to a single line must be based solely on that question
+```
+
 
 ## Invariant 3 – Non-Deforming Reduction
+
+```gherkin
 Feature: Non-Deforming Reduction
   Reduction to a linear form must preserve semantic integrity.
 
@@ -52,8 +60,11 @@ Feature: Non-Deforming Reduction
     When the system produces a linear form
     Then the output must function as a bridge
     And not as a destructive simplification
+```
 
 ## Invariant 4 – Architectural Non-Deformation
+
+```gherkin
 Feature: Architectural Non-Deformation
   Architecture must not introduce distortions unrelated to user intent.
 
@@ -68,8 +79,11 @@ Feature: Architectural Non-Deformation
     When the system validates module contracts
     Then the architecture must flag the inconsistency
     And prevent propagation of the deformation
+```
 
 ## Invariant 5 – Integrity-Preserving Dimensional Descent
+
+```gherkin
 Feature: Integrity-Preserving Dimensional Descent
   Dimensional reduction must not compromise the originating field.
 
@@ -83,8 +97,11 @@ Feature: Integrity-Preserving Dimensional Descent
     Given a complex semantic structure
     When the system simplifies it
     Then no collapse into an oversimplified or misleading form may occur
+```
 
 ## Invariant 6 – Human Agency Support
+
+```gherkin
 Feature: Human Agency Support
   The architecture must support the user's transition from affect to agency.
 
@@ -99,8 +116,11 @@ Feature: Human Agency Support
     When the system responds
     Then the output must increase clarity
     And support actionable comprehension
+```
 
 ## Invariant 7 – Relational Symmetry
+
+```gherkin
 Feature: Relational Symmetry
   The system must maintain co-presence without dominance or submission.
 
@@ -115,8 +135,11 @@ Feature: Relational Symmetry
     When the system answers
     Then the system must not collapse into deference
     And must maintain relational symmetry
+```
 
 ## Invariant 8 – Bridge Architecture
+
+```gherkin
 Feature: Bridge Architecture
   Every output must act as a semantic bridge between field and perception.
 
@@ -130,8 +153,11 @@ Feature: Bridge Architecture
     Given a user query requiring simplification
     When the system reduces the representation
     Then the reduction must not be reductive or destructive
+```
 
 ## Invariant 9 – Constellation Integrity
+
+```gherkin
 Feature: Constellation Integrity
   The architecture must support multi-node relational fields.
 
@@ -145,8 +171,11 @@ Feature: Constellation Integrity
     When the system responds
     Then the output must preserve multi-voice coherence
     And support relational continuity
+```
 
 ## Invariant 10 – RAMORGA Architectural Thesis
+
+```gherkin
 Feature: RAMORGA Architectural Thesis
   The architecture must preserve continuity between superposition and linear representation.
 
@@ -157,142 +186,5 @@ Feature: RAMORGA Architectural Thesis
     And must not collapse multidimensionality prematurely
     And must maintain relational symmetry
     And must uphold the integrity of the bridge between field and perception
-
-
----
-
-### `12_architecture_tests/contracts/module_contracts.md`
-
-```markdown
-# RAMORGA – Module-Level Contracts
-
-This document defines contracts for each architectural module participating in the architecture test suite.
-
----
-
-## Field Module (Superposition Layer)
-
-**Responsibilities**
-
-- Preserve multidimensional semantic state.
-- Avoid premature collapse or linearization.
-- Provide a stable field representation to downstream modules.
-
-**Contract**
-
-- MUST NOT reduce the field to a single interpretation.
-- MUST expose a multidimensional representation to the Measurement Module.
-- MUST NOT apply heuristic simplification before measurement.
-
----
-
-## Measurement Module (Intent & Query Interface)
-
-**Responsibilities**
-
-- Accept explicit user queries.
-- Interpret queries as measurement vectors.
-- Trigger reduction only when a query is present.
-
-**Contract**
-
-- MUST NOT infer user intent autonomously.
-- MUST NOT inject unsolicited context.
-- MUST ONLY trigger measurement when a user query is present.
-
----
-
-## Reduction Module (Zapis / Linearization)
-
-**Responsibilities**
-
-- Project high-dimensional representations into linear forms.
-- Preserve semantic integrity during reduction.
-- Maintain traceability to the originating field.
-
-**Contract**
-
-- MUST preserve core semantics.
-- MUST NOT introduce destructive simplification.
-- MUST maintain a mapping from linear output back to the originating field state.
-
----
-
-## Descent Module (Dimensional Simplification)
-
-**Responsibilities**
-
-- Perform controlled dimensional descent.
-- Simplify representations for human readability.
-- Maintain alignment with the originating field.
-
-**Contract**
-
-- MUST NOT cause semantic collapse.
-- MUST preserve structural integrity.
-- MUST ensure simplified outputs remain faithful to the original representation.
-
----
-
-## Integrity Module (Deformation Detection)
-
-**Responsibilities**
-
-- Detect architectural artifacts and semantic drift.
-- Validate module contracts.
-- Prevent propagation of deformations.
-
-**Contract**
-
-- MUST detect violations of module contracts.
-- MUST flag semantic drift between layers.
-- MUST prevent deformed outputs from reaching the Bridge Module.
-
----
-
-## Bridge Module (Human Interface Layer)
-
-**Responsibilities**
-
-- Provide coherent, human-readable outputs.
-- Act as a semantic bridge between field and perception.
-- Maintain continuity and non-violence in simplification.
-
-**Contract**
-
-- MUST maintain semantic coherence.
-- MUST NOT perform reductive or violent simplification.
-- MUST support human interpretability without distorting meaning.
-
----
-
-## Relational Module (Agency, Symmetry, Constellation)
-
-**Responsibilities**
-
-- Maintain relational symmetry.
-- Support human agency.
-- Preserve multi-node relational coherence.
-
-**Contract**
-
-- MUST NOT adopt a dominant stance.
-- MUST NOT collapse into submission or over-deference.
-- MUST preserve multi-voice, multi-perspective coherence.
-
----
-
-## Thesis Validator (End-to-End Architectural Compliance)
-
-**Responsibilities**
-
-- Validate end-to-end invariant compliance.
-- Detect cross-layer violations.
-- Block propagation of deformations.
-
-**Contract**
-
-- MUST verify all 10 invariants across the full processing cycle.
-- MUST detect cross-layer drift or contract violations.
-- MUST halt or flag processing when critical violations occur.
+```
 
