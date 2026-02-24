@@ -1,0 +1,41 @@
+@startuml
+title Module 01 — Module Contracts Overview
+
+skinparam packageStyle rectangle
+skinparam rectangle {
+  BackgroundColor #f9f9f9
+  BorderColor #555
+  RoundCorner 10
+}
+
+rectangle "Module Contracts\n(01)" as MC
+
+rectangle "Contract Principles\n(ADR 01.1)" as P
+rectangle "Boundary Specification\n(ADR 01.2)" as B
+rectangle "Contract Enforcement Layer\n(ADR 01.3)" as CEL
+
+rectangle "Field Layer\n(02)" as F
+rectangle "Measurement Layer\n(03)" as M
+rectangle "Invariants\n(04)" as I
+rectangle "Reduction Layer\n(05)" as R
+
+rectangle "Continuity Tests\n(12)" as C12
+rectangle "Security\n(13)" as S13
+
+MC --> P
+MC --> B
+MC --> CEL
+
+P --> F
+P --> M
+P --> I
+P --> R
+
+B --> F
+B --> M
+B --> I
+
+CEL --> C12
+CEL --> S13
+
+@enduml
