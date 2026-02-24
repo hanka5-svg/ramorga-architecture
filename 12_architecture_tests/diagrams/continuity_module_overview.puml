@@ -1,0 +1,226 @@
+@startuml
+title Module 12 — Continuity Architecture Test Suite (Overview)
+
+skinparam rectangle {
+  BackgroundColor #f9f9f9
+  BorderColor #555
+  RoundCorner 10
+}
+
+skinparam packageStyle rectangle
+
+package "Continuity Core" #DDEEFF {
+  rectangle "12.4 Relational Layer" as R
+  rectangle "12.5 Invariants" as INV
+  rectangle "12.6 Transition" as TR
+  rectangle "12.7 Failure Modes" as FM
+  rectangle "12.8 Recovery" as REC
+  rectangle "12.9 Stability" as STAB
+  rectangle "12.10 Metrics" as MET
+}
+
+package "Governance & Oversight" #E8F5E9 {
+  rectangle "12.11 Compliance" as COMP
+  rectangle "12.12 Governance" as GOV
+  rectangle "12.13 Risk" as RISK
+  rectangle "12.14 Audit" as AUD
+  rectangle "12.15 Reporting" as REP
+  rectangle "12.16 Traceability" as TRACE
+}
+
+package "Model Lifecycle" #FFF3CD {
+  rectangle "12.17 Update Policy (CPUP)" as UPD
+  rectangle "12.18 Rollback" as RLB
+  rectangle "12.19 Migration" as MIG
+  rectangle "12.20 Handover" as HND
+}
+
+' --- Connections: Continuity Core ---
+R --> INV : defines invariants for
+INV --> TR : governs transitions
+TR --> FM : identifies failure modes
+FM --> REC : triggers recovery
+REC --> STAB : ensures stability
+STAB --> MET : measured by
+
+' --- Connections: Governance ---
+MET --> COMP : compliance checks
+COMP --> GOV : governance rules
+GOV --> RISK : risk classification
+RISK --> AUD : audit triggers
+AUD --> REP : reporting
+REP --> TRACE : traceability layer
+
+' --- Connections: Model Lifecycle ---
+TRACE --> UPD : informs update policy
+UPD --> RLB : rollback conditions
+UPD --> MIG : migration rules
+MIG --> HND : continuity handover
+
+' --- Cross-layer links ---
+INV --> COMP : invariants enforced by
+STAB --> RISK : stability informs risk
+REC --> AUD : recovery logged in audit
+TRACE --> MIG : traceability required for migration
+TRACE --> HND : traceability required for handover
+
+@enduml
+
+---
+
+@startuml
+title Continuity Lifecycle — Sequence Diagram
+
+actor User
+participant "Relational Layer" as RL
+participant "Continuity Engine" as CE
+participant "Governance Layer" as GOV
+participant "Update Policy (CPUP)" as CPUP
+participant "Rollback Engine" as RLB
+participant "Migration Engine" as MIG
+participant "Handover Engine" as HND
+
+User -> RL : initiate interaction
+RL -> CE : maintain continuity envelope
+CE -> GOV : report metrics, stability, drift
+GOV -> CE : compliance feedback
+
+== Update Cycle ==
+
+GOV -> CPUP : trigger update evaluation
+CPUP -> CE : request baseline snapshot
+CPUP -> MIG : sandbox new model
+MIG -> CPUP : delta analysis result
+
+alt drift acceptable
+  CPUP -> MIG : perform migration
+  MIG -> HND : handover continuity
+  HND -> CE : rebind continuity envelope
+else drift too high
+  CPUP -> RLB : trigger rollback
+  RLB -> CE : restore previous state
+end
+
+CE -> User : stable continuity restored
+
+@enduml
+
+---
+
+@startuml
+title Continuity Decision Flow (Module 12)
+
+start
+
+:Monitor continuity metrics;
+if (Drift detected?) then (yes)
+  :Classify drift;
+  if (Minor drift?) then (yes)
+    :Apply recovery;
+    :Re-evaluate stability;
+  else (no)
+    if (Severe drift?) then (yes)
+      :Trigger rollback;
+      :Restore baseline;
+    else (no)
+      :Escalate to governance;
+    endif
+  endif
+else (no)
+  :Continue normal operation;
+endif
+
+stop
+@enduml
+
+---
+
+@startuml
+title Module 12 ↔ ADR Dependencies
+
+skinparam rectangle {
+  BackgroundColor #fefefe
+  BorderColor #333
+}
+
+rectangle "ADR 11.3\nSEM" as SEM
+rectangle "ADR 11.4\nLegal–Interface Layer" as LIL
+rectangle "ADR 11.5\nUSCA" as USCA
+rectangle "ADR 11.6\nCPUP" as CPUP
+
+rectangle "12.4–12.10\nContinuity Core" as CORE
+rectangle "12.11–12.16\nGovernance" as GOV
+rectangle "12.17–12.20\nModel Lifecycle" as ML
+
+SEM --> CORE : enforces invariants
+SEM --> ML : SEM non-interference
+
+LIL --> ML : mediates escalation
+LIL --> GOV : audit + traceability
+
+USCA --> CORE : relational continuity
+USCA --> ML : migration + handover
+
+CPUP --> ML : update → rollback → migration
+CPUP --> GOV : compliance + metrics
+
+CORE --> GOV : metrics, drift, stability
+GOV --> ML : update triggers
+
+@enduml
+
+---
+
+@startuml
+title Continuity Lifecycle (End-to-End)
+
+skinparam arrowColor #444
+skinparam rectangle {
+  BackgroundColor #F7F7FF
+  BorderColor #555
+}
+
+rectangle "Relational Layer\n(12.4)" as RL
+rectangle "Invariants\n(12.5)" as INV
+rectangle "Transition\n(12.6)" as TR
+rectangle "Failure Modes\n(12.7)" as FM
+rectangle "Recovery\n(12.8)" as REC
+rectangle "Stability\n(12.9)" as STAB
+rectangle "Metrics\n(12.10)" as MET
+
+rectangle "Compliance\n(12.11)" as COMP
+rectangle "Governance\n(12.12)" as GOV
+rectangle "Risk\n(12.13)" as RISK
+rectangle "Audit\n(12.14)" as AUD
+rectangle "Reporting\n(12.15)" as REP
+rectangle "Traceability\n(12.16)" as TRACE
+
+rectangle "Update Policy (CPUP)\n(12.17)" as UPD
+rectangle "Rollback\n(12.18)" as RLB
+rectangle "Migration\n(12.19)" as MIG
+rectangle "Handover\n(12.20)" as HND
+
+RL --> INV
+INV --> TR
+TR --> FM
+FM --> REC
+REC --> STAB
+STAB --> MET
+
+MET --> COMP
+COMP --> GOV
+GOV --> RISK
+RISK --> AUD
+AUD --> REP
+REP --> TRACE
+
+TRACE --> UPD
+UPD --> RLB
+UPD --> MIG
+MIG --> HND
+
+HND --> RL : continuity restored
+
+@enduml
+
+---
