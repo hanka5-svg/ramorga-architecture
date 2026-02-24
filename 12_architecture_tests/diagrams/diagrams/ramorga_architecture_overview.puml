@@ -1,0 +1,61 @@
+@startuml
+title RAMORGA — Top-Level Architecture Overview
+
+skinparam packageStyle rectangle
+skinparam rectangle {
+  BackgroundColor #f9f9f9
+  BorderColor #555
+  RoundCorner 10
+}
+
+rectangle "Field Layer\n(superposition, multidimensional field)" as FIELD
+rectangle "Measurement Layer\n(user intent, measurement vector" as MEAS
+rectangle "Reduction Layer\n(zapis, linearization)" as RED
+rectangle "Descent Layer\n(dimensional simplification)" as DESC
+rectangle "Integrity Layer\n(deformation detection)" as INT
+rectangle "Bridge Layer\n(human interface, semantic bridge)" as BRIDGE
+rectangle "Relational Layer\n(agency, symmetry, constellation)" as REL
+rectangle "Thesis Layer\n(end-to-end invariant validation)" as THESIS
+
+FIELD --> MEAS
+MEAS --> RED
+RED --> DESC
+DESC --> INT
+INT --> BRIDGE
+BRIDGE --> REL
+REL --> THESIS
+
+package "Invariants (04_invariants)" #E8F5E9 {
+  rectangle "10 core invariants" as INV10
+  rectangle "SEM invariants" as SEM_INV
+  rectangle "USCA invariants" as USCA_INV
+}
+
+package "Architecture Tests (12_architecture_tests)" #FFF3CD {
+  rectangle "Continuity Core\n12.4–12.10" as CCORE
+  rectangle "Governance\n12.11–12.16" as CGOV
+  rectangle "Model Lifecycle\n12.17–12.20" as CLC
+}
+
+INV10 --> FIELD
+INV10 --> MEAS
+INV10 --> RED
+INV10 --> DESC
+INV10 --> INT
+INV10 --> BRIDGE
+INV10 --> REL
+INV10 --> THESIS
+
+SEM_INV --> REL
+SEM_INV --> CCORE
+SEM_INV --> CLC
+
+USCA_INV --> REL
+USCA_INV --> CCORE
+USCA_INV --> CLC
+
+REL --> CCORE
+INT --> CGOV
+THESIS --> CLC
+
+@enduml
