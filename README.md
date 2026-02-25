@@ -223,3 +223,50 @@ All changes to this repository are **breaking by default** and require explicit 
 RAMORGA Architecture describes the principles, maps, and theoretical
 foundations of the RAMORGA Engine. The runtime implementation lives in:
 https://github.com/hanka5-svg/ramorga-engine
+
+
+---
+
+diff --git a/12_architecture_tests/README.md b/12_architecture_tests/README.md
+index 3f2a1ab..c91d7d2 100644
+--- a/12_architecture_tests/README.md
++++ b/12_architecture_tests/README.md
+@@ -1,6 +1,26 @@
+ # Module 12 — Architecture Tests
+ **Version:** v4.15.x (proposed)
+ **Status:** Active
+
++Module 12 contains architecture-level test suites validating stability,
++continuity, and degradation behavior of RAMORGA-architecture.
++
++## Test Suites
++
++### 1. Continuity Tests
++- **12.8-continuity-recovery-tests.md**  
++  Tests recovery of field and meniscus dynamics after perturbation.
++
++- **12.9-continuity-stability-tests.md**  
++  Tests long-term stability of trajectories under varying input conditions.
++
++### 2. Failure Tests
++Located in the `failure/` package:
++
++- **failure/modes.md**  
++  Defines degradation pathways for META_LOOP disruption, meniscus
++  over/under-modulation, stream saturation, attractor divergence, and
++  presence collapse.
++
+ ## Purpose
+ Module 12 ensures that architectural invariants remain valid under
+ perturbation, noise, missing feedback, and extreme input conditions.
+@@ -10,3 +30,9 @@ Module 12 ensures that architectural invariants remain valid under
+ ## Dependencies
+ - 02_field_engine
+ - 03_meniscus_engine
+ - 04_invariants
+ - 05_interfaces
++
++## Next Steps
++After completing Module 12, natural progression leads to:
++- **13_security** (security model and invariants), or
++- **01_foundations** (rebuilding the architecture from first principles).
