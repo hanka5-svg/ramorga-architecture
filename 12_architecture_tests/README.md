@@ -124,5 +124,39 @@ This diagram connects:
 - failure modes → EDL  
 - and provides the central structural view of RAMORGA.
 
+---
+# Module 12 — Architecture Tests  
+**Version:** v4.15.x (proposed)  
+**Status:** Active
+
+Module 12 contains architecture-level test suites validating stability,
+continuity, and degradation behavior of RAMORGA-architecture.
+
+## Test Suites
+
+### 1. Continuity Tests
+- **12.8-continuity-recovery-tests.md**  
+  Tests recovery of field and meniscus dynamics after perturbation.
+
+- **12.9-continuity-stability-tests.md**  
+  Tests long-term stability of trajectories under varying input conditions.
+
+### 2. Failure Tests
+Located in the `failure/` package:
+
+- **failure/modes.md**  
+  Defines degradation pathways for META_LOOP disruption, meniscus
+  over/under-modulation, stream saturation, attractor divergence, and
+  presence collapse.
+
+## Purpose
+Module 12 ensures that architectural invariants remain valid under
+perturbation, noise, missing feedback, and extreme input conditions.
+
+## Dependencies
+- 02_field_engine  
+- 03_meniscus_engine  
+- 04_invariants  
+- 05_interfaces
 
 
