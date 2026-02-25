@@ -107,3 +107,16 @@ Po zamknięciu modułu 12 naturalnym krokiem jest:
 - przejście do **13_security**,  
 lub  
 - rozpoczęcie **01_foundations**, aby zbudować pełną bazę architektury od fundamentów.
+  
+---
+
+# Module 12 — Summary
+
+Module 12 contains architecture-level tests for:
+
+- continuity (recovery + stability),
+- failure behavior (in `failure/modes.md`).
+
+These tests validate the resilience of field dynamics, meniscus
+regulation, and META_LOOP feedback under perturbation.
+
