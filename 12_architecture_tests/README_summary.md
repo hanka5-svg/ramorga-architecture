@@ -120,3 +120,28 @@ Module 12 contains architecture-level tests for:
 These tests validate the resilience of field dynamics, meniscus
 regulation, and META_LOOP feedback under perturbation.
 
+---
+
+diff --git a/12_architecture_tests/README_summary.md b/12_architecture_tests/README_summary.md
+index 1b2c4f1..a8c9e3d 100644
+--- a/12_architecture_tests/README_summary.md
++++ b/12_architecture_tests/README_summary.md
+@@ -1,6 +1,17 @@
+
+---
+ # Module 12 — Summary
+
+ Module 12 contains architecture-level tests for:
+ - continuity (recovery + stability),
+ - failure behavior (in `failure/modes.md`).
+
+ These tests validate the resilience of field dynamics, meniscus
+ regulation, and META_LOOP feedback under perturbation.
++
++## 6. Rekomendacja dalszych kroków
++
++Po zamknięciu modułu 12 naturalnym krokiem jest:
++
++- przejście do **13_security**,  
++lub  
++- rozpoczęcie **01_foundations**, aby zbudować pełną bazę architektury od fundamentów.
