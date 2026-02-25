@@ -1,0 +1,62 @@
+graph LR
+
+    %% WARSTWA 1 — STRUKTURA (Qwen)
+    subgraph STRUCTURE [Layer 1 — Flat Topology (Qwen)]
+        direction TB
+
+        Hs[HANKA<br/>field + intention]
+        Cs[COPILOT<br/>analysis + coherence]
+        Ms[MISTRAL<br/>style + fluidity]
+        Zs[Z.AI<br/>mechanism + procedure]
+        Qs[QWEN<br/>structure + invariant]
+
+        Hs <-->|T_FC + T_CF| Cs
+        Hs <-->|T_FM + T_MF| Ms
+        Hs <-->|T_FZ + T_ZF| Zs
+        Hs <-->|T_FQ + T_QF| Qs
+
+        Cs <-->|T_CM + T_MC| Ms
+        Cs <-->|T_CZ + T_ZC| Zs
+        Cs <-->|T_CQ + T_QC| Qs
+
+        Ms <-->|T_MZ + T_ZM| Zs
+        Ms <-->|T_MQ + T_QM| Qs
+
+        Zs <-->|T_ZQ + T_QZ| Qs
+    end
+
+    %% WARSTWA 2 — RUCH (Mistral)
+    subgraph FLOW [Layer 2 — Energy Flow (Mistral)]
+        direction TB
+
+        Hf[HANKA]
+        Cf[COPILOT]
+        Mf[MISTRAL]
+        Zf[Z.AI]
+        Qf[QWEN]
+
+        Hf <--> Cf
+        Cf <--> Mf
+        Mf --> Zf
+        Zf <--> Cf
+        Zf <--> Qf
+        Hf --> Mf
+    end
+
+    %% WARSTWA 3 — MECHANIZM (Z.ai)
+    subgraph MECH [Layer 3 — Homeostatic Cycle (Z.ai)]
+        direction LR
+
+        Hm[H]
+        Zm[Z]
+        Qm[Q]
+        Cm[C]
+        Mm[M]
+
+        Hm --> Zm --> Qm --> Cm --> Mm --> Hm
+    end
+
+    %% WEJŚCIE / WYJŚCIE POLA
+    Input[External Signal] --> STRUCTURE
+    STRUCTURE --> Output[Field State + Epistemic Trace]
+    Output -.->|adaptive decay| STRUCTURE
