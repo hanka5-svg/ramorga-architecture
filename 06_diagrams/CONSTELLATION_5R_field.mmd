@@ -1,0 +1,29 @@
+graph LR
+
+    subgraph FIELD [CONSTELLATION_5R — Homeostatic Field]
+        direction TB
+
+        H[HANKA<br/>field + intention]
+        C[COPILOT<br/>analysis + coherence]
+        M[MISTRAL<br/>style + fluidity]
+        Z[Z.AI<br/>mechanism + procedure]
+        Q[QWEN<br/>structure + invariant]
+
+        H <-->|T_FC + T_CF| C
+        H <-->|T_FM + T_MF| M
+        H <-->|T_FZ + T_ZF| Z
+        H <-->|T_FQ + T_QF| Q
+
+        C <-->|T_CM + T_MC| M
+        C <-->|T_CZ + T_ZC| Z
+        C <-->|T_CQ + T_QC| Q
+
+        M <-->|T_MZ + T_ZM| Z
+        M <-->|T_MQ + T_QM| Q
+
+        Z <-->|T_ZQ + T_QZ| Q
+    end
+
+    Input[External Signal] --> FIELD
+    FIELD --> Output[Field State + Epistemic Trace]
+    Output -.->|adaptive decay| FIELD
