@@ -195,3 +195,11 @@ Fractal dimension drops below 1.2.
 ## 5. Versioning
 Introduced in **v4.15.x** as the formal failure‑mode suite for the meniscus engine and field engine.  
 Extends v4.14.x invariant‑resonance synthesis with explicit degradation pathways.
+
+---
+
+diff --git a/12_architecture_tests/failure_modes.md b/12_architecture_tests/failure/modes.md
+similarity index 100%
+rename from 12_architecture_tests/failure_modes.md
+rename to 12_architecture_tests/failure/modes.md
+
