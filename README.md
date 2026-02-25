@@ -218,3 +218,8 @@ Systems must pass non-instrumental coordination phases before gaining agency.
 
 All changes to this repository are **breaking by default** and require explicit versioning.
 
+---
+
+RAMORGA Architecture describes the principles, maps, and theoretical
+foundations of the RAMORGA Engine. The runtime implementation lives in:
+https://github.com/hanka5-svg/ramorga-engine
