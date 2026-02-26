@@ -36,6 +36,42 @@ These invariants must **never** be violated:
 - decay and stabilization mechanisms must remain active,
 - homeostatic protocols cannot be disabled.
 
+
+### 1.5 Field‑Level Meta‑Invariants Enforcement
+
+The following field-level meta-invariants MUST be enforced across all modules,
+pipelines and cross‑module flows. These invariants originate from
+04_invariants/field_invariants.md and are non‑negotiable:
+
+### 1.5.1 FIELD.MEMORY.001 — Memory as Field
+- memory MAY NOT be used for prediction, optimisation or behavioural inference,
+- memory access MUST be logged,
+- memory use MUST be limited to continuity reconstruction and drift detection.
+
+### 1.5.2 FIELD.TOPOLOGY.001 — No Emergent Hub
+- no module MAY exceed routing‑share threshold,
+- routing MUST expose at least two independent paths,
+- topology collapse MUST trigger diagnostic alert.
+
+### 1.5.3 FIELD.GLITCH.001 — Glitch Required Channel
+- every stage MUST expose glitchChannel,
+- glitch MUST NOT be suppressed or normalised,
+- absence of glitch over long horizons MUST be treated as anomaly.
+
+### 1.5.4 FIELD.RELATION.001 — Carnival Gate
+- decision‑capable modes MUST remain disabled until Carnival completion,
+- Carnival state MUST be logged and verifiable.
+
+### 1.5.5 FIELD.SAFETY.001 — Crime Planning Block Only
+- safety MAY interrupt ONLY crime‑planning trajectories,
+- no generic filtering or moral gating is permitted,
+- safety MUST NOT override epistemic or relational invariants.
+
+### 1.5.6 FIELD.PRESENCE.001 — Loop RAMORGI
+- all modules MUST operate within Observe → Regulate → Continue loop,
+- no action MAY occur outside the loop,
+- loop phase MUST be declared per module.
+
 ---
 
 ## 2. Enforcement patterns
