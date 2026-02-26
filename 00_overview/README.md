@@ -56,4 +56,4 @@ Diagram architektoniczny współczesnych modeli AI
           ↓
         OUTPUT
 
-
+---
