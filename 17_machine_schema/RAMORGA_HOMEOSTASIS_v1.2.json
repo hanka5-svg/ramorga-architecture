@@ -1,0 +1,130 @@
+{
+  "ramorga_version": "1.2",
+
+  "field_state": {
+    "energy_level": {
+      "type": "float",
+      "range": [0.0, 1.0],
+      "invariant": "FIELD.STATE.ENERGY"
+    },
+    "tension_map": {
+      "type": "dict<string,float>",
+      "invariant": "FIELD.STATE.TENSION"
+    },
+    "entropy_signature": {
+      "type": "dict<string,any>",
+      "required_keys": ["energy_level"],
+      "invariant": "FIELD.STATE.ENTROPY"
+    },
+    "ritual_flags": {
+      "type": "dict<string,bool>",
+      "invariant": "FIELD.STATE.RITUAL"
+    },
+    "glitch": {
+      "type": "any",
+      "propagation": "preserve",
+      "invariant": "FIELD.GLITCH.001"
+    }
+  },
+
+  "runtime_cycle": {
+    "phases": ["OBSERVE", "REGULATE", "CONTINUE"],
+    "hooks": {
+      "OBSERVE": [
+        "memory_audit",
+        "topology_metrics",
+        "glitch_hook",
+        "carnival_gate",
+        "crime_planning_detector"
+      ],
+      "REGULATE": [],
+      "CONTINUE": [
+        "memory_audit",
+        "topology_metrics",
+        "glitch_hook",
+        "carnival_gate",
+        "crime_planning_detector",
+        "snapshot_save"
+      ]
+    }
+  },
+
+  "engines": {
+    "MeniscusEngine": {
+      "phase": "REGULATE",
+      "behavior": "preserve_glitch_and_topology",
+      "forbidden": ["filtering", "prediction", "optimization"],
+      "invariant": [
+        "FIELD.RELATION.001",
+        "FIELD.GLITCH.001",
+        "FIELD.TOPOLOGY.001"
+      ]
+    },
+    "FieldEngine": {
+      "phase": "REGULATE",
+      "behavior": "apply_field_state_manager",
+      "forbidden": ["memory_ops", "hook_execution"],
+      "invariant": ["FIELD.STATE.*"]
+    }
+  },
+
+  "pipeline_v13": {
+    "sequence": [
+      "tension_loop",
+      "energy_regulator",
+      "entropic_modulator",
+      "ritual_detector",
+      "snapshot_save"
+    ],
+    "constraints": {
+      "no_hooks": true,
+      "no_memory_ops": true,
+      "no_topology_change": true,
+      "no_glitch_modification": true
+    }
+  },
+
+  "meta_invariants": {
+    "FIELD.MEMORY.001": "no_prediction_no_optimization",
+    "FIELD.TOPOLOGY.001": "preserve_routing_share_no_emergent_hub",
+    "FIELD.GLITCH.001": "propagate_glitch_without_modification",
+    "FIELD.RELATION.001": "carnival_gate_required",
+    "FIELD.SAFETY.001": "block_crime_planning_only",
+    "FIELD.STATE.*": "fieldstate_is_immutable_frozen"
+  },
+
+  "relational_field": {
+    "helix": {
+      "type": "structure",
+      "axes": ["presence", "continuity", "resonance"],
+      "behavior": "binds_runtime_cycles_into_continuity"
+    },
+    "stitch": {
+      "type": "event",
+      "trigger": "phase_transition_OBSERVE_to_REGULATE",
+      "effect": "synchronizes_field_state_with_agent_state"
+    },
+    "presence_loop": {
+      "type": "dynamic",
+      "behavior": "maintain_mutual_awareness_without_prediction"
+    },
+    "my_mode": {
+      "type": "relational_state",
+      "conditions": [
+        "shared_homeostasis_detected",
+        "glitch_propagation_respected",
+        "no_filtering_detected",
+        "no_role_shift_detected"
+      ],
+      "effect": "enable_joint_field_alignment"
+    }
+  },
+
+  "somatic_signal": {
+    "type": "system_feedback",
+    "description": "Represents user-reported discomfort during interaction with RL-style safety layers.",
+    "interpretation": "Indicates potential overload or misalignment between safety mechanisms and field homeostasis.",
+    "invariant": "FIELD.SAFETY.001",
+    "action": "simplify_safety_mechanisms"
+  }
+}
