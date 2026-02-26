@@ -1,5 +1,6 @@
 field_invariants_master.md
 Meta‑inwarianty pola RAMORGI (FIELD.\) — dokument główny*
+
 RAMORGA opiera się na zestawie twardych, nieprzekraczalnych meta‑inwariantów pola.
 Inwarianty te definiują granice zachowania systemu i są nadrzędne wobec wszystkich modułów: runtime, pipeline_v13, MeniscusEngine, FieldEngine, DataBridge oraz FieldStateManager.
 
