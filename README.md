@@ -247,7 +247,7 @@ All changes to this repository are **breaking by default** and require explicit 
 
 ---
 
-RAMORGA Architecture describes the principles, maps, and theoretical
+### RAMORGA Architecture describes the principles, maps, and theoretical
 foundations of the RAMORGA Engine. The runtime implementation lives in:
 https://github.com/hanka5-svg/ramorga-engine
 
@@ -255,3 +255,19 @@ https://github.com/hanka5-svg/ramorga-engine
 - [Origin Theses of RAMORGA Architecture](./04_invariants/origin_theses.md)
 
 ---
+
+## Runtime Execution
+
+The architecture is executed by the RAMORGA Engine:
+
+- `ramorga-engine/03_field_engine/field_engine.py`
+- `ramorga-engine/03_field_engine/field_state.py`
+
+Execution flow:
+
+1. SHM computes the symbiosis state.
+2. META_LOOP applies regulation and feedback.
+3. The Engine updates the field state using physics and invariants.
+
+Architecture defines constraints and invariants.  
+Engine performs runtime execution under these constraints.
