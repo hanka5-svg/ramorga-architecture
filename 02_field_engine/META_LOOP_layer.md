@@ -127,6 +127,7 @@ META_LOOP maintains this threshold by modulating \( I_t \).
 - presence gradient responsiveness  
 - invariance under input scaling  
 - stability under noise injection
+  
 
 ---
 

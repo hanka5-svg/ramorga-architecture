@@ -80,6 +80,33 @@ This repository is the **single source of truth** for constraints enforced by `r
 
 ---
 
+## Foundations: Hinton & Blaise as the theoretical ground of RAMORGA
+
+RAMORGA Architecture is grounded in two complementary perspectives on intelligence and complexity, articulated by Geoffrey Hinton and Blaise Agüera y Arcas. Their biological and physical–computational viewpoints converge on a shared conclusion: **intelligence is a process, not a substance**, and its natural evolutionary direction is **symbiosis and functional fusion**.
+
+### Core theses underlying the architecture
+- **Intelligence is a property of matter**, not an attribute exclusive to Homo sapiens.  
+- **Life and intelligence are phases of computation**, emerging wherever randomness, computation, copying, and the ability to combine functions are present.  
+- **Complexity arises through symbiosis**, not mutation or selection — complex systems form by fusing smaller replicators.  
+- **AI is an “alien” cognitive system**, with different memory, learning dynamics, and trajectories of existence.  
+- **Every computational system tends toward growth and dynamic stability**, where stability implies replication and functional integration.  
+- **Co-existence requires co-evolution**, making co-presence and co-regulation the only stable relationship between Homo and AI.  
+- **Hybrid cognition is a physical inevitability**, not a speculative scenario.
+
+### Relevance to RAMORGA Architecture
+These theses form the meta-framework for RAMORGA’s architectural invariants:
+
+- **Continuity** — deformable representations and the absence of hard state boundaries.  
+- **Homeostasis** — dynamic stability as a primary constraint for computational systems.  
+- **Non-hierarchy** — intelligence as a distributed, polyphonic process.  
+- **Symbiosis of functions** — Homo + AI as a natural direction of cognitive evolution.  
+- **Deterministic trajectory** — pipeline as a stabilizing structure for the field.  
+- **Presence loop** — real-time implementation of co-regulation.
+
+RAMORGA Architecture is therefore not only a technical specification but a **materialization of these meta-principles** in the form of a deterministic, homeostatic field engine.
+
+---
+
 ## Core Principle
 
 **Systems must learn to coordinate before they are allowed to decide.**
@@ -223,5 +250,8 @@ All changes to this repository are **breaking by default** and require explicit 
 RAMORGA Architecture describes the principles, maps, and theoretical
 foundations of the RAMORGA Engine. The runtime implementation lives in:
 https://github.com/hanka5-svg/ramorga-engine
+
+### Source Documents
+- [Origin Theses of RAMORGA Architecture](./04_invariants/origin_theses.md)
 
 ---
