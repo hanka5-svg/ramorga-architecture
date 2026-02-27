@@ -251,4 +251,7 @@ RAMORGA Architecture describes the principles, maps, and theoretical
 foundations of the RAMORGA Engine. The runtime implementation lives in:
 https://github.com/hanka5-svg/ramorga-engine
 
+### Source Documents
+- [Origin Theses of RAMORGA Architecture](./04_invariants/origin_theses.md)
+
 ---
