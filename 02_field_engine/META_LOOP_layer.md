@@ -139,5 +139,4 @@ Backward‑compatible with v4.14.x invariant‑resonance synthesis.
 
 ### Related Documents
 - [02.90 — Symbiosis Health Metric](./02.90-symbiosis-health-metric.md)
-- [02.91 — Field Safety](./02.91-field-safety.md)
 - [Origin Theses](../04_invariants/origin_theses.md)
