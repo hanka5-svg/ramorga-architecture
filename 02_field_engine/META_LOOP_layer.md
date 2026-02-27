@@ -135,3 +135,10 @@ META_LOOP maintains this threshold by modulating \( I_t \).
 Introduced in **v4.15.x** as a core field‑engine mechanism.  
 Backward‑compatible with v4.14.x invariant‑resonance synthesis.
 
+---
+
+### Related Documents
+- [02.90 — SHM Layer](./02.90_shm.md)
+- [02.95 — Field Safety](./02.95_field_safety.md)
+- [02.96 — Validation Layer](./02.96_validation.md)
+- [Origin Theses](../04_invariants/origin_theses.md)
