@@ -35,3 +35,4 @@ OBECNOŚĆ HIPOTETYCZNA
 (dim_H ~ 1, prawie linia)
 
 ---
+
