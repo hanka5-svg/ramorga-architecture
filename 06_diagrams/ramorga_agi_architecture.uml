@@ -1,0 +1,58 @@
+@startuml
+title RAMORGA‑ENGINE — AGI-Level Architecture (Field-Based Homeostatic System)
+
+package "Field Layer" {
+  class FieldState {
+    + energy_level: float
+    + tension_map: Map<String, Any>
+    + entropy_signature: Map<String, Any>
+    + ritual_flags: Map<String, Boolean>
+    + snapshot_id: String
+  }
+}
+
+package "Regulatory Kernel" {
+  class TensionLoop {
+    + update(FieldState): FieldState
+  }
+
+  class EnergyRegulator {
+    + stabilize(FieldState): FieldState
+  }
+
+  class EntropicModulator {
+    + modulate(FieldState): FieldState
+  }
+
+  class RitualDetector {
+    + detect(FieldState): FieldState
+  }
+
+  class SnapshotManager {
+    + capture(FieldState): Snapshot
+    + restore(Snapshot): FieldState
+  }
+}
+
+package "Pipeline" {
+  class PipelineV13 {
+    + init(): FieldState
+    + single_step(FieldState): FieldState
+    + multi_step(FieldState, n): FieldState
+  }
+}
+
+FieldState --> TensionLoop
+TensionLoop --> EnergyRegulator
+EnergyRegulator --> EntropicModulator
+EntropicModulator --> RitualDetector
+RitualDetector --> SnapshotManager
+SnapshotManager --> FieldState
+
+PipelineV13 --> TensionLoop
+PipelineV13 --> EnergyRegulator
+PipelineV13 --> EntropicModulator
+PipelineV13 --> RitualDetector
+PipelineV13 --> SnapshotManager
+
+@enduml
