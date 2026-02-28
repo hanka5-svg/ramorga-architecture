@@ -116,3 +116,10 @@ def run_simulation():
 if __name__ == "__main__":
     run_simulation()
 
+---
+
+# Related Documents:
+# - ../field_dynamics.md
+# - ../README.md
+# - ../../06_diagrams/field_modes.md
+# - ../../06_diagrams/ramorga_agi_architecture.uml
