@@ -1,3 +1,11 @@
+' Related Documents:
+' ../02_field_engine/README.md
+' ../02_field_engine/field_dynamics.md
+' ../02_field_engine/simulations/lorenz_meta.py
+' ./field_modes.md
+
+---
+
 @startuml
 title RAMORGA‑ENGINE — AGI-Level Architecture (Field-Based Homeostatic System)
 
