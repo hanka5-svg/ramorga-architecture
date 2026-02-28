@@ -1,0 +1,226 @@
+@startuml
+title RAMORGA Full Architecture Map (Modules 02–27)
+
+' ===========================
+' FIELD LAYER (02)
+' ===========================
+package "02 Field Engine" {
+  class FieldEngine
+  class FieldState {
+    + tension
+    + energy
+    + entropy
+    + ritual
+    + continuity
+  }
+}
+
+FieldEngine --> FieldState : produces
+
+' ===========================
+' MENISCUS LAYER (03)
+' ===========================
+package "03 Meniscus Engine" {
+  class MeniscusEngine
+  class MeniscusState
+}
+
+FieldState --> MeniscusEngine : input
+MeniscusEngine --> MeniscusState : normalizes
+
+' ===========================
+' INVARIANTS (04)
+' ===========================
+package "04 Invariants" {
+  class Invariants
+}
+
+FieldState --> Invariants : validated by
+MeniscusState --> Invariants
+Invariants --> FieldEngine
+Invariants --> MeniscusEngine
+
+' ===========================
+' INTERFACES (05)
+' ===========================
+package "05 Interfaces" {
+  class Interfaces
+}
+
+Interfaces --> FieldEngine
+Interfaces --> MeniscusEngine
+
+' ===========================
+' PRINCIPLES (09)
+' ===========================
+package "09 Principles" {
+  class Principles
+}
+
+Principles --> Invariants
+Principles --> Interfaces
+
+' ===========================
+' NFR (10)
+' ===========================
+package "10 NFR" {
+  class NFR
+}
+
+NFR --> FieldEngine
+NFR --> MeniscusEngine
+NFR --> Pipeline
+
+' ===========================
+' ADR (11)
+' ===========================
+package "11 ADR" {
+  class ADR
+}
+
+ADR --> Principles
+ADR --> Interfaces
+
+' ===========================
+' ARCHITECTURE TESTS (12)
+' ===========================
+package "12 Architecture Tests" {
+  class ArchitectureTests
+}
+
+ArchitectureTests --> Invariants
+ArchitectureTests --> Interfaces
+ArchitectureTests --> Security
+
+' ===========================
+' SECURITY (13)
+' ===========================
+package "13 Security" {
+  class Security
+}
+
+Security --> Invariants
+Security --> FieldEngine
+Security --> MeniscusEngine
+
+' ===========================
+' INTEGRATION (14)
+' ===========================
+package "14 Integration" {
+  class Integration
+}
+
+Integration --> FieldEngine
+Integration --> MeniscusEngine
+Integration --> Pipeline
+
+' ===========================
+' VERSIONING (15)
+' ===========================
+package "15 Versioning" {
+  class Versioning
+}
+
+Versioning --> Interfaces
+Versioning --> MachineSchema
+
+' ===========================
+' POLYPHONY (16)
+' ===========================
+package "16 Polyphony" {
+  class Polyphony
+}
+
+Polyphony --> FieldEngine
+Polyphony --> MeniscusEngine
+
+' ===========================
+' MACHINE SCHEMA (17)
+' ===========================
+package "17 Machine Schema" {
+  class MachineSchema
+}
+
+MachineSchema --> FieldState
+MachineSchema --> MeniscusState
+
+' ===========================
+' RUNTIME (18)
+' ===========================
+package "18 Runtime" {
+  class Runtime
+}
+
+Runtime --> FieldEngine
+Runtime --> MeniscusEngine
+Runtime --> Pipeline
+
+' ===========================
+' METRICS (19)
+' ===========================
+package "19 Metrics" {
+  class Metrics
+}
+
+Metrics --> Runtime
+Metrics --> FieldEngine
+Metrics --> Pipeline
+
+' ===========================
+' LOGGING (20)
+' ===========================
+package "20 Logging" {
+  class Logging
+}
+
+Logging --> Runtime
+Logging --> Debugging
+
+' ===========================
+' DEBUGGING (21)
+' ===========================
+package "21 Debugging" {
+  class Debugging
+}
+
+Debugging --> Logging
+Debugging --> Recovery
+Debugging --> Invariants
+
+' ===========================
+' RECOVERY (22)
+' ===========================
+package "22 Recovery" {
+  class Recovery
+}
+
+Recovery --> SnapshotManager
+Recovery --> FieldEngine
+Recovery --> MeniscusEngine
+
+' ===========================
+' ERROR MODEL (25)
+' ===========================
+package "25 Error Model" {
+  class ErrorModel
+  class ErrorState
+}
+
+ErrorModel --> ErrorState
+ErrorState --> Recovery
+ErrorState --> Security
+
+' ===========================
+' SYSTEM OVERVIEW (27)
+' ===========================
+package "27 System Overview" {
+  class SystemOverview
+}
+
+SystemOverview --> FieldEngine
+SystemOverview --> MeniscusEngine
+SystemOverview --> Pipeline
+SystemOverview --> Recovery
+SystemOverview --> ErrorModel
+
+@enduml
