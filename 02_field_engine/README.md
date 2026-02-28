@@ -100,6 +100,11 @@ Together, these layers form the complete RAMORGA Field Engine.
 
 - [02.90 — Symbiosis Health Metric](./02.90-symbiosis-health-metric.md)
 - [META_LOOP — Presence Loop](./META_LOOP.md)
+- [Field Dynamics Model](./field_dynamics.md)
+- [Lorenz META-loop Simulation](./simulations/lorenz_meta.py)
+- [Field Modes Diagram](../06_diagrams/field_modes.md)
+- [RAMORGA AGI Architecture UML](../06_diagrams/ramorga_agi_architecture.uml)
+
 
 --- 
 
