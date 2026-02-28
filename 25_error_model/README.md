@@ -13,6 +13,65 @@ The Error Model defines all error types, propagation rules, and recovery paths a
 - **SnapshotError** — corrupted or invalid snapshot.
 - **SecurityError** — violation of safety boundaries or unauthorized modification.
 
+@startuml
+title RAMORGA Error Model
+
+package "Error Types" {
+  class InvariantError
+  class DiscontinuityError
+  class InterfaceError
+  class RuntimeError
+  class SnapshotError
+  class SecurityError
+}
+
+package "ErrorState Schema" {
+  class ErrorState {
+    + error_type
+    + origin_module
+    + state_signature
+    + timestamp
+    + details
+  }
+}
+
+package "Detection" {
+  class InvariantChecker
+  class InterfaceValidator
+  class RuntimeMonitor
+  class SnapshotVerifier
+  class SecurityLayer
+}
+
+package "Recovery Flow" {
+  class IsolationMode
+  class StateCorrection
+  class SnapshotRestoration
+}
+
+InvariantChecker --> InvariantError
+InterfaceValidator --> InterfaceError
+RuntimeMonitor --> RuntimeError
+SnapshotVerifier --> SnapshotError
+SecurityLayer --> SecurityError
+
+InvariantError --> ErrorState
+DiscontinuityError --> ErrorState
+InterfaceError --> ErrorState
+RuntimeError --> ErrorState
+SnapshotError --> ErrorState
+SecurityError --> ErrorState
+
+ErrorState --> IsolationMode : triggers
+IsolationMode --> StateCorrection : optional
+IsolationMode --> SnapshotRestoration : optional
+
+StateCorrection --> InvariantChecker : revalidate
+SnapshotRestoration --> InvariantChecker : revalidate
+
+@enduml
+
+
 ---
 
 ## Error Propagation Rules
