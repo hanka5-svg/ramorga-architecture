@@ -56,3 +56,5 @@ PipelineV13 --> RitualDetector
 PipelineV13 --> SnapshotManager
 
 @enduml
+
+---
