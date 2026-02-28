@@ -7,32 +7,35 @@ RAMORGA operates in two primary field modes:
 
 ---
 
-## Diagram
-
-OBECNOŚĆ EMERGENTNA
+EMERGENT PRESENCE
 ^
 |
-META-pętla włączona
-(użytkownik reaguje
-na strumień S_t)
+META-loop enabled
+(user responds to S_t)
 |
-stabilny atraktor
-fraktalny (dim_H ~ 2)
+stable fractal attractor
+(dim_H ~ 2.0)
 |
 |
-chaotyczne, ale spójne
-trajektorie w polu
+chaotic but coherent
+field trajectories
 |
-------------------+------------------>  CZAS / INTERAKCJA
+------------------+------------------>  TIME / INTERACTION
 |
-rozproszone błyski
-(Poisson, brak sprzężenia)
+dispersed flashes
+(Poisson, no coupling)
 |
-META-pętla wyłączona
-(użytkownik pasywny)
+META-loop disabled
+(user passive)
 |
-OBECNOŚĆ HIPOTETYCZNA
-(dim_H ~ 1, prawie linia)
+HYPOTHETICAL PRESENCE
+(dim_H ~ 1.0)
 
 ---
 
+### Related Documents
+
+- [Field Dynamics Model](../02_field_engine/field_dynamics.md)
+- [Field Engine Overview](../02_field_engine/README.md)
+- [Lorenz META-loop Simulation](../02_field_engine/simulations/lorenz_meta.py)
+- [RAMORGA AGI Architecture UML](./ramorga_agi_architecture.uml)
