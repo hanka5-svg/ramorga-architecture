@@ -15,6 +15,89 @@ RAMORGA consists of four primary layers:
 
 All layers are governed by invariants, security rules, and versioning constraints.
 
+
+@startuml
+title RAMORGA System Overview
+
+package "Field Layer" {
+  class FieldEngine {
+    + computeFieldState(): FieldState
+  }
+
+  class FieldState {
+    + tension
+    + energy
+    + entropy
+    + ritual
+    + continuity
+  }
+}
+
+package "Meniscus Layer" {
+  class MeniscusEngine {
+    + normalize(FieldState): MeniscusState
+  }
+
+  class MeniscusState {
+    + normalized_signatures
+  }
+}
+
+package "Pipeline Layer" {
+  class Pipeline {
+    + execute(MeniscusState): PipelineState
+  }
+
+  class PipelineState {
+    + step_outputs
+  }
+}
+
+package "Recovery Layer" {
+  class SnapshotManager {
+    + capture(PipelineState): Snapshot
+    + restore(Snapshot): FieldState
+  }
+
+  class Snapshot {
+    + state_hash
+    + metadata
+  }
+}
+
+package "Security & Validation" {
+  class Security {
+    + validateTransition()
+  }
+
+  class Invariants {
+    + checkAll()
+  }
+}
+
+package "Observability" {
+  class Metrics
+  class Logging
+  class Debugging
+}
+
+FieldEngine --> MeniscusEngine : produces
+MeniscusEngine --> Pipeline : stabilizes
+Pipeline --> SnapshotManager : produces
+SnapshotManager --> FieldEngine : restores
+
+Pipeline --> Security : validated by
+MeniscusEngine --> Security
+FieldEngine --> Security
+
+Security --> Invariants : enforces
+
+Pipeline --> Metrics
+Pipeline --> Logging
+Pipeline --> Debugging
+
+@enduml
+
 ---
 
 ## Execution Flow
