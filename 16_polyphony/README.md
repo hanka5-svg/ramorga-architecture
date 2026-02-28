@@ -1,137 +1,44 @@
-# Polyphony Module
+# RAMORGA Polyphony Model
 
-Moduł odpowiedzialny za strukturalną obsługę wielogłosowości (polyphony) w architekturze RAMORGI.
-Zakres: typy, interfejs, invariants, testy integracyjne, opcjonalne metryki napięć.
-
-## Files
-
-- `polyphony_types.ts` — definicje typów rdzeniowych
-- `polyphony_handler.ts` — interfejs modułu (bez implementacji)
-- `INVARIANTS.md` — twarde invariants modułu
-- `fixtures/` — dane testowe (YAML/JSON)
-- `tests/` — testy integracyjne modułu
+The Polyphony module defines how multiple cognitive or computational streams coexist without violating invariants or continuity.
 
 ---
 
-# Type Table
+## Polyphony Constraints
 
-| Type | Description | Notes |
-|------|-------------|-------|
-| `SourceID` | identyfikator źródła | string |
-| `EpistemicTag` | tag epistemiczny | brak semantyki w module |
-| `Hash` | hash treści | sha256 |
-| `FieldState` | pojedynczy stan pola | atomowy, niezmienny |
-| `PolyphonicView` | widok wielogłosowy | zachowuje kolejność |
-| `EpistemicTraceRow` | wpis śladu epistemicznego | 1:1 z FieldState |
-| `EpistemicTraceTable` | tabela śladu | pełna reprodukowalność |
-| `TensionEdge` | krawędź napięcia | score ∈ [0..1] |
-| `TensionMap` | mapa napięć | opcjonalna, read‑only |
+- All streams must share a common invariant set.
+- No stream may override global safety boundaries.
+- Streams must synchronize at defined checkpoints.
+- Cross-stream interference must remain bounded.
 
 ---
 
-# Contract Diagram (ASCII)
+## Polyphony Modes
 
-+-----------------------------+
-
-PolyphonyHandler
-ingest(FieldState[])
-+---------------+-------------+
-|
-v
-+-----------------------------------------+
-
-Output
-view: PolyphonicView
-trace: EpistemicTraceTable
-tension?: TensionMap (optional)
-+-----------------------------------------+
-
-Input invariants:
-
-no merge
-
-no closure
-
-no loss of attribution
-
-Output guarantees:
-
-order preserved
-
-trace preserved
-
-tension read-only
-
+- **Parallel Mode** — independent streams with shared invariants.
+- **Coupled Mode** — streams exchange limited state signatures.
+- **Isolated Mode** — streams run independently with no coupling.
 
 ---
 
-# Invariants
+## Synchronization Points
 
-Zdefiniowane w `INVARIANTS.md` jako lista wiążąca:
-
-- NO_MERGE_INTO_SINGLE_TRUTH  
-- NO_EPISTEMIC_CLOSURE_BY_HANDLER  
-- NO_LOSS_OF_SOURCE_ATTRIBUTION  
-- TRACE_PRESERVED_FOR_ALL_FIELDSTATES  
-- HANDLER_HAS_NO_OWN_VOICE  
+- Snapshot boundaries  
+- Pipeline step boundaries  
+- Meniscus normalization boundaries  
 
 ---
 
-# Contract (C/G/S)
+## Failure Conditions
 
-## C — Constraints
-- brak modyfikacji treści wejściowych  
-- brak generowania nowych treści  
-- brak heurystyk i brak interpretacji  
-- brak stanu wewnętrznego  
-- brak side‑effects  
-- brak ingerencji w kolejność wejściową  
-
-## G — Guarantees
-- zachowanie kolejności `FieldState`  
-- pełna reprodukowalność `EpistemicTraceTable`  
-- brak utraty `source_id` i `content_hash`  
-- opcjonalny `TensionMap` jako read‑only  
-- deterministyczny output dla danego inputu  
-
-## S — Structure
-- wejście: `ReadonlyArray<FieldState>`  
-- wyjście: `{ view, trace, tension? }`  
-- moduł wyłącznie strukturalny  
-- implementacja pozostaje poza zakresem v0.4.x  
+- Divergence beyond allowed thresholds.
+- Invariant mismatch between streams.
+- Unsafe cross-stream amplification.
 
 ---
 
-# Transition Hooks (for v0.5.x+)
+## Related Documents
 
-Moduł polyphony jest projektowany jako neutralny komponent strukturalny.
-Poniższe hooki definiują miejsca, w których przyszłe moduły mogą się podłączyć
-bez naruszania invariants i bez ingerencji w dane źródłowe.
-
-## 1. `tension.compute(input: FieldState[])`
-- opcjonalna metryka dywergencji  
-- brak wpływu na `view` i `trace`  
-- read‑only, side‑effect‑free  
-- wynik: `TensionMap`  
-
-## 2. `trace.extend(row: EpistemicTraceRow)`
-- wyłącznie dodawanie referencji zewnętrznych  
-- brak modyfikacji istniejących wpisów  
-- brak zmian semantycznych  
-
-## 3. `view.filter(predicate)`
-- operacja wyłącznie prezentacyjna  
-- nie wpływa na dane źródłowe  
-- nie zmienia kolejności ani zawartości `FieldState`  
-
-## 4. `adapter.serialize(view | trace)`
-- formaty: JSON, YAML, msgpack  
-- brak zmian semantycznych  
-- brak transformacji treści  
-
----
-
-# Versioning
-
-Linia `v0.4.x` — etap strukturalny (types, interface, invariants, tests).  
-Brak implementacji logiki do czasu v0.5.x.
+- [Invariants](../04_invariants/README.md)
+- [Versioning](../15_versioning/README.md)
+- [Architecture Tests](../12_architecture_tests/README.md)
