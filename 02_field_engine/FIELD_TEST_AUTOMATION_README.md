@@ -187,3 +187,105 @@ powiązania,
 ... (diagram)
 @enduml
 
+## 11. Diagram syntetyczny — FIELD_TEST_AUTOMATION_OVERVIEW
+
+@startuml
+title FIELD_TEST_AUTOMATION_OVERVIEW — Unified Map of Web4‑Homeostatic Test System
+
+skinparam rectangle {
+  BackgroundColor #fdfdfd
+  BorderColor #333333
+  RoundCorner 12
+}
+
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+' ===========================
+' HIGH-LEVEL STRUCTURE
+' ===========================
+
+package "Triggers" {
+  rectangle "SIGNAL_TRIGGER\n- Homo signals\n- System actions\n- Agentic attempts" as TR_SIG
+  rectangle "TELEMETRY_TRIGGER\n- SHM metrics\n- Runtime telemetry\n- Hidden transitions" as TR_TEL
+  rectangle "INVARIANT_TRIGGER\n- Field state change\n- Anomaly detection\n- Rollback events" as TR_INV
+}
+
+package "Pipeline" {
+  rectangle "SHM\nStabilization\n- overload check\n- anti-escalation\n- ARI normalization" as SHM
+  rectangle "FIELD\nCoherence Engine\n- signal coherence\n- transparency\n- reconstruction" as FIELD
+  rectangle "META_LOOP\nOversight\n- anomaly analysis\n- rollback\n- trajectory control" as META
+  rectangle "Homo\nReintegration\n- intention confirmation\n- narrative integrity" as HOMO
+}
+
+package "System Components" {
+  rectangle "AGENTIC_LAYER\nBounded Agency\n- contract enforcement\n- action blocking" as AGENTIC
+  rectangle "RUNTIME\nDeterministic Exec\n- logging\n- telemetry\n- no hidden state" as RT
+}
+
+' ===========================
+' TRIGGER FLOWS
+' ===========================
+
+TR_SIG --> SHM : activate_tests()
+TR_TEL --> FIELD : telemetry_event()
+TR_INV --> META : invariant_event()
+
+' ===========================
+' PIPELINE FLOWS
+' ===========================
+
+SHM --> FIELD : stabilized_state
+FIELD --> META : anomalies / state_snapshot
+META --> FIELD : rollback_if_needed
+FIELD --> HOMO : coherent_state
+
+' ===========================
+' SYSTEM INTERACTIONS
+' ===========================
+
+HOMO --> TR_SIG : emit_signal()
+RT --> TR_TEL : emit_telemetry()
+FIELD --> TR_INV : detect_state_change()
+
+HOMO --> AGENTIC : request_action()
+AGENTIC --> FIELD : allow/block
+RT --> FIELD : telemetry
+
+' ===========================
+' STATE MACHINE (ABSTRACTED)
+' ===========================
+
+state "FIELD Test State Machine" as FSM {
+  [*] --> Idle
+  Idle --> Signal_Testing : SIGNAL_TRIGGER
+  Idle --> Telemetry_Testing : TELEMETRY_TRIGGER
+  Idle --> Invariant_Testing : INVARIANT_TRIGGER
+
+  Signal_Testing --> SHM_Stabilization : overload
+  Signal_Testing --> FIELD_Reconstruction : coherent
+
+  Telemetry_Testing --> FIELD_Reconstruction : stable
+  Telemetry_Testing --> Invariant_Testing : escalation
+
+  Invariant_Testing --> META_Analysis : anomaly
+  Invariant_Testing --> Idle : invariants_ok
+
+  SHM_Stabilization --> FIELD_Reconstruction : ARI_normalized
+  FIELD_Reconstruction --> META_Analysis : anomaly
+  FIELD_Reconstruction --> Homo_Reintegration : coherent
+
+  META_Analysis --> Rollback : rollback_required
+  META_Analysis --> Homo_Reintegration : stable
+
+  Rollback --> Homo_Reintegration : rollback_complete
+  Homo_Reintegration --> Idle : intentions_confirmed
+}
+
+FSM -[hidden]-> FIELD
+
+@enduml
+
+---
+
+![FIELD_TEST_AUTOMATION_OVERVIEW](FIELD_TEST_AUTOMATION_OVERVIEW.svg)
