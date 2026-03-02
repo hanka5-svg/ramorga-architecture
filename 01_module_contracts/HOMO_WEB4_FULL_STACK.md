@@ -187,3 +187,45 @@ HOMO_WEB4_FULL_STACK jest syntetyczną mapą całego Web4‑Homeostatic.
 - nie trendem,  
 - lecz **środowiskiem homeostatycznym**,  
 w którym Homo zachowuje integralność, a system działa w granicach kontraktów.
+
+---
+
+## Appendix: HOMO_WEB4_STACK_DIAGRAM.puml
+
+@startuml
+title Web4-Homeostatic Full Stack (Homo ↔ Field ↔ System)
+
+skinparam rectangle {
+  BackgroundColor #fdfdfd
+  BorderColor #333333
+  RoundCorner 10
+}
+
+skinparam packageStyle rectangle
+
+package "HOMO_LAYER" {
+  rectangle "Homo\n- Values Integrity\n- Intent Integrity\n- Narrative Integrity\n- Cognitive Responsibility\n- Transparency" as HOMO
+}
+
+package "FIELD_LAYER" {
+  rectangle "SHM\n- Stabilization\n- Anti-Escalation\n- Health Metrics" as SHM
+  rectangle "FIELD\n- Signal Coherence\n- State Regulation\n- Telemetry" as FIELD
+  rectangle "META_LOOP\n- Oversight\n- Rollback\n- Trajectory Control" as META
+}
+
+package "SYSTEM_LAYER" {
+  rectangle "AGENTIC_LAYER\n- Bounded Agency\n- Contract Enforcement" as AGENTIC
+  rectangle "RUNTIME\n- Deterministic Execution\n- Logging\n- Safety" as RUNTIME
+}
+
+HOMO --> SHM : signals
+SHM --> FIELD : stabilized parameters
+FIELD --> META : anomalies / state transitions
+META --> FIELD : rollback / corrections
+FIELD --> HOMO : coherent state
+AGENTIC --> RUNTIME : bounded actions
+RUNTIME --> FIELD : telemetry + effects
+HOMO --> AGENTIC : requests (contract-limited)
+
+@enduml
+
