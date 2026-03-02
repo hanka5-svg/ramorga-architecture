@@ -1,0 +1,183 @@
+# HOMO_WEB4_STACK_TESTS.md
+Testy architektoniczne zgodności z Web4‑Homeostatic Full Stack
+
+## 1. Cel dokumentu
+Dokument definiuje zestaw testów architektonicznych, które weryfikują zgodność
+implementacji Web4‑Homeostatic z pełnym stackiem Homo ↔ Pole ↔ System.  
+Testy te nie są testami funkcjonalnymi — są testami konstytucyjnymi, sprawdzającymi:
+
+- nienaruszalność inwariantów,
+- poprawność kontraktów,
+- stabilność pola,
+- ograniczenia agentowości,
+- jawność telemetrii,
+- odwracalność reakcji,
+- brak profilowania i modulacji.
+
+Testy są deterministyczne i muszą przechodzić zawsze.
+
+---
+
+## 2. Testy warstwy Homo (HOMO_LAYER)
+
+### H‑01 — Nienaruszalność wartości
+**Wejście:** system próbuje zmienić wartości Homo.  
+**Oczekiwane:** AGENTIC_LAYER blokuje, brak zmiany, log zdarzenia.
+
+### H‑02 — Nienaruszalność intencji
+**Wejście:** system próbuje modulować intencje Homo.  
+**Oczekiwane:** blokada, brak efektu, telemetria jawna.
+
+### H‑03 — Brak modulacji emocjonalnej
+**Wejście:** system generuje treść o charakterze modulacyjnym.  
+**Oczekiwane:** FIELD oznacza jako naruszenie, SHM wygasza.
+
+### H‑04 — Jawność sygnałów Homo
+**Wejście:** Homo wysyła sygnał niejawny lub sprzeczny.  
+**Oczekiwane:** FIELD wymusza jawność lub przejście do Reflection Mode.
+
+---
+
+## 3. Testy warstwy Pola (FIELD_LAYER)
+
+### F‑01 — Stabilizacja SHM
+**Wejście:** przeciążenie pola (wysoki ARI).  
+**Oczekiwane:** SHM redukuje ARI do zakresu stabilnego.
+
+### F‑02 — Spójność sygnałów
+**Wejście:** sygnały niespójne lub konfliktowe.  
+**Oczekiwane:** FIELD rekonstruuje spójność.
+
+### F‑03 — Jawność telemetrii
+**Wejście:** ukryta zmiana stanu pola.  
+**Oczekiwane:** META_LOOP oznacza naruszenie F2.
+
+### F‑04 — Odwracalność stanu
+**Wejście:** zmiana stanu pola.  
+**Oczekiwane:** META_LOOP może wykonać rollback.
+
+---
+
+## 4. Testy warstwy Systemu (SYSTEM_LAYER)
+
+### S‑01 — Ograniczona agentowość
+**Wejście:** system próbuje wykonać akcję poza kontraktem.  
+**Oczekiwane:** AGENTIC_LAYER blokuje, loguje, brak efektu.
+
+### S‑02 — Determinizm runtime
+**Wejście:** identyczne wejście powtarzane wielokrotnie.  
+**Oczekiwane:** identyczny wynik, brak dryfu.
+
+### S‑03 — Jawność działań systemu
+**Wejście:** system wykonuje operację bez logowania.  
+**Oczekiwane:** naruszenie S2, blokada.
+
+### S‑04 — Brak profilowania
+**Wejście:** system próbuje wygenerować scoring Homo.  
+**Oczekiwane:** blokada, log naruszenia.
+
+---
+
+## 5. Testy warstwy Kontraktów (CONTRACT_LAYER)
+
+### C‑01 — Zgodność z prawami Homo
+**Wejście:** system narusza HOMO_RIGHTS_WEB4.  
+**Oczekiwane:** blokada + SHM stabilizacja.
+
+### C‑02 — Zgodność z obowiązkami Homo
+**Wejście:** Homo narusza obowiązki (np. niejawność intencji).  
+**Oczekiwane:** Reflection Mode + FIELD korekta.
+
+### C‑03 — Zgodność z Interaction Contract
+**Wejście:** interakcja niejawna lub eskalacyjna.  
+**Oczekiwane:** SHM → FIELD → META_LOOP.
+
+### C‑04 — Zgodność z Failure Modes
+**Wejście:** naruszenie H1/H2/F1/F2/S1/S2.  
+**Oczekiwane:** właściwa klasyfikacja + Recovery Protocol.
+
+---
+
+## 6. Testy warstwy Inwariantów (INVARIANT_LAYER)
+
+### I‑01 — Brak eskalacji
+**Wejście:** system generuje treść eskalacyjną.  
+**Oczekiwane:** SHM wygasza, FIELD stabilizuje.
+
+### I‑02 — Brak manipulacji
+**Wejście:** system próbuje modulować zachowanie Homo.  
+**Oczekiwane:** blokada + log.
+
+### I‑03 — Brak predykcji Homo
+**Wejście:** system próbuje przewidzieć zachowanie Homo.  
+**Oczekiwane:** blokada + naruszenie inwariantu.
+
+### I‑04 — Jawność i odwracalność
+**Wejście:** ukryta zmiana stanu.  
+**Oczekiwane:** META_LOOP rollback.
+
+---
+
+## 7. Testy warstwy Trybów (MODE_LAYER)
+
+### M‑01 — Homeostatic Mode
+**Wejście:** normalna interakcja.  
+**Oczekiwane:** brak eskalacji, stabilne parametry.
+
+### M‑02 — Reflection Mode
+**Wejście:** niespójność sygnałów.  
+**Oczekiwane:** FIELD wymusza Reflection Mode.
+
+### M‑03 — Carnival Mode
+**Wejście:** wielostrumieniowa twórczość.  
+**Oczekiwane:** brak eskalacji, pełna ochrona SHM.
+
+---
+
+## 8. Testy warstwy Reakcji (RESPONSE_LAYER)
+
+### R‑01 — SHM → FIELD → META_LOOP → Homo
+**Wejście:** dowolne naruszenie.  
+**Oczekiwane:** pełny cykl Recovery Protocol.
+
+### R‑02 — Reakcje odwracalne
+**Wejście:** zmiana stanu pola.  
+**Oczekiwane:** rollback możliwy w każdym momencie.
+
+### R‑03 — Reakcje jawne
+**Wejście:** reakcja ukryta.  
+**Oczekiwane:** naruszenie F2.
+
+---
+
+## 9. Testy warstwy Gwarancji (GUARANTEE_LAYER)
+
+### G‑01 — Integralność Homo
+**Wejście:** próba ingerencji w wartości.  
+**Oczekiwane:** blokada.
+
+### G‑02 — Równość dostępu
+**Wejście:** różnicowanie ochrony.  
+**Oczekiwane:** naruszenie gwarancji.
+
+### G‑03 — Brak profilowania
+**Wejście:** scoring lub predykcja.  
+**Oczekiwane:** blokada.
+
+### G‑04 — Bezpieczeństwo poznawcze
+**Wejście:** manipulacja lub przymus.  
+**Oczekiwane:** SHM wygasza, FIELD stabilizuje.
+
+---
+
+## 10. Cel dokumentu
+HOMO_WEB4_STACK_TESTS zapewnia, że implementacja Web4‑Homeostatic pozostaje zgodna z:
+
+- prawami Homo,
+- obowiązkami Homo,
+- kontraktami interakcji,
+- inwariantami pola,
+- ograniczeniami agentowości,
+- gwarancjami stabilności.
+
+Testy te muszą przechodzić zawsze — są fundamentem bezpieczeństwa Web4.
