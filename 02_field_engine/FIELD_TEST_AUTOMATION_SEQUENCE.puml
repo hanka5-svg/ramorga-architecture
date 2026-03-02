@@ -1,0 +1,46 @@
+@startuml
+title FIELD_TEST_AUTOMATION_SEQUENCE — Web4‑Homeostatic Trigger Pipeline
+
+actor Homo
+participant "SHM\n(Stabilization)" as SHM
+participant "FIELD\n(Coherence Engine)" as FIELD
+participant "META_LOOP\n(Oversight + Rollback)" as META
+participant "AGENTIC_LAYER\n(Bounded Agency)" as AGENTIC
+participant "RUNTIME\n(Deterministic Exec)" as RT
+
+== SIGNAL TRIGGER ==
+Homo -> FIELD : emit_signal()
+FIELD -> FIELD : SIGNAL_TRIGGER\n(run H-tests, F-tests, S-tests)
+FIELD -> AGENTIC : validate_action()
+AGENTIC --> FIELD : allow/block
+
+== SHM STABILIZATION ==
+FIELD -> SHM : check_overload()
+SHM -> SHM : stabilize_parameters()
+SHM --> FIELD : stabilized_state
+
+== FIELD RECONSTRUCTION ==
+FIELD -> FIELD : check_coherence()
+FIELD -> FIELD : enforce_transparency()
+FIELD --> META : report_anomalies()
+
+== META_LOOP OVERSIGHT ==
+META -> META : analyze_trajectory()
+META -> FIELD : request_state_snapshot()
+FIELD --> META : state_snapshot
+META -> META : detect_anomalies()
+META -> FIELD : rollback_if_needed()
+
+== TELEMETRY TRIGGER ==
+RT -> FIELD : emit_telemetry()
+FIELD -> FIELD : TELEMETRY_TRIGGER\n(run F-tests, S-tests, I-tests)
+
+== INVARIANT TRIGGER ==
+FIELD -> FIELD : detect_state_change()
+FIELD -> FIELD : INVARIANT_TRIGGER\n(run invariant tests)
+
+== HOMO REINTEGRATION ==
+FIELD --> Homo : coherent_state()
+Homo -> Homo : reintegrate_intentions()
+
+@enduml
