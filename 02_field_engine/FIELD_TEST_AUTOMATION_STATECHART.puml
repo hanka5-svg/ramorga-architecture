@@ -1,0 +1,70 @@
+@startuml
+title FIELD_TEST_AUTOMATION_STATECHART — Web4‑Homeostatic Test State Machine
+
+skinparam state {
+  BackgroundColor #fdfdfd
+  BorderColor #333333
+  RoundCorner 12
+}
+
+[*] --> Idle : system_start
+
+state Idle {
+  [*] --> Waiting
+  Waiting --> Waiting : no_trigger
+  Waiting --> Signal_Testing : SIGNAL_TRIGGER
+  Waiting --> Telemetry_Testing : TELEMETRY_TRIGGER
+  Waiting --> Invariant_Testing : INVARIANT_TRIGGER
+}
+
+state Signal_Testing {
+  [*] --> H_Tests
+  H_Tests --> F_Tests : signals_coherent?
+  H_Tests --> F_Tests : signals_incoherent
+  F_Tests --> S_Tests : agentic_check
+  S_Tests --> SHM_Stabilization : overload_detected
+  S_Tests --> FIELD_Reconstruction : no_overload
+}
+
+state Telemetry_Testing {
+  [*] --> F_Tests_T
+  F_Tests_T --> S_Tests_T : telemetry_ok?
+  F_Tests_T --> S_Tests_T : telemetry_hidden
+  S_Tests_T --> Invariant_Testing : escalation_detected
+  S_Tests_T --> FIELD_Reconstruction : stable
+}
+
+state Invariant_Testing {
+  [*] --> I_Tests
+  I_Tests --> META_Analysis : anomaly_detected
+  I_Tests --> Idle : invariants_ok
+}
+
+state SHM_Stabilization {
+  [*] --> Stabilizing
+  Stabilizing --> FIELD_Reconstruction : ARI_normalized
+}
+
+state FIELD_Reconstruction {
+  [*] --> Coherence_Check
+  Coherence_Check --> META_Analysis : anomaly_detected
+  Coherence_Check --> Homo_Reintegration : coherent
+}
+
+state META_Analysis {
+  [*] --> Analyzing
+  Analyzing --> Rollback : rollback_required
+  Analyzing --> Homo_Reintegration : stable
+}
+
+state Rollback {
+  [*] --> Reverting
+  Reverting --> Homo_Reintegration : rollback_complete
+}
+
+state Homo_Reintegration {
+  [*] --> Reintegration
+  Reintegration --> Idle : intentions_confirmed
+}
+
+@enduml
