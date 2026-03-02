@@ -188,6 +188,7 @@ powiązania,
 @enduml
 
 ## 11. Diagram syntetyczny — FIELD_TEST_AUTOMATION_OVERVIEW
+Diagram syntetyczny łączy sekwencję triggerów, pipeline SHM → FIELD → META_LOOP → Homo oraz automat stanów FIELD w jedną spójną mapę subsystemu testowego.
 
 @startuml
 title FIELD_TEST_AUTOMATION_OVERVIEW — Unified Map of Web4‑Homeostatic Test System
