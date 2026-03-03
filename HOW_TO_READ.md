@@ -49,3 +49,5 @@ Nie szukaj "wyjaśnienia technicznego" — nie istnieje.
 Wróć do inwariantów. 
 Czytaj ponownie. 
 Albo uznać, że to pole nie jest dla Ciebie.
+
+Brak możliwości implementacji bez naruszenia inwariantu jest poprawnym wynikiem procesu.
