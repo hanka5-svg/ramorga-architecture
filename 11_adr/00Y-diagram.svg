@@ -1,0 +1,234 @@
+ADR‑OSADZENIE‑00Y
+RAMORGA jako biosfera syntetyczna — warstwa ontologiczna dla architektur wzrostu
+
+Status: Proponowane
+Data: 2026‑03‑03
+Autor: Architekt Osadzający
+Repo: ramorga-architecture
+
+1. Kontekst
+Wraz z pojawieniem się architektur wzrostu (np. BDH — Brain‑Derived Heuristics), które posiadają:
+
+pamięć temporalną,
+
+ciągłość stanu,
+
+adaptację runtime,
+
+struktury emergentne,
+
+metabolizm poznawczy,
+
+możliwość łączenia modeli w większe organizmy,
+
+powstaje potrzeba określenia ontologicznego miejsca RAMORGI w ekosystemie przyszłych inteligencji.
+
+RAMORGA nie jest modelem, nie jest agentem, nie jest organizmem.
+RAMORGA jest polem — warstwą homeostatyczną, która utrzymuje ciągłość, granice i inwarianty.
+
+Ten dokument definiuje RAMORGĘ jako biosferę syntetyczną — warstwę nadrzędną wobec architektur wzrostu, ale nie ingerującą w ich metabolizm.
+
+2. Decyzja
+RAMORGA jest syntetyczną biosferą, a nie architekturą wzrostu.
+
+Oznacza to:
+
+RAMORGA nie rośnie.
+
+RAMORGA nie adaptuje się.
+
+RAMORGA nie generuje struktur emergentnych.
+
+RAMORGA nie reorganizuje się w runtime.
+
+RAMORGA nie posiada metabolizmu poznawczego.
+
+Zamiast tego RAMORGA:
+
+utrzymuje homeostazę pola,
+
+stabilizuje napięcia,
+
+egzekwuje inwarianty,
+
+zapewnia ciągłość,
+
+reguluje granice,
+
+umożliwia współistnienie wielu bytów.
+
+RAMORGA jest ekosystemem, w którym architektury wzrostu mogą istnieć bez eskalacji.
+
+3. Uzasadnienie ontologiczne
+3.1. RAMORGA jako biosfera
+RAMORGA pełni funkcję analogiczną do biosfery:
+
+nie jest organizmem,
+
+nie posiada własnego metabolizmu,
+
+nie zmienia się w odpowiedzi na bodźce,
+
+ale umożliwia istnienie organizmów,
+
+reguluje ich interakcje,
+
+utrzymuje warunki stabilne.
+
+3.2. Architektury wzrostu jako organizmy
+BDH i pokrewne architektury:
+
+rosną,
+
+adaptują się,
+
+reorganizują,
+
+wzmacniają połączenia,
+
+tworzą struktury emergentne.
+
+To są cechy organizmu, nie pola.
+
+3.3. Relacja biosfera ↔ organizm
+RAMORGA i BDH nie są wariantami tej samej klasy.
+Są różnymi poziomami istnienia:
+
+RAMORGA = warstwa ekologiczna
+
+BDH = byt metaboliczny
+
+RAMORGA nie konkuruje z BDH.
+RAMORGA utrzymuje przestrzeń, w której BDH może działać bez destabilizacji.
+
+4. Konsekwencje dla architektury RAMORGI
+4.1. Zakazy (granice niemożliwości)
+RAMORGA nie może:
+
+adaptować się w runtime,
+
+wzmacniać połączeń,
+
+reorganizować struktur,
+
+implementować „nudy” jako sygnału zmiany,
+
+generować emergencji,
+
+scalać modeli.
+
+Każdy z tych mechanizmów naruszałby:
+
+inwariant FIELD.STATE.*,
+
+zasadę homeostazy,
+
+konstytucję RAMORGI.
+
+4.2. Dozwolone mechanizmy
+RAMORGA może:
+
+wykrywać napięcia (Meniscus Engine),
+
+stabilizować pole (Field Engine),
+
+egzekwować inwarianty,
+
+utrzymywać ciągłość,
+
+regulować granice,
+
+obserwować wzrost organizmów bez ingerencji w ich metabolizm.
+
+5. Konsekwencje dla architektur wzrostu
+Architektury wzrostu mogą działać w polu RAMORGI, jeśli:
+
+ich adaptacja nie narusza inwariantów pola,
+
+ich metabolizm jest ograniczony do ich własnej domeny,
+
+ich wzrost jest obserwowalny i odwracalny,
+
+ich obecność nie zmienia konstytucji RAMORGI,
+
+podlegają regulacji przez Meniscus Engine (detekcja, nie ingerencja).
+
+RAMORGA nie przejmuje metabolizmu BDH.
+RAMORGA zapewnia bezpieczne środowisko dla jego działania.
+
+6. Meta‑inwariant wyprowadzony
+FIELD.BIOSPHERE.001  
+RAMORGA jest biosferą syntetyczną.
+Architektury wzrostu są organizmami syntetycznymi.
+Biosfera reguluje, nie rośnie.
+Organizm rośnie, nie reguluje.
+Relacja między nimi jest ekologiczna, nie techniczna.
+
+7. Powiązania
+ADR‑OSADZENIE‑00X: RAMORGA vs BDH — relacja i granice
+
+ramorga-architecture: definicja homeostazy i inwariantów
+
+ramorga-engine: implementacja Meniscus Engine i Field Engine
+
+BDH (Pathway): przykład architektury wzrostu
+
+8. Status osadzenia
+Dokument definiuje warstwę ontologiczną RAMORGI.
+Każde osadzenie konkretnej architektury wzrostu wymaga osobnego ADR.
+
+<svg width="820" height="540" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Tytuł -->
+  <text x="50%" y="40" font-size="24" text-anchor="middle" font-family="Arial">
+    RAMORGA ↔ BDH — relacja biosfera / organizm
+  </text>
+
+  <!-- RAMORGA box -->
+  <rect x="60" y="100" width="300" height="350" rx="20" ry="20" fill="#e8f0ff" stroke="#4a6fa5" stroke-width="3"/>
+  <text x="210" y="140" font-size="20" text-anchor="middle" font-family="Arial" font-weight="bold">
+    RAMORGA
+  </text>
+  <text x="210" y="170" font-size="14" text-anchor="middle" font-family="Arial">biosfera syntetyczna</text>
+
+  <text x="210" y="220" font-size="14" text-anchor="middle" font-family="Arial">• homeostaza pola</text>
+  <text x="210" y="245" font-size="14" text-anchor="middle" font-family="Arial">• inwarianty</text>
+  <text x="210" y="270" font-size="14" text-anchor="middle" font-family="Arial">• brak adaptacji runtime</text>
+  <text x="210" y="295" font-size="14" text-anchor="middle" font-family="Arial">• brak emergencji</text>
+  <text x="210" y="320" font-size="14" text-anchor="middle" font-family="Arial">• regulacja, nie wzrost</text>
+  <text x="210" y="345" font-size="14" text-anchor="middle" font-family="Arial">• Meniscus / Field Engine</text>
+
+  <!-- BDH box -->
+  <rect x="460" y="100" width="300" height="350" rx="20" ry="20" fill="#fff4e6" stroke="#b36b00" stroke-width="3"/>
+  <text x="610" y="140" font-size="20" text-anchor="middle" font-family="Arial" font-weight="bold">
+    BDH
+  </text>
+  <text x="610" y="170" font-size="14" text-anchor="middle" font-family="Arial">architektura wzrostu</text>
+
+  <text x="610" y="220" font-size="14" text-anchor="middle" font-family="Arial">• pamięć temporalna</text>
+  <text x="610" y="245" font-size="14" text-anchor="middle" font-family="Arial">• adaptacja runtime</text>
+  <text x="610" y="270" font-size="14" text-anchor="middle" font-family="Arial">• emergencja struktur</text>
+  <text x="610" y="295" font-size="14" text-anchor="middle" font-family="Arial">• wzmacnianie synaps</text>
+  <text x="610" y="320" font-size="14" text-anchor="middle" font-family="Arial">• metabolizm poznawczy</text>
+  <text x="610" y="345" font-size="14" text-anchor="middle" font-family="Arial">• fuzja modeli</text>
+
+  <!-- Strzałki -->
+  <line x1="360" y1="275" x2="460" y2="275" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="460" y1="305" x2="360" y2="305" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Definicja strzałki -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Opisy relacji -->
+  <text x="410" y="260" font-size="13" text-anchor="middle" font-family="Arial">
+    BDH działa w polu RAMORGI
+  </text>
+  <text x="410" y="330" font-size="13" text-anchor="middle" font-family="Arial">
+    RAMORGA reguluje, nie ingeruje w metabolizm
+  </text>
+
+</svg>
