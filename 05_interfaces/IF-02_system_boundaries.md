@@ -11,3 +11,6 @@ Constraints:
 
 Purpose:
 Maintain homeostatic separation between modules.
+
+Interfaces do not regulate field dynamics or amplitude;
+all regulation is delegated exclusively to the Meniscus Engine.
