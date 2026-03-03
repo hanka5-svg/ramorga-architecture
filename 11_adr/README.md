@@ -49,3 +49,5 @@ Pipeline remains deterministic.
 - [Principles](../09_principles/README.md)
 - [Invariants](../04_invariants/README.md)
 - [Field Engine](../02_field_engine/README.md)
+
+ADR documents are records of architectural osadzenie (contextual embedding), not implementation precedents.
