@@ -18,6 +18,17 @@ Each module contract includes:
 
 ---
 
+# Module Contracts Overview
+
+Module contracts formalize the constitutional separation
+between Field, Meniscus, and Interface layers.
+
+They prevent responsibility overlap, escalation paths,
+and semantic drift across the architecture.
+
+
+---
+
 ## Field Module (Superposition Layer)
 
 **Responsibilities**
