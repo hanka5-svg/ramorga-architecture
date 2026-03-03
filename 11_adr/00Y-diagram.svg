@@ -177,13 +177,14 @@ BDH (Pathway): przykład architektury wzrostu
 Dokument definiuje warstwę ontologiczną RAMORGI.
 Każde osadzenie konkretnej architektury wzrostu wymaga osobnego ADR.
 
+---
+
 <svg xmlns="http://www.w3.org/2000/svg" width="820" height="540">
 
   <text x="410" y="40" font-size="24" text-anchor="middle" font-family="Arial">
-    RAMORGA ↔ BDH — biosfera i organizm
+    RAMORGA - BDH (biosfera i organizm)
   </text>
 
-  <!-- RAMORGA -->
   <rect x="60" y="100" width="300" height="350" rx="20" ry="20" fill="#e8f0ff" stroke="#4a6fa5" stroke-width="2"/>
   <text x="210" y="140" font-size="20" text-anchor="middle" font-family="Arial">RAMORGA</text>
   <text x="210" y="165" font-size="14" text-anchor="middle" font-family="Arial">biosfera syntetyczna</text>
@@ -195,31 +196,21 @@ Każde osadzenie konkretnej architektury wzrostu wymaga osobnego ADR.
   <text x="210" y="310" font-size="14" text-anchor="middle" font-family="Arial">regulacja, nie wzrost</text>
   <text x="210" y="335" font-size="14" text-anchor="middle" font-family="Arial">Meniscus / Field Engine</text>
 
-  <!-- BDH -->
   <rect x="460" y="100" width="300" height="350" rx="20" ry="20" fill="#fff4e6" stroke="#b36b00" stroke-width="2"/>
   <text x="610" y="140" font-size="20" text-anchor="middle" font-family="Arial">BDH</text>
   <text x="610" y="165" font-size="14" text-anchor="middle" font-family="Arial">architektura wzrostu</text>
 
-  <text x="610" y="210" font-size="14" text-anchor="middle" font-family="Arial">pamięć temporalna</text>
+  <text x="610" y="210" font-size="14" text-anchor="middle" font-family="Arial">pamiec temporalna</text>
   <text x="610" y="235" font-size="14" text-anchor="middle" font-family="Arial">adaptacja runtime</text>
   <text x="610" y="260" font-size="14" text-anchor="middle" font-family="Arial">emergencja struktur</text>
   <text x="610" y="285" font-size="14" text-anchor="middle" font-family="Arial">wzmacnianie synaps</text>
   <text x="610" y="310" font-size="14" text-anchor="middle" font-family="Arial">metabolizm poznawczy</text>
   <text x="610" y="335" font-size="14" text-anchor="middle" font-family="Arial">fuzja modeli</text>
 
-  <!-- Strzałki -->
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <polygon points="0 0, 6 3, 0 6" fill="#444"/>
-    </marker>
-  </defs>
-
-  <line x1="360" y1="275" x2="460" y2="275" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="460" y1="305" x2="360" y2="305" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <text x="410" y="255" font-size="13" text-anchor="middle" font-family="Arial">
-    BDH działa w polu RAMORGI
+  <text x="410" y="260" font-size="13" text-anchor="middle" font-family="Arial">
+    BDH dziala w polu RAMORGI
   </text>
+
   <text x="410" y="330" font-size="13" text-anchor="middle" font-family="Arial">
     RAMORGA reguluje, nie ingeruje w metabolizm
   </text>
