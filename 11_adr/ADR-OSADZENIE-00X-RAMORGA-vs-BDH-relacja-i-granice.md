@@ -2,6 +2,10 @@ ADR‑OSADZENIE‑00X
 
 Przeczytaj artykuł badawczy BDH: https://arxiv.org/abs/2509.26507
 
+Do tego ADR dołączony jest diagram ontologiczny (00Y-diagram.md), który wizualizuje relację zawierania i przepływ regulacji.
+
+---
+
 RAMORGA vs BDH — definicja przez różnicę i punkty styku
 
 Status: Proponowane
