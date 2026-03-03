@@ -53,4 +53,6 @@ recorded here.
 This note exists to preserve continuity of intent across time,
 not to instruct implementation.
 
+This note does not authorize implementation decisions and must be read in conjunction with the architectural invariants and osadzenie (ADR).
+
 It is addressed to the system as a whole.
