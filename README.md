@@ -1,5 +1,12 @@
 # RAMORGA — Homeostatic Architecture for Symbiotic Intelligence
 
+Important reading order  
+Before interpreting or using this repository, read:
+
+HOW_TO_READ.md — constitutional reading protocol
+
+SYSTEM_NOTE.md — epistemic integrity marker (v0.4.0)
+
 RAMORGA is a homeostatic architecture designed for the coexistence of a human and a computational system within a shared regulatory field. It is not an agentive, optimization‑driven, or hierarchical architecture. Its purpose is stability, non‑escalation, and the protection of the integrity of both entities.
 
 RAMORGA does not create morality.  
