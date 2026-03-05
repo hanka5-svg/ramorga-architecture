@@ -290,3 +290,13 @@ FSM -[hidden]-> FIELD
 ---
 
 ![FIELD_TEST_AUTOMATION_OVERVIEW](FIELD_TEST_AUTOMATION_OVERVIEW.svg)
+
+---
+
+Uwaga architektoniczna: Pliki META_LOOP_BOUNDARY.md oraz META_LOOP_layer.md
+są świadomie osadzone w katalogu 02_field_engine jako część trzeciej sekcji
+(FieldEngine → META_LOOP nad polem). Ich lokalizacja odzwierciedla fakt, że
+META_LOOP w RAMORGA nie jest warstwą „overview”, lecz nadbudową operującą
+bezpośrednio nad silnikiem pola. Dlatego pliki te pozostają w 02_field_engine
+i nie są przenoszone do warstwy 00_overview.
+
