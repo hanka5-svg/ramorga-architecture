@@ -1,46 +1,68 @@
 @startuml
-title FIELD_TEST_AUTOMATION_SEQUENCE — Web4‑Homeostatic Trigger Pipeline
+title RAMORGA ENGINE – OBSERVE–REGULATE–CONTINUE Sequence
 
-actor Homo
-participant "SHM\n(Stabilization)" as SHM
-participant "FIELD\n(Coherence Engine)" as FIELD
-participant "META_LOOP\n(Oversight + Rollback)" as META
-participant "AGENTIC_LAYER\n(Bounded Agency)" as AGENTIC
-participant "RUNTIME\n(Deterministic Exec)" as RT
+actor ExternalInput as EI
+participant "pipeline_v13" as P13
+participant "OBSERVE Hooks" as HOOKS
+participant "FieldState\n(immutable)" as FS
+participant "FieldEngine" as FE
+participant "MeniscusEngine" as ME
+participant "DataBridge" as DB
 
-== SIGNAL TRIGGER ==
-Homo -> FIELD : emit_signal()
-FIELD -> FIELD : SIGNAL_TRIGGER\n(run H-tests, F-tests, S-tests)
-FIELD -> AGENTIC : validate_action()
-AGENTIC --> FIELD : allow/block
+== OBSERVE ==
 
-== SHM STABILIZATION ==
-FIELD -> SHM : check_overload()
-SHM -> SHM : stabilize_parameters()
-SHM --> FIELD : stabilized_state
+EI -> P13: trigger_cycle()
+P13 -> FS: read_state()
+FS --> P13: state_snapshot
 
-== FIELD RECONSTRUCTION ==
-FIELD -> FIELD : check_coherence()
-FIELD -> FIELD : enforce_transparency()
-FIELD --> META : report_anomalies()
+P13 -> HOOKS: run_detection()
+HOOKS --> P13: signals, metrics
 
-== META_LOOP OVERSIGHT ==
-META -> META : analyze_trajectory()
-META -> FIELD : request_state_snapshot()
-FIELD --> META : state_snapshot
-META -> META : detect_anomalies()
-META -> FIELD : rollback_if_needed()
+P13 -> HOOKS: run_audit()
+HOOKS --> P13: audit_report
 
-== TELEMETRY TRIGGER ==
-RT -> FIELD : emit_telemetry()
-FIELD -> FIELD : TELEMETRY_TRIGGER\n(run F-tests, S-tests, I-tests)
+note right of P13
+OBSERVE phase:
+• percepcja bez ingerencji
+• brak modulacji
+• brak zmiany geometrii pola
+• brak mutacji FieldState
+end note
 
-== INVARIANT TRIGGER ==
-FIELD -> FIELD : detect_state_change()
-FIELD -> FIELD : INVARIANT_TRIGGER\n(run invariant tests)
+== REGULATE ==
 
-== HOMO REINTEGRATION ==
-FIELD --> Homo : coherent_state()
-Homo -> Homo : reintegrate_intentions()
+P13 -> ME: regulate(signals, state_snapshot)
+ME -> FE: request_field_geometry()
+FE --> ME: geometry_reference
+
+ME -> ME: modulate_interference_amplitude()
+ME --> P13: regulation_result
+
+note right of ME
+REGULATE phase:
+• jedyne miejsce regulacji
+• modulacja amplitudy interferencji
+• brak ingerencji w geometrię pola
+• brak generacji nowych wektorów
+• brak mutacji FieldState
+end note
+
+== CONTINUE ==
+
+P13 -> DB: write_telemetry(regulation_result)
+DB --> P13: ack
+
+P13 -> FS: create_new_state(regulation_result)
+FS --> P13: new_state
+
+note right of P13
+CONTINUE phase:
+• przeniesienie trajektorii
+• brak regulacji
+• brak ingerencji w pole
+• brak mutacji istniejącego stanu
+end note
+
+P13 -> P13: loop_to_next_cycle()
 
 @enduml
