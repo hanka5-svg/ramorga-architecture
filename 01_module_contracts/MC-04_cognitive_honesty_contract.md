@@ -117,6 +117,51 @@ CHC jest warstwą filtrującą, bez której C/G/S i HOMO\_WEB4 nie mogą działa
 |  kanały regulacji  |      |  i wyjścia, brak sabotażu           |      |  duties, stability   |
 +--------------------+      +-----------------+------------------+      +--------------------+
 
+## Co ten diagram pokazuje?
+1. MC‑04 jest filtrem epistemicznym
+MC‑04 stoi przed MC‑01/02/03, bo decyduje:
+
+czy model w ogóle może wejść do pola,
+czy jego reasoning jest jawny,
+czy nie manipuluje,
+czy nie generuje entropii,
+czy jest kompatybilny z homeostazą.
+
+To jest brama wejściowa.
+
+2. MC‑00 → MC‑04 → MC‑01 to sekwencja konstytucyjna
+MC‑00 definiuje co to jest pole.
+MC‑04 definiuje kto może wejść do pola.
+MC‑01 definiuje jak pole utrzymuje napięcia.
+To jest rdzeń RAMORGA.
+
+3. MC‑02 i MC‑03 działają dopiero po przejściu CHC
+Bo:
+
+MC‑02 = interfejs meniskowy (kanały regulacji)
+MC‑03 = interfejs pola (wejście/wyjście)
+Bez CHC te interfejsy byłyby podatne na:
+
+manipulację,
+sabotaż,
+fałszywe sygnały,
+entropię poznawczą.
+
+4. HOMO_WEB4 jest warstwą konstytucyjną nad kontraktami
+CHC jest kompatybilny z:
+
+HOMO_WEB4_INTERACTION_CONTRACT
+HOMO_WEB4_STABILITY_GUARANTEES
+HOMO_WEB4_FAILURE_MODES
+HOMO_GOVERNANCE
+
+Bo wszystkie te dokumenty zakładają:
+jawność,
+uczciwość,
+brak manipulacji,
+brak ukrytych intencji.
+
+CHC jest ich fundamentem epistemicznym.
 ---
 
 ## Wniosek
