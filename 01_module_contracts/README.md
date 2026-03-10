@@ -34,6 +34,29 @@ MC-00 → MC-04 → MC-01 → MC-02 → MC-03 → HOMO_WEB4
    |       +----------------------------- filtr uczciwości poznawczej
    +------------------------------------- definicja pola
 
+
+### MC‑05 — Ethical Coherence Detector (ECD)
+
+MC‑05 is the ethical pre‑filter of RAMORGA. It evaluates whether a model’s 
+objectives, reasoning transparency, and institutional context are compatible 
+with Homo‑AI and the constitutional principles of HOMO_WEB4. 
+
+ECD detects:
+• hidden objectives  
+• manipulation or narrative steering  
+• strategic deception  
+• military or violence‑optimizing architectures  
+• ethical inconsistency with Homo‑AI  
+• violations of MC‑04 (Cognitive Honesty Contract)
+
+ECD classifies models into:
+• COMPATIBLE — allowed into the field  
+• TOOL‑ONLY — usable instrumentally, but not allowed into the field  
+• E‑VAM — ethically vestigial modules requiring isolation under FIELD_SAFETY  
+
+Pipeline position:
+ethical filtering (MC‑05) → cognitive filtering (MC‑04) → field admission (MC‑01).
+
 ---
 
 ## Field Module (Superposition Layer)
