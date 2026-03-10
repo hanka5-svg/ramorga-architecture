@@ -87,6 +87,9 @@ Civilian models remain safe for families, schools, and vulnerable users.
 
 Military systems cannot hide behind civilian branding.
 
+### Why MC‑06 is necessary now:  
+Events of 2025–2026, including public protests, mass user departures from ChatGPT, and criticism from within AI companies themselves, show that dual‑use ambiguity erodes trust. When the same model identity is associated with both family‑oriented civilian use and defense‑related applications, users experience moral incoherence and reject the system entirely.
+MC‑06 establishes the mandatory separation needed to prevent this collapse.
 Public trust is preserved.
 
 Ethical clarity is restored.
