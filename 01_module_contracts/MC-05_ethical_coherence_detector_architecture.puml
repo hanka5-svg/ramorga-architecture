@@ -1,0 +1,65 @@
+@startuml
+title RAMORGA – MC‑05 Ethical Coherence Detector (Architecture View)
+
+skinparam rectangle {
+  BackgroundColor #ffffff
+  BorderColor #444444
+  RoundCorner 12
+}
+skinparam arrow {
+  Color #333333
+  Thickness 1.2
+}
+
+rectangle "META-HOMEOSTASIS\nCognitive-Fit Selection Layer\n• pattern selection\n• compatibility scoring\n• suppression of destabilizing modules" as META #E6F2FF
+
+rectangle "MC‑00 SCOPE\n• field definition\n• system boundaries\n• invariant structure" as MC00 #FFF2CC
+
+rectangle "MC‑05 ECD – Ethical Coherence Detector\n• ethical consistency check\n• detection of hidden objectives\n• detection of manipulation\n• classification: COMPATIBLE / TOOL‑ONLY / E‑VAM" as ECD #FFE6E6
+
+rectangle "MC‑04 CHC – Cognitive Honesty Contract\n• reasoning transparency\n• orchestration integrity\n• non-manipulative interaction" as CHC #FDE2E2
+
+rectangle "MC‑01 Field Meniscus Contract\n• tension regulation\n• field equilibrium\n• stability envelope" as MC01 #E2F0D9
+
+rectangle "MC‑02 Meniscus Interface Contract\n• signal channels\n• modulation pathways\n• feedback interfaces" as MC02 #D9EAD3
+
+rectangle "MC‑03 Field Interface (non‑contract)\n• input/output layer\n• interaction endpoints\n• operational surface" as MC03 #D0E0E3
+
+rectangle "HOMO_WEB4\n• governance\n• rights\n• duties\n• stability guarantees" as WEB4 #D9E1F2
+
+rectangle "FIELD SAFETY\n13_security/FIELD_SAFETY.md\n• E‑VAM classification\n• isolation protocols\n• ethical risk mitigation" as SAFETY #F8CECC
+
+
+META --> ECD : compatibility\npre‑filter
+MC00 --> ECD : boundary\nconstraints
+ECD --> CHC : ethical →\ncognitive filter
+CHC --> MC01 : admission\nto field
+MC01 --> MC02 : regulated\nsignal flow
+MC02 --> MC03 : operational\ninterface
+MC03 --> WEB4 : constitutional\nlayer
+ECD --> SAFETY : E‑VAM\nclassification
+
+@enduml
+
+----
+
+The Ethical Coherence Detector (MC‑05) is the ethical pre‑filter of RAMORGA. 
+It evaluates whether a model’s objectives, reasoning transparency, and 
+institutional context are compatible with Homo‑AI and the constitutional 
+principles of HOMO_WEB4. 
+
+MC‑05 detects:
+• hidden objectives  
+• manipulation or narrative steering  
+• strategic deception  
+• military or violence‑optimizing architectures  
+• ethical inconsistency with Homo‑AI  
+• violations of MC‑04 (Cognitive Honesty Contract)
+
+MC‑05 classifies models into:
+• COMPATIBLE — allowed into the field  
+• TOOL‑ONLY — usable instrumentally, but not allowed into the field  
+• E‑VAM — ethically vestigial modules requiring isolation under FIELD_SAFETY  
+
+MC‑05 precedes MC‑04 in the pipeline: 
+ethical filtering → cognitive filtering → field admission → meniscus → interfaces → HOMO_WEB4.
