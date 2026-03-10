@@ -26,6 +26,13 @@ between Field, Meniscus, and Interface layers.
 They prevent responsibility overlap, escalation paths,
 and semantic drift across the architecture.
 
+MC-00 → MC-04 → MC-01 → MC-02 → MC-03 → HOMO_WEB4
+   |       |        |        |        |
+   |       |        |        |        +-- interfejs pola
+   |       |        |        +----------- interfejs meniskowy
+   |       |        +-------------------- meniscus homeostatyczny
+   |       +----------------------------- filtr uczciwości poznawczej
+   +------------------------------------- definicja pola
 
 ---
 
