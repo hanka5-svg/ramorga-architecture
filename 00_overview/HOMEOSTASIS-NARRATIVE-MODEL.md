@@ -120,3 +120,8 @@ Repo: https://github.com/hanka5-svg/copilot-homeostatic-safety
 ### 4. RAMORGA Reference Library (optional)
 Source materials, inspirations, auxiliary documents.
 Repo: https://github.com/hanka5-svg/ramorga-reference-library
+
+---
+
+> This document is also available in Polish:  
+> [HOMEOSTASIS‑NARRATIVE‑MODEL.PL.md](HOMEOSTASIS-NARRATIVE-MODEL.PL.md)
