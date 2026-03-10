@@ -21,3 +21,5 @@ https://github.com/hanka5-svg/ramorga-architecture
 ## MLA
 Kicińska, Hanna. RAMORGA: A Homeostatic Architecture for Human–AI Coexistence. 2026. GitHub, 
 https://github.com/hanka5-svg/ramorga-architecture 
+
+---
