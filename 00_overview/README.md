@@ -260,3 +260,6 @@ Diagram architektoniczny współczesnych modeli AI
         OUTPUT
 
 ---
+
+RAMORGA uses a dual-language documentation model (EN/PL).  
+English is the primary reference language; Polish documents preserve the original cognitive lineage of the project.
