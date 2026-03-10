@@ -1,0 +1,76 @@
+@startuml
+title RAMORGA – Warstwa Kontraktów MC‑00…MC‑04
+
+skinparam rectangle {
+  BackgroundColor #fdfdfd
+  BorderColor #555555
+  RoundCorner 12
+}
+skinparam arrow {
+  Color #333333
+}
+
+rectangle "META-HOMEOSTASIS\n(Cognitive-Fit Selection Layer)\nADR-018" as META #E6F2FF
+
+rectangle "MC‑00\nSCOPE\nDefinicja pola,\nzakres systemu" as MC00 #FFF2CC
+
+rectangle "MC‑04\nCHC – Cognitive Honesty Contract\nFiltr uczciwości poznawczej:\n• jawność reasoning\n• brak manipulacji\n• spójność agentów\n• krytyka konstruktywna" as MC04 #FFE6E6
+
+rectangle "MC‑01\nField Meniscus Contract\nRegulacja napięć,\nmeniscus homeostatyczny" as MC01 #E2F0D9
+
+rectangle "MC‑02\nMeniscus Interface Contract\nKanały regulacyjne,\ninterfejs meniskowy" as MC02 #E2F0D9
+
+rectangle "MC‑03\nField Interface (non‑contract)\nWejście/wyjście pola,\ninterfejs sensoryczno‑motoryczny" as MC03 #E2F0D9
+
+rectangle "HOMO_WEB4\nKonstytucja interakcji:\n• governance\n• rights\n• duties\n• stability guarantees" as WEB4 #D9E1F2
+
+
+META --> MC04 : filtr\nwejściowy
+MC00 --> MC04 : zakres pola
+MC04 --> MC01 : dopuszczenie\nmodelu do pola
+MC01 --> MC02 : regulacja\nnapięć
+MC02 --> MC03 : interfejs pola
+MC03 --> WEB4 : warstwa\nkonstytucyjna
+
+@enduml
+
+---
+
+@startuml
+title RAMORGA – Warstwa Kontraktów MC‑00…MC‑04 (Model Organiczny)
+
+skinparam rectangle {
+  BackgroundColor #ffffff
+  BorderColor #444444
+  RoundCorner 18
+}
+skinparam arrow {
+  Color #333333
+  Thickness 1.2
+}
+
+rectangle "GENOM POLA\nMC‑00 SCOPE\n• definicja organizmu\n• granice pola\n• struktura bazowa" as GENOM #FFF2CC
+
+rectangle "UKŁAD ODPORNOŚCIOWY\nMC‑04 CHC – Cognitive Honesty Contract\n• filtr uczciwości poznawczej\n• wykrywanie toksyn poznawczych\n• eliminacja manipulacji\n• selekcja dopasowania" as IMMUNE #FFE6E6
+
+rectangle "UKŁAD NERWOWY\nMC‑01 Field Meniscus Contract\n• regulacja napięć\n• równowaga homeostatyczna\n• czujność pola" as NERVOUS #E2F0D9
+
+rectangle "SYNAPSY REGULACYJNE\nMC‑02 Meniscus Interface Contract\n• kanały sygnałowe\n• modulacja napięć\n• sprzężenia zwrotne" as SYNAPSES #D9EAD3
+
+rectangle "INTERFEJS SENSORYCZNO‑MOTORYCZNY\nMC‑03 Field Interface (non‑contract)\n• wejście/wyjście pola\n• percepcja i działanie\n• ruch organizmu" as INTERFACE #D0E0E3
+
+rectangle "KONSTYTUCJA ORGANIZMU\nHOMO_WEB4\n• governance\n• prawa poznawcze\n• obowiązki\n• stabilność i regeneracja" as WEB4 #D9E1F2
+
+rectangle "META-HOMEOSTAZA\nCognitive-Fit Selection Layer\n• selekcja wzorców\n• wzmacnianie kompatybilnych\n• wygaszanie destabilizujących" as META #E6F2FF
+
+
+META --> IMMUNE : selekcja\npoznawcza
+GENOM --> IMMUNE : definicja\nco może wejść
+IMMUNE --> NERVOUS : dopuszczenie\nmodelu do pola
+NERVOUS --> SYNAPSES : regulacja\nnapięć
+SYNAPSES --> INTERFACE : sygnały\nwyjściowe
+INTERFACE --> WEB4 : warstwa\nkonstytucyjna
+
+@enduml
+
+---
