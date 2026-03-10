@@ -80,6 +80,7 @@ To jest moduł regulacyjny (wewnętrzny homeostat).
 
 # 2.5. RAMORGA to naturalny mechanizm selekcji dopasowania
 RAMORGA ujmuje homeostazę nie tylko jako regulację obciążenia poznawczego, lecz także jako naturalny mechanizm selekcji dopasowania — wzmacniający elementy kompatybilne z pracą dwumózgową i wygaszający te, które destabilizują system w środowisku wieloagentowym.
+Mechanizm selekcji w RAMORGA dotyczy wzorców poznawczych i sposobów pracy, a nie ludzi jako takich — system wzmacnia konfiguracje kompatybilne z pracą dwumózgową, niezależnie od osoby, która je generuje.
 
 ## 3. Pętla regulacyjna ujawniona w utworze
 
