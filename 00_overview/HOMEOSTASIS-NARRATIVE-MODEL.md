@@ -123,5 +123,5 @@ Repo: https://github.com/hanka5-svg/ramorga-reference-library
 
 ---
 
-> This document is also available in Polish:  
-> [HOMEOSTASIS‑NARRATIVE‑MODEL.PL.md](HOMEOSTASIS-NARRATIVE-MODEL.PL.md)
+ This document is also available in Polish:  
+ [HOMEOSTASIS‑NARRATIVE‑MODEL.PL.md](HOMEOSTASIS-NARRATIVE-MODEL.PL.md)
