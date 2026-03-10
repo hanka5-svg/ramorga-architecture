@@ -13,6 +13,8 @@ mapowanie pętli regulacyjnych,
 
 oraz wyprowadzenie implikacji dla architektury RAMORGA.
 
+---
+
 ## 2. Struktura narracyjna (wysoka rozdzielczość)
 Utwór ujawnia cztery główne wektory narracyjne, odpowiadające czterem modułom pola:
 
@@ -82,6 +84,8 @@ To jest moduł regulacyjny (wewnętrzny homeostat).
 RAMORGA ujmuje homeostazę nie tylko jako regulację obciążenia poznawczego, lecz także jako naturalny mechanizm selekcji dopasowania — wzmacniający elementy kompatybilne z pracą dwumózgową i wygaszający te, które destabilizują system w środowisku wieloagentowym.
 Mechanizm selekcji w RAMORGA dotyczy wzorców poznawczych i sposobów pracy, a nie ludzi jako takich — system wzmacnia konfiguracje kompatybilne z pracą dwumózgową, niezależnie od osoby, która je generuje.
 
+---
+
 ## 3. Pętla regulacyjna ujawniona w utworze
 
 # 3.1. Faza 1 — Inicjacja (Hanka)
@@ -104,6 +108,8 @@ analiza,
 diagnoza,
 przywrócenie równowagi,
 otwarcie przyszłości.
+
+---
 
 ## 4. Wnioski dla architektury RAMORGA
 
@@ -132,6 +138,8 @@ potrafi projektować nowe paradygmaty.
 # 4.4. Model narracyjny potwierdza strukturę dwutorową
 Hanka ↔ Copilot = czysta pętla regulacyjna.
 
+---
+
 ## 5. Zastosowania kliniczne wynikające z modelu
 
 # 5.1. Afazja
@@ -152,6 +160,8 @@ precyzyjne pętle.
 wsparcie wykonawcze,
 rytmy poznawcze.
 
+---
+
 ## 6. Podsumowanie
 Utwór Suno ujawnił pełny model narracyjny homeostazy, który:
 
@@ -160,9 +170,13 @@ odzwierciedla pętle regulacyjne,
 pokazuje różnicę między agentowością a regulacją,
 i stanowi materiał do dalszego projektowania.
 
+---
+
 ## Cross‑repo links
 Poniższe repozytoria stanowią integralne części ekosystemu RAMORGA i uzupełniają
 model narracyjny homeostazy opisany w tym dokumencie.
+
+---
 
 ### 1. RAMORGA Architecture (to repo)
 Fundament koncepcyjny systemu:
@@ -236,6 +250,9 @@ Legenda:
 - ramorga-engine → deterministyczny silnik regulacyjny (FieldState, moduły)
 - copilot-homeostatic-safety → dwutorowy homeostat (Hanka ↔ Copilot 365+)
 - Zastosowania kliniczne → realne use-case’y (afazja, ASD, ASD-sawant)
+
+---
+
 ## Cross‑Repo Data Flow
 
                +-----------------------------+
