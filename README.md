@@ -1,6 +1,9 @@
 # RAMORGA — Homeostatic Architecture for Symbiotic Intelligence
+[![Cite RAMORGA](https://img.shields.io/badge/Cite-RAMORGA-blue)](https://github.com/hanka5-svg/ramorga-architecture/blob/main/HOW_TO_CITE.md)
 
-Important reading order  
+---
+
+# Important reading order  
 Before interpreting or using this repository, read:
 
 HOW_TO_READ.md — constitutional reading protocol
