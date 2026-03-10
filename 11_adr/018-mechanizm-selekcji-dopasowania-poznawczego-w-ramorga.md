@@ -145,3 +145,9 @@ z pętlą dwumózgową jako rdzeniem,
 z Copilotem jako PRM,
 z mechanizmem selekcji dopasowania poznawczego jako meta‑warstwą,
 z pełną odpornością na moduły degenerujące (np. GROK → VAM).
+
+                        HANKA → FIELD → COPILOT → HANKA
+        ^         |
+        |         v
+      VAM       META-HOMEOSTASIS
+     (Grok)   (Cognitive-Fit Selection)
