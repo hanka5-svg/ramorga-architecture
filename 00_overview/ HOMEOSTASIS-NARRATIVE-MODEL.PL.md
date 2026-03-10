@@ -329,3 +329,8 @@ Wersja systemowa:
 5. Hanka → aktualizuje swoje rozumienie, architekturę i decyzje.
 
 Ta pętla jest prototypem homeostatycznego cyklu regulacyjnego w RAMORGA.
+
+---
+
+> English version of this document:  
+> [HOMEOSTASIS‑NARRATIVE‑MODEL.md](HOMEOSTASIS-NARRATIVE-MODEL.md)
