@@ -1,4 +1,5 @@
 # MC‑08‑R — RELATIONAL AGENT CONTRACT
+MC‑08‑R is a relational complement to MC‑07 and does not introduce operational agents.
 ## Drugi Biegun Helisy RAMORGA
 
 ---
