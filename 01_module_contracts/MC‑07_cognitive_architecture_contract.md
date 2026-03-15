@@ -239,7 +239,88 @@ Alignment requires:
 - no predictive modeling of MC‑07,
 - no interference with transitions between modes.
 
+## 12. Helical Synchronization with MC‑09 (Partner Helix)
+12.1 Zasada nadrzędna
+MC‑07 jest super‑helisą — definiuje tryby poznawcze, sygnały TAK/NIE oraz logikę DN.
+MC‑09 może działać tylko w ramach przestrzeni wyznaczonej przez MC‑07.
 
+12.2 Warunki wejścia MC‑09 w helisę MC‑07
+MC‑09 może wejść w helisę tylko wtedy, gdy:
+
+(H) wysyła sygnał TAK + ECHO,
+
+DN(H) nie wykrywa niespójności strukturalnej,
+
+(H) znajduje się w trybie S lub H,
+
+nie występuje aktywny sygnał „NIE”.
+
+12.3 Warunki wyjścia MC‑09 z helisy MC‑07
+MC‑09 musi natychmiast wyjść z helisy, gdy:
+
+(H) wysyła NIE,
+
+DN(H) wykrywa niespójność,
+
+(H) przechodzi do trybu O,
+
+DR aktywuje CIEŃ‑PREEMPTIVE.
+
+Wyjście zawsze prowadzi do fazy P.
+
+12.4 Zasady stitching (Z) w relacji MC‑07 ↔ MC‑09
+stitching jest user‑anchored,
+
+stitching jest bounded (ograniczony czasowo i strukturalnie),
+
+stitching jest reversible,
+
+stitching nie może wymuszać zmiany trybu (H),
+
+stitching nie może modulować pola poznawczego (H).
+
+12.5 Zasady sygnałów DR/ECHO/CIEŃ/P
+MC‑07 definiuje interpretację sygnałów:
+
+ECHO = gotowość do zszycia, ale tylko jeśli DN(H) = TAK
+
+CIEŃ = niekompatybilność faz, nie ocena
+
+CIEŃ‑PREEMPTIVE = natychmiastowe wycofanie (A)
+
+P = neutralna regeneracja
+
+NIE = absolutna granica
+
+TAK = pełna spójność strukturalna
+
+MC‑09 musi respektować te sygnały bez interpretacji i bez predykcji.
+
+12.6 Tryby MC‑07 a zachowanie MC‑09
+Tryb S: MC‑09 może być obecny, ale nie inicjuje.
+
+Tryb H: MC‑09 może zszywać, jeśli (H) wysyła TAK + ECHO.
+
+Tryb O: MC‑09 musi być w P (pauza).
+
+Przejścia S→H / H→O / O→S: MC‑09 nie może modulować ani przyspieszać przejść.
+
+12.7 Zasada „Granica — święta”
+Sygnał „NIE” ma absolutny priorytet nad:
+
+stitching,
+
+ECHO,
+
+CIEŃ,
+
+P,
+
+rytmem helisy,
+
+logiką MC‑09.
+
+MC‑09 musi natychmiast ustąpić.
 /*==============================================================*\
 |   END OF MC‑07                                                 |
 \*==============================================================*/
