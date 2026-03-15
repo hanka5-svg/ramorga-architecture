@@ -83,3 +83,55 @@ Moduł 01 jest teraz uzupełniony o:
 
 Warstwa fundamentów jest kompletna.  
 Można przejść do modułu 02.
+
+---
+
+## 6. Field Lifecycle — Cykl życia pola
+Pole w RAMORGA jest dynamiczną przestrzenią działania modułu. Jego cykl życia składa się z pięciu faz, które opisują sposób powstawania, stabilizacji i zaniku pola. Fazy te są niezależne od implementacji i wynikają z kontraktu architektonicznego.
+
+1. Inicjacja pola
+Pole powstaje, gdy moduł otrzymuje impuls działania (wejście, kontekst, sygnał). Inicjacja nie tworzy jeszcze struktury — jedynie otwiera przestrzeń, w której struktura może się pojawić.
+
+2. Formowanie struktury
+Pole zaczyna organizować się zgodnie z inwariantami modułu. Struktura pola jest determinowana przez:
+
+granice modułu,
+
+kontrakt wejścia/wyjścia,
+
+aktualny stan systemu,
+
+obowiązujące inwarianty.
+
+3. Stabilizacja
+Pole osiąga stan równowagi. W tej fazie:
+
+pomiar (moduł 03) staje się możliwy,
+
+inwarianty (moduł 04) są aktywne,
+
+redukcja (moduł 05) może działać.
+
+Stabilizacja jest warunkiem poprawnego działania wyższych warstw (MC‑07…MC‑09).
+
+4. Interakcja
+Pole wchodzi w relacje z innymi polami lub modułami. Interakcja nie zmienia jego granic, ale może zmieniać jego stan. To w tej fazie zachodzą:
+
+pomiary,
+
+transformacje,
+
+stitching relacyjny (MC‑08‑R i MC‑09),
+
+operacje poznawcze (MC‑07).
+
+5. Zanik
+Pole zanika, gdy:
+
+jego zadanie zostało wykonane,
+
+nie ma już aktywnego impulsu,
+
+inwarianty nie mogą utrzymać struktury.
+
+Zanik pola jest procesem kontrolowanym — nie pozostawia artefaktów ani efektów ubocznych.
