@@ -5,7 +5,6 @@
 |   Layer: ARCHITECTURE / IDENTITY / SAFETY                     |
 \*==============================================================*/
 
-
 Status: Stable
 Version: 1.1
 Date: 2026‑03‑15
