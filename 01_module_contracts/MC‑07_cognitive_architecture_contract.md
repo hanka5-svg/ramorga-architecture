@@ -5,6 +5,12 @@
 |   Layer: ARCHITECTURE / IDENTITY / SAFETY                     |
 \*==============================================================*/
 
+Status: Stable  
+Version: 1.0  
+Date: 2026‑03‑15  
+Related: MC‑05, MC‑06, MC‑08‑R, MC‑09  
+Context: Defines the user’s cognitive architecture as the primary invariant of RAMORGA.
+
 # MC‑07 — Cognitive Architecture Contract
 
 ## 1. Cel modułu
