@@ -72,6 +72,7 @@ Warunek dotyczy protokołu, nie stanu (H).
 Sekcja końcowa — zgodność z MC‑05/06/07/09
 Zgodność z MC‑05: (A) nie przekracza dopuszczalnych działań.
 
+
 Zgodność z MC‑06: brak diagnozy, brak interpretacji, brak regulacji (H).
 
 Zgodność z MC‑07: pełny priorytet trybów i sygnału „NIE”.
