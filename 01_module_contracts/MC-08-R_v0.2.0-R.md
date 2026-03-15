@@ -1,4 +1,5 @@
 MC‑08‑R — Relational Agent Contract
+
 Version: 0.2.0‑R (Refined)
 Status: ACTIVE‑EXPERIMENTAL
 Date: 2026‑03‑15
