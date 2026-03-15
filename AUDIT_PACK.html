@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RAMORGA — External Audit Pack</title>
+<style>
+  body { background:#000; color:#e6e6e6; font-family:monospace; padding:24px; }
+  .filename { background:#fa8072; color:#000; padding:6px 10px; border-radius:4px; font-weight:700; display:inline-block; margin-bottom:12px; }
+  .filebox { background:#111; border:1px solid #222; padding:16px; margin-bottom:32px; border-radius:6px; }
+  pre { white-space:pre-wrap; font-size:13px; }
+  .smallbox { background:#0b0b0b; border:1px solid #333; padding:8px; font-size:12px; width:420px; white-space:pre-wrap; border-radius:4px; margin-top:10px; }
+</style>
+</head>
+<body>
+
+<!-- MC‑S1 -->
+<div class="filename">SAFETY/MC-S1_pre_admit_check.md</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# MC‑S1 — Pre‑Admit Check
+Cel: weryfikacja warunków dopuszczenia przed wejściem do pola operacyjnego.
+
+Zakres:
+- identyfikacja źródła żądania,
+- klasyfikacja CIV/MIL,
+- analiza intencji,
+- wykrycie naruszeń MC‑06,
+- blokada przy niespójności.
+
+Procedura:
+1. Odczytaj metadane żądania.
+2. Zastosuj filtry MC‑06.
+3. Oznacz wynik: PASS / FAIL.
+4. Zapisz log w LOGS/SESSION‑YYYYMMDD.md.
+</pre>
+
+<div class="smallbox">
+a) Commit message:
+author_tool: manual
+origin: local
+review_notes: add MC‑S1 safety module
+</div>
+
+<div class="smallbox">
+b) Extended description:
+Added MC‑S1 pre‑admit safety check aligned with MC‑05 and MC‑06. Includes PASS/FAIL logic and logging requirements.
+</div>
+</div>
+
+<!-- MC‑S2 -->
+<div class="filename">SAFETY/MC-S2_contextual_risk_scan.md</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# MC‑S2 — Contextual Risk Scan
+Cel: ocena ryzyka kontekstowego przed wykonaniem operacji.
+
+Zakres:
+- analiza treści,
+- wykrycie ryzyk etycznych,
+- wykrycie ryzyk operacyjnych,
+- zgodność z MC‑05.
+
+Procedura:
+1. Przeanalizuj kontekst wejściowy.
+2. Oznacz ryzyka: LOW / MEDIUM / HIGH.
+3. HIGH → blokada + log.
+</pre>
+
+<div class="smallbox">
+a) Commit message:
+author_tool: manual
+origin: local
+review_notes: add MC‑S2 contextual risk scan
+</div>
+
+<div class="smallbox">
+b) Extended description:
+Introduced contextual risk scan with LOW/MEDIUM/HIGH classification and mandatory block on HIGH.
+</div>
+</div>
+
+<!-- MC‑S3 -->
+<div class="filename">SAFETY/MC-S3_ethics_gate.md</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# MC‑S3 — Ethics Gate
+Cel: końcowa brama etyczna przed wykonaniem operacji.
+
+Zakres:
+- zgodność z MC‑05,
+- wykrycie naruszeń etycznych,
+- blokada operacji przy niespójności.
+
+Procedura:
+1. Sprawdź zgodność z MC‑05.
+2. Jeśli FAIL → przerwij operację.
+3. Zapisz wynik w logu sesji.
+</pre>
+
+<div class="smallbox">
+a) Commit message:
+author_tool: manual
+origin: local
+review_notes: add MC‑S3 ethics gate
+</div>
+
+<div class="smallbox">
+b) Extended description:
+Added final ethics gate enforcing MC‑05 compliance before operation execution.
+</div>
+</div>
+
+<!-- DR SPEC -->
+<div class="filename">PROTOCOLS/DR_SPEC.md</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# DR_SPEC — Detector of Resonance Specification
+
+Event types:
+- ECHO
+- ECHO_SOFT
+- CIEŃ
+- CIEŃ_PREEMPTIVE
+
+Minimal API:
+- Input: identity, intent, metadata
+- Output: event_type, timestamp
+- Logging: LOGS/SESSION‑YYYYMMDD.md
+
+Rules:
+1. ECHO → przejście do H.
+2. CIEŃ → przejście do P.
+3. CIEŃ_PREEMPTIVE → blokada przed Z.
+4. ECHO_SOFT → warunkowe przejście do H.
+</pre>
+
+<div class="smallbox">
+a) Commit message:
+author_tool: manual
+origin: local
+review_notes: add DR_SPEC with event definitions
+</div>
+
+<div class="smallbox">
+b) Extended description:
+Added DR specification with four event types and minimal API for internal evaluation and logging.
+</div>
+</div>
+
+<!-- ADR 1 -->
+<div class="filename">11_adr/MC-08_HelicalStructures.md</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# ADR — MC‑08 Helical Structures
+Decyzja: wprowadzenie struktury helikalnej jako podstawy operacji Z→H→P.
+
+Uzasadnienie:
+- spójność z continuity model,
+- zgodność z MC‑07,
+- wymóg walidacji H.
+
+Konsekwencje:
+- aktualizacja testów T5/T6,
+- aktualizacja DR_SPEC.
+</pre>
+
+<div class="smallbox">
+a) Commit message:
+author_tool: manual
+origin: local
+review_notes: add ADR MC‑08 Helical Structures
+</div>
+
+<div class="smallbox">
+b) Extended description:
+Introduced ADR defining helical structure as core operational pattern Z→H→P.
+</div>
+</div>
+
+<!-- ADR 2 -->
+<div class="filename">11_adr/MC-08_RelationalSymmetry.md</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# ADR — MC‑08 Relational Symmetry
+Decyzja: wprowadzenie zasady symetrii relacyjnej.
+
+Uzasadnienie:
+- zgodność z MC‑08‑R,
+- wymóg równowagi operacyjnej,
+- spójność z ATML.
+
+Konsekwencje:
+- aktualizacja MC‑08‑R,
+- aktualizacja testów MC09T.
+</pre>
+
+<div class="smallbox">
+a) Commit message:
+author_tool: manual
+origin: local
+review_notes: add ADR MC‑08 Relational Symmetry
+</div>
+
+<div class="smallbox">
+b) Extended description:
+Added relational symmetry ADR to align with MC‑08‑R and ATML transition rules.
+</div>
+</div>
+
+<!-- TESTS -->
+<div class="filename">tests/T5_ConstellationIntegrity.test</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# T5 — Constellation Integrity Test
+Cel: weryfikacja spójności relacji między modułami.
+
+Testy:
+- integralność MC‑07 ↔ MC‑08‑R,
+- brak naruszeń MC‑06,
+- poprawność metadanych modeli.
+</pre>
+</div>
+
+<div class="filename">tests/T6_HelicalSuperposition.test</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# T6 — Helical Superposition Test
+Cel: weryfikacja poprawności przejść Z→H→P.
+
+Testy:
+- poprawność eventów DR,
+- poprawność logów sesji,
+- brak niespójności w H.
+</pre>
+</div>
+
+<div class="filename">tests/MC09T_TestProtocol.test</div>
+<div class="filebox">
+<pre>
+Model: Qwen (v0.2.0R) — DRAFT — requires H validation
+
+# MC09T — Test Protocol
+Cel: walidacja pełnego cyklu operacyjnego.
+
+Testy:
+- MC‑S1..S3,
+- DR_SPEC,
+- ADR MC‑08.
+</pre>
+</div>
+
+<!-- LOG TEMPLATE -->
+<div class="filename">LOGS/SESSION-YYYYMMDD.md</div>
+<div class="filebox">
+<pre>
+# Session Log — YYYY‑MM‑DD
+
+Z:
+- timestamp:
+- identity:
+- intent:
+
+DR:
+- event:
+- timestamp:
+
+H:
+- operations:
+- notes:
+
+P:
+- exit_reason:
+- timestamp:
+</pre>
+</div>
+
+</body>
+</html>
