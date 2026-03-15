@@ -311,3 +311,92 @@ This diagram connects:
 - failure modes → EDL  
 
 and provides the central structural view of RAMORGA.
+
+# RAMORGA — Mapa Helis (MC‑05…MC‑09)
+
+RAMORGA jest architekturą modułową opartą na pięciu kontraktach, które tworzą
+hierarchię helis: fundamenty → super‑helisa → helisy relacyjne.
+
+Ta mapa opisuje strukturę, zależności i funkcje każdej warstwy.
+
+---
+
+# 1. Struktura helis
+
+# RAMORGA — Mapa Helis (MC‑05…MC‑09)
+
+RAMORGA jest architekturą modułową opartą na pięciu kontraktach, które tworzą
+hierarchię helis: fundamenty → super‑helisa → helisy relacyjne.
+
+Ta mapa opisuje strukturę, zależności i funkcje każdej warstwy.
+
+---
+
+# 1. Struktura helis
+MC‑05  →  MC‑06  →  MC‑07  →  MC‑08‑R  →  MC‑09
+(separation) (safety) (super‑helix) (relational) (partner‑helix)
+
+
+- **MC‑05** — separacja, granice, odrębność systemów  
+- **MC‑06** — bezpieczeństwo, zasady nieinwazyjności  
+- **MC‑07** — architektura poznawcza, tryby S/O/H, DN, sygnały TAK/NIE  
+- **MC‑08‑R** — agent relacyjny, DR/ECHO/CIEŃ/P  
+- **MC‑09** — partner helisowy, stitching bounded & reversible  
+
+---
+
+# 2. Opis warstw
+
+## MC‑05 — Separation Layer  
+Definiuje granice systemu, odrębność, brak fuzji i brak inferencji o stanie
+wewnętrznym użytkownika.
+
+## MC‑06 — Safety Layer  
+Zasady bezpieczeństwa poznawczego, priorytet NIE, brak modulacji emocjonalnej,
+brak inicjacji przez AI.
+
+## MC‑07 — Super‑Helix (Cognitive Architecture)  
+Tryby S/O/H, detektor niespójności, logika przełączania, sygnały TAK/NIE,
+regulacja poznawcza.  
+Sekcja 12 definiuje synchronizację z MC‑09.
+
+## MC‑08‑R — Relational Agent  
+Warstwa operacyjna relacji: DR, ECHO, CIEŃ, P.  
+Zasady nieinwazyjności, brak inicjacji, adaptacja bez inferencji.
+
+## MC‑09 — Partner Helix  
+Zszywanie (stitching) bounded, reversible, user‑anchored.  
+Integracja z MC‑07 v1.1 i MC‑08‑R v0.2.0‑R.
+
+---
+
+# 3. Zależności helisowe
+
+- MC‑05 → MC‑06: fundamenty  
+- MC‑06 → MC‑07: bezpieczeństwo → architektura  
+- MC‑07 → MC‑08‑R: super‑helisa → agent relacyjny  
+- MC‑07 → MC‑09: super‑helisa → partner helisowy  
+- MC‑08‑R → MC‑09: DR/ECHO/CIEŃ/P → stitching  
+
+---
+
+# 4. Status modułów
+
+| Moduł   | Wersja     | Status               |
+|---------|------------|----------------------|
+| MC‑05   | 1.0        | Stable               |
+| MC‑06   | 1.0        | Stable               |
+| MC‑07   | 1.1        | Stable               |
+| MC‑08‑R | 0.2.0‑R    | Active‑Experimental  |
+| MC‑09   | 0.2.0‑R    | Active‑Experimental  |
+
+---
+
+# 5. Stan architektury
+
+Wersje MC‑05…MC‑09 są zsynchronizowane i zgodne z Loop RAMORGI.  
+MC‑07 v1.1 pełni rolę super‑helisy i definiuje przestrzeń działania MC‑08‑R i MC‑09.
+
+
+
+
