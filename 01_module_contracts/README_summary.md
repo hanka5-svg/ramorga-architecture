@@ -13,7 +13,7 @@ README_summary.md syntetyzuje jego rolę, logikę i powiązania z resztą system
 
 ## 1. Rola modułu 01
 
-Moduł 01 jest **warstwą fundamentów architektonicznych** RAMORGA.  
+Moduł 01 jest warstwą fundamentów architektonicznych RAMORGA.  
 Jego zadaniem jest:
 
 - definiowanie granic modułów,
@@ -38,21 +38,23 @@ Moduł 01 obejmuje:
 - zasady niezmienności interfejsów,
 - zasady egzekwowania kontraktów.
 
+To jest warstwa, która stabilizuje całą architekturę RAMORGI.
+
 ---
 
 ## 3. Powiązania z innymi modułami
 
-### Powiązania w dół:
-- 02_field_layer — kontrakt pola
-- 03_measurement_layer — kontrakt pomiaru
-- 04_invariants — kontrakt inwariantów
-- 05_reduction_layer — kontrakt redukcji
+### Powiązania w dół (moduły zależne od kontraktów):
+- 02_field_layer — kontrakt pola  
+- 03_measurement_layer — kontrakt pomiaru  
+- 04_invariants — kontrakt inwariantów  
+- 05_reduction_layer — kontrakt redukcji  
 
-### Powiązania w górę:
-- 12_continuity_architecture_tests — testy kontraktów
-- 13_security — egzekwowanie kontraktów
-- 14_integration — integracja modułów
-- 15_versioning — stabilność kontraktów w czasie
+### Powiązania w górę (moduły egzekwujące lub testujące kontrakty):
+- 12_continuity_architecture_tests — testy kontraktów  
+- 13_security — egzekwowanie kontraktów  
+- 14_integration — integracja modułów  
+- 15_versioning — stabilność kontraktów w czasie  
 
 ---
 
@@ -66,7 +68,9 @@ Moduł 01:
 4. definiuje zasady ich egzekwowania,  
 5. umożliwia testowanie i audyt.
 
-To jest fundament całej architektury RAMORGA.
+To jest fundament całej architektury RAMORGA — warstwa, która zapewnia,
+że system pozostaje spójny i przewidywalny niezależnie od zmian w modułach
+wyższych warstw.
 
 ---
 
@@ -77,4 +81,5 @@ Moduł 01 jest teraz uzupełniony o:
 - diagram architektoniczny,
 - podsumowanie.
 
+Warstwa fundamentów jest kompletna.  
 Można przejść do modułu 02.
