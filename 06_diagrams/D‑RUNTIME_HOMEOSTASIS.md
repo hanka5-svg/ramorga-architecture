@@ -1,7 +1,8 @@
-D‑RUNTIME_HOMEOSTASIS.md
+# D‑RUNTIME_HOMEOSTASIS.md
+
 RAMORGA — Homeostaza runtime MC‑11/MC‑12/MC‑13 + SEM + Metryki
 
-Cel
+# Cel
 Dokument przedstawia, jak runtime RAMORGI utrzymuje homeostazę interpretacyjną, łącząc:
 
 warstwy interpretacyjne (MC‑13/11/12),
@@ -16,7 +17,7 @@ metryki homeostatyczne (stabilność, spójność, ciągłość).
 
 To jest pełny model regulacji — odpowiednik autonomicznego układu nerwowego RAMORGI.
 
-1. Diagram homeostazy runtime
+## 1. Diagram homeostazy runtime
 
                          ┌──────────────────────────────────────────┐
                          │                INPUT TEXT                 │
@@ -88,44 +89,46 @@ To jest pełny model regulacji — odpowiednik autonomicznego układu nerwowego 
                           │   (stabilny po korekcie) │     │   (SEM: Safety/Escalation)│
                           └──────────────────────────┘     └──────────────────────────┘
 
-2. Jak działa homeostaza runtime
-1. MC‑13/11/12 generują interpretację
+## 2. Jak działa homeostaza runtime
+
+### 2.1. MC‑13/11/12 generują interpretację
 MC‑13 dostarcza struktur fonologicznych.
-
 MC‑11 ocenia trafność i stabilność podstawową.
-
 MC‑12 generuje interpretację emergentną, jeśli MC‑11 jest stabilne.
 
-2. Integracja scala trzy warstwy
+### 2.2. Integracja scala trzy warstwy
 Matryca integracyjna tworzy jedną strukturę interpretacyjną.
 
 To jest „ciało” odpowiedzi.
 
-3. Scoring W1–W5 ocenia jakość
+### 2.3. Scoring W1–W5 ocenia jakość
 W1–W5 to pięć wymiarów jakości interpretacji.
 
 W5 (stabilność) jest kluczowy dla homeostazy.
 
-4. Metryki homeostatyczne oceniają stan systemu
+### 2.4. Metryki homeostatyczne oceniają stan systemu
 S (stabilność)
-
 C (spójność)
-
-Q (ciągłość)
-
+Q (ciągłość): definicja i progi w HOMEOSTATIC_METRICS_Q.md
 R (regulacja)
-
 To jest „układ nerwowy RAMORGI”.
 
-5. SEM reaguje na niestabilność
+### 2.5. SEM reaguje na niestabilność
 W5 i S są mapowane na SEM.
 
 SEM decyduje o ścieżce: stabilna / ciągłość / eskalacja.
 
-6. Output jest regulowany
+### 2.6. Output jest regulowany
 Output może być stabilny, skorygowany lub ochronny.
 
-3. Zasady homeostazy runtime
+### 2.7. Arena.ai → runtime
+Wejście: surowy log tur (prompt + odpowiedź) dla modelu.
+Warunki: brak resetu, stały cel, stała liczba tur.
+Wyjście: S/C/Q/R + ścieżka (OK / Regulation / SEM).
+
+---
+
+## 3. Zasady homeostazy runtime
 Stabilność jest nadrzędna
 MC‑12 nie może działać, jeśli MC‑11 jest niestabilne.
 
@@ -136,44 +139,31 @@ SEM jest strażnikiem
 SEM chroni przed:
 
 halucynacją emergentną,
-
 błędami fonologicznymi,
-
 utratą ciągłości.
 
 Homeostaza jest procesem ciągłym
 Każda odpowiedź przechodzi przez:
 
 interpretację,
-
 integrację,
-
 scoring,
-
 homeostatyczną regulację.
 
-4. Powiązania
+## 4. Powiązania
 MC‑11_Learning_Layer.md
-
 MC‑12_Emergent_Layer.md
-
 MC‑13_Phonological_Layer.md
-
 MC_Integration_Matrix.md
-
 Model_Scoring.md
-
 HOMEOSTATIC_METRICS.md
-
 D‑RUNTIME_SEM_Escalation.md
-
 D‑RUNTIME_MC11_MC12_MC13_Overview.md
-
 18_runtime/*
-
 11.3–11.6 SEM
+HOMEOSTATIC_METRICS_Q.md
 
-5. Metryka Q — ciągłość interakcji (Continuity Index)
+## 5. Metryka Q — ciągłość interakcji (Continuity Index)
 Definicja
 Q (Continuity Index) mierzy zdolność systemu do utrzymania ciągłej interakcji w czasie bez resetów, zerwań referencji i eskalacji ochronnych.
 
@@ -205,7 +195,7 @@ Q jest odpowiednikiem CER/WER w ASR:
 CER/WER mierzy utratę znaków,
 Q mierzy utratę interakcji.
 
-6. Integracja testów Arena.ai z runtime RAMORGI
+## 6. Integracja testów Arena.ai z runtime RAMORGI
 Cel
 Umożliwić ocenę modeli porównywanych w Arena.ai  pod kątem ciągłości i homeostazy, a nie wyłącznie skuteczności epizodycznej.
 
@@ -251,7 +241,7 @@ RAMORGA odpowiada na pytanie:
 
 „Który model utrzymuje interakcję?”
 
-7. Zasada nadrzędna runtime’u
+## 7. Zasada nadrzędna runtime’u
 Homeostaza ma pierwszeństwo przed generacją.
 
 Jeśli ciągłość lub stabilność są zagrożone:
