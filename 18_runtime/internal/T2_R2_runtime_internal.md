@@ -1,3 +1,5 @@
+Internal runtime analysis — not intended for narrative reading.
+
 Runtime cues — T2_R2 (walkthrough)
 Model: zeylu‑beta
 MC‑13:  
