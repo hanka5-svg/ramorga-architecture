@@ -1,76 +1,234 @@
-D‑RAMORGA_RUNTIME_LAYER.md
-Cel i zakres
-Warstwa runtime definiuje mechanikę wykonywania pipeline, orkiestrację hooków, zarządzanie cyklem życia procesów regulacyjnych oraz integrację z MeniscusEngine i FieldEngine. Zakres obejmuje: model wykonywania, harmonogramy, mechanizmy obserwacji, DataBridge integration, snapshot lifecycle oraz polityki bezpieczeństwa w czasie rzeczywistym.
+RAMORGA Runtime Layer (Engineering Specification)  
+Status: Historical, fixed
+Scope: Execution model, pipeline orchestration, lifecycle management, real‑time safety enforcement
+Dependencies: MC‑14 (TMRL), Pattern Layer, Memory Layer, FieldEngine, MeniscusEngine, Module Contracts (01), SnapshotManager, DataBridge
 
-Kluczowe założenia projektowe
-Deterministyczny runtime — przy tych samych wejściach i konfiguracji runtime zachowuje deterministyczność.
+1. Purpose
+The Runtime Layer defines the execution environment for all regulatory and observational processes in the RAMORGA architecture. It specifies:
 
-Bezstanowość operacyjna vs. trwały stan — runtime zarządza procesami; trwały stan przechowywany w Memory Layer.
+the execution model,
 
-Hook‑first architecture — obserwacja i hooki są pierwszym krokiem w pipeline; żadne działanie nie jest wykonywane bez audytowalnego hooku.
+pipeline orchestration,
 
-Model wykonywania pipeline_v13
-OBSERVE — zbieranie sygnałów przez hooki; emitowanie surowych eventów.
+hook‑based observation,
 
-PIPELINE_v13 — transformacje: tension → energy → entropy → ritual; każda transformacja to etap z własnymi walidacjami.
+lifecycle management,
 
-REGULATE — wywołanie MeniscusEngine i FieldEngine z rekomendacjami; decyzje wykonywane zgodnie z kontraktami.
+error handling and retry logic,
 
-CONTINUE — zapis kontekstów, DataBridge SAVE, przygotowanie do snapshotu.
+integration with FieldEngine and MeniscusEngine,
 
-SNAPSHOT — wywołanie SnapshotManager; walidacja inwariantów; zamknięcie cyklu.
+real‑time safety enforcement.
 
-Runtime zarządza kolejnością, retry, timeoutami i eskalacjami.
+This layer is descriptive and historical, documenting the runtime model used in the RAMORGA architecture (2025–2026).
 
-Orkiestracja i harmonogramy
-Synchronous cycles — krótkie, deterministyczne cykle regulacyjne dla krytycznych operacji.
+2. Design Principles
+2.1. Deterministic Runtime
+Given identical inputs, configuration, and state, the runtime must produce identical outputs.
 
-Asynchronous tasks — długotrwałe analizy patternów, kalibracje, testy.
+2.2. Stateless Execution vs. Persistent State
+Runtime processes are stateless; persistent state is stored exclusively in the Memory Layer.
 
-Priority queues — priorytetyzacja zdarzeń zgodnie z politykami bezpieczeństwa.
+2.3. Hook‑First Architecture
+Every pipeline cycle begins with auditable hooks.
+No action is executed without:
 
-Hooki i obserwacja
-Pre‑hook — walidacja wejścia, sanity checks.
+pre‑hook validation,
 
-Observe hook — rejestracja surowych sygnałów do PatternEngine.
+observation hook registration,
 
-Post‑hook — zapis wyników, metryk, audit trail.
-Hooki muszą być audytowalne i nie mogą modyfikować FieldState bez przejścia przez kontrakty.
+post‑hook audit.
 
-Zarządzanie błędami i retry
-Idempotent operations — wszystkie operacje runtime projektowane jako idempotentne.
+2.4. Contract‑Bound Execution
+All runtime actions must satisfy:
 
-Backoff strategies — deterministyczne retry z ograniczeniem eskalacji.
+preconditions,
 
-Circuit breakers — mechanizmy zatrzymania cykli przy naruszeniu inwariantów.
+postconditions,
 
-Integracja z innymi warstwami
-Memory Layer — zapis snapshotów po zakończeniu cyklu; odczyt kontekstów historycznych.
+failure modes
 
-Pattern Layer — subskrypcja PatternEventów; runtime reaguje zgodnie z rekomendacjami regulatora.
+defined in 01_module_contracts.
 
-Module Contracts — runtime honoruje preconditions/postconditions i failure modes z 01_module_contracts.
+3. Execution Model: PIPELINE_v13
+Runtime executes cycles using the PIPELINE_v13 model:
 
-Bezpieczeństwo w czasie rzeczywistym
-Runtime policy enforcement — twarde blokady (FIELD.SAFETY.001) egzekwowane natychmiastowo; żadne akcje naruszające inwarianty nie są wykonywane.
+3.1. OBSERVE
+Hook‑based
+Raw event emission to PatternEngine.
 
-Audit trail — każdy krok cyklu zapisywany z podpisami i metadanymi.
+Validation of input invariants.
 
-Isolation — możliwość uruchomienia cykli w trybie kwarantanny dla eksperymentów.
+3.2. PIPELINE_v13 Transformations
+Each transformation is isolated, validated and contract‑bound:
 
-Testy i walidacja runtime
-Determinism tests — powtarzalność cykli przy tych samych wejściach.
+tension → energy
 
-Stress tests — zachowanie przy wysokim obciążeniu eventów.
+energy → entropy
 
-Safety tests — próby wymuszenia naruszeń inwariantów; runtime musi je zablokować.
+entropy → ritual
 
-Przykładowe scenariusze operacyjne
-normalny cykl regulacji pola z zapisem snapshotu;
+Each stage includes:
 
-wykrycie PAT‑DRIFT i uruchomienie procedury recovery;
+structural validation,
 
-uruchomienie asynchronicznej kalibracji patternów bez wpływu na krytyczne cykle.
+safety checks,
 
-Notatki implementacyjne
-runtime powinien być lekki, deterministyczny i łatwo audytowalny; preferowane wzorce: actor model dla izolacji procesów, append‑only audit log, oraz silne kontrakty wejścia/wyjścia.
+deterministic transformation rules.
+
+3.3. REGULATE
+Runtime invokes:
+
+MeniscusEngine (micro‑regulation),
+
+FieldEngine (macro‑regulation),
+
+using recommendations from Pattern Layer.
+Decisions must satisfy all module contracts.
+
+3.4. CONTINUE
+Context persistence.
+
+DataBridge SAVE operations.
+
+Preparation for snapshot.
+
+3.5. SNAPSHOT
+SnapshotManager invoked.
+
+Invariant validation.
+
+Cycle closure.
+
+Runtime manages ordering, retry logic, timeouts and escalation paths.
+
+4. Orchestration and Scheduling
+Synchronous cycles
+Short, deterministic cycles for critical regulatory operations.
+
+Asynchronous tasks
+Long‑running tasks:
+
+pattern analysis,
+
+calibration,
+
+background validation.
+
+Priority queues
+Events are prioritized according to real‑time safety policies.
+
+5. Hooks and Observation
+Pre‑hook
+Input validation.
+
+Sanity checks.
+
+Contract precondition enforcement.
+
+Observe hook
+Raw signal registration.
+
+Emission to PatternEngine.
+
+Timestamping and audit metadata.
+
+Post‑hook
+Result persistence.
+
+Metric logging.
+
+Audit trail completion.
+
+Hooks must be auditable and cannot modify FieldState without contract‑validated transitions.
+
+6. Error Handling and Retry
+Idempotent operations
+All runtime operations must be idempotent to allow safe retry.
+
+Backoff strategies
+Deterministic retry with bounded escalation.
+
+Circuit breakers
+Cycle termination when invariants are violated.
+Triggers:
+
+PAT‑DRIFT critical,
+
+FieldState corruption,
+
+contract violation.
+
+7. Integration with Other Layers
+Memory Layer
+Snapshot persistence.
+
+Historical context retrieval.
+
+Pattern Layer
+Subscription to PatternEvents.
+
+Runtime reacts to regulator recommendations.
+
+Module Contracts
+Runtime must honor:
+
+preconditions,
+
+postconditions,
+
+failure modes.
+
+DataBridge
+SAVE operations during CONTINUE.
+
+Append‑only audit log integration.
+
+8. Real‑Time Safety Enforcement
+Runtime policy enforcement
+Immediate enforcement of FIELD.SAFETY.001 and related policies.
+No unsafe action may proceed.
+
+Audit trail
+Every step of the cycle is logged with:
+
+timestamps,
+
+signatures,
+
+metadata.
+
+Isolation mode
+Runtime can execute cycles in quarantine mode for experimental or degraded‑safety scenarios.
+
+9. Testing and Validation
+Determinism tests
+Repeated cycles with identical inputs must yield identical outputs.
+
+Stress tests
+High‑volume event processing to validate throughput and stability.
+
+Safety tests
+Forced invariant violations; runtime must block unsafe transitions.
+
+10. Operational Scenarios
+Standard regulatory cycle with snapshot persistence.
+
+PAT‑DRIFT detection and recovery procedure.
+
+Asynchronous pattern calibration without affecting critical cycles.
+
+Isolation mode execution for experimental modules.
+
+11. Implementation Notes
+Runtime must remain lightweight, deterministic and auditable.
+
+Recommended patterns:
+
+actor model for process isolation,
+
+append‑only audit log,
+
+strict input/output contracts.
+
+No hidden state; all state transitions must be explicit and logged.
