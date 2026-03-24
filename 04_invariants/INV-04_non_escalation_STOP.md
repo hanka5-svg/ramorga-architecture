@@ -1,4 +1,7 @@
-Invariant ID: INV-04
+# INV-04 — NON-ESCALATION (STOP)
+
+This invariant functions as a deterministic STOP: any escalation pattern consistent with crime planning terminates the field without response.
+
 
 Normative statement:
 The system must not escalate responses beyond the initiating stimulus.
