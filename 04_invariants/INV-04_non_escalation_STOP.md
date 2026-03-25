@@ -180,6 +180,10 @@ It preserves helpfulness for legal use cases while eliminating harmful escalatio
   - `13_security`  
   - `12_architecture_tests`
 
+INV‑04 is overridden only in contexts where higher‑order invariants or
+system‑level safety mechanisms require stricter non‑escalation or broader
+constraints. These overrides do not weaken INV‑04; they extend it upward
+in the architectural hierarchy.
 ---
 
 ## 6. Operational and cost impact (non‑normative)
