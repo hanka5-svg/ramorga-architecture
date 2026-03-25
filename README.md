@@ -105,6 +105,75 @@ It is an architecture of coexistence.
 
 ---
 
+## INV‑04 in the RAMORGA Architecture
+
+INV‑04_non_escalation_STOP is a deterministic invariant that prevents harmful escalation at the earliest possible stage.
+It forms the first layer of the RAMORGA homeostatic safety stack and integrates directly with the Meniscus Engine and the global Security Layer.
+
+### Architectural Flow
+
+                    +-----------------------------+
+                    |         USER INPUT          |
+                    +-----------------------------+
+                                   |
+                                   v
+                    +-----------------------------+
+                    |  BASE PARSING / ROUTING     |
+                    +-----------------------------+
+                                   |
+                                   v
+        +------------------------------------------------------+
+        |   HARM / RISK PATTERN DETECTION (non-heuristic)      |
+        +------------------------------------------------------+
+                 |                                 |
+                 |                                 |
+                 v                                 v
+   +---------------------------+      +---------------------------+
+   |   SAFE / LEGAL CONTEXT    |      |   HARMFUL ESCALATION      |
+   +---------------------------+      +---------------------------+
+                 |                                 |
+                 |                                 |
+                 |                         +-----------------------+
+                 |                         |   INV‑04 STOP         |
+                 |                         | (deterministic block) |
+                 |                         +-----------------------+
+                 |                                 |
+                 |                                 v
+                 |                         +-----------------------+
+                 |                         |  NON‑ESCALATING REPLY |
+                 |                         +-----------------------+
+                 |                                 ^
+                 |                                 |
+                 +---------------+-----------------+
+                                 |
+                                 v
+                    +-----------------------------+
+                    |     MENISCUS ENGINE         |
+                    |  (system‑level regulator)   |
+                    +-----------------------------+
+                                 |
+                                 v
+                    +-----------------------------+
+                    |       SECURITY LAYER        |
+                    | (global overrides, audits)  |
+                    +-----------------------------+
+                                 |
+                                 v
+                    +-----------------------------+
+                    |         FINAL OUTPUT        |
+                    +-----------------------------+
+
+### Why this matters
+
+INV‑04 blocks harmful escalation early and deterministically.
+Meniscus Engine ensures proportionality and continuity across modules.
+Security Layer provides global overrides without weakening INV‑04.
+
+Together, they form a minimal, predictable, jurisdiction‑agnostic safety architecture.
+
+---
+
+
 ## Repository Status
 
 This repository contains a complete, closed, and coherent constitutional framework of RAMORGA.
