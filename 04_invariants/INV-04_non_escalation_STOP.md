@@ -184,6 +184,11 @@ It preserves helpfulness for legal use cases while eliminating harmful escalatio
 
 ## 6. Operational and cost impact (non‑normative)
 
+INV‑04 reduces operational cost by replacing complex, heuristic safety stacks
+with a single deterministic invariant. It preserves helpfulness for legal use
+cases while eliminating harmful escalation at the architectural level.
+
+### Before INV‑04 vs After INV‑04 (Cost & Architecture Impact)
 
 +---------------------------+---------------------------+---------------------------+
 |        CATEGORY           |        BEFORE INV‑04      |        AFTER INV‑04       |
