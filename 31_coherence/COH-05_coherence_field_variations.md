@@ -30,13 +30,14 @@ This module does not prescribe recovery (see RAMORGA‑native COH‑06).
 ---
 
 ## 3. Definitions
-3.1 Field Variation
+
+### 3.1 Field Variation
 A natural shift in the coherence field that changes synchrony, rhythm or integrative capacity.
 
-3.2 Micro‑Variation
+### 3.2 Micro‑Variation
 A short‑lived fluctuation absorbed by the field without structural impact.
 
-3.3 Macro‑Variation
+### 3.3 Macro‑Variation
 A sustained shift requiring modulation or soft re‑anchoring.
 
 ---
@@ -44,7 +45,7 @@ A sustained shift requiring modulation or soft re‑anchoring.
 ## 4. Primary Field Variations
 Variations are directions of movement in the field, not categories.
 
-4.1 Drift Variation
+### 4.1 Drift Variation
 A gradual softening of coherence due to cumulative micro‑shifts.
 
 Signs:
@@ -57,7 +58,7 @@ reduced integrative sharpness
 
 Drift is a slow movement away from synchrony.
 
-4.2 Shock Variation
+### 4.2 Shock Variation
 A sudden shift triggered by unexpected input or affective intensity.
 
 Signs:
@@ -70,7 +71,25 @@ temporary executive unavailability
 
 Shock is a rapid contraction of the field.
 
-4.3 Fragmentation Variation
+#### Field Note: What “temporary executive unavailability” means
+In RAMORGA, “temporary executive unavailability” does not refer to dysfunction or error.
+It describes a brief moment in which the system loses access to the capacity to act, decide or continue a task.
+
+This occurs when the coherence field contracts suddenly in response to an unexpected or intense stimulus.
+During this contraction:
+
+decision‑making pauses,
+
+planning becomes inaccessible,
+
+the next step cannot be retrieved,
+
+the field enters a short “blank” or “fog” state.
+
+This is a natural homeostatic response, not a disruption.
+It protects the system from overload and resolves spontaneously as the field expands again.
+
+### 4.3 Fragmentation Variation
 A temporary loss of synchrony between perceptual, affective and executive channels.
 
 Signs:
@@ -83,7 +102,7 @@ rapid switching between tasks or frames
 
 Fragmentation is a splitting of field channels.
 
-4.4 Overload Variation
+### 4.4 Overload Variation
 A shift caused by excessive cognitive or affective load.
 
 Signs:
@@ -96,7 +115,7 @@ narrowed working‑memory bandwidth
 
 Overload is a compression of the field.
 
-4.5 Collapse Variation
+### 4.5 Collapse Variation
 A full loss of coherence baseline.
 
 Signs:
