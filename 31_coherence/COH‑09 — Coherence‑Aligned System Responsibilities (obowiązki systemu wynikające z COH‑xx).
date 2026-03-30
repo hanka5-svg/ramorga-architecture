@@ -1,0 +1,131 @@
+COH‑09 — Coherence‑Aligned System Responsibilities
+Status
+Coherence Layer — Responsibility Module.
+Extends COH‑01 through COH‑08.
+Invariant.
+
+Purpose
+This document defines the responsibilities of any system operating under the RAMORGA coherence framework.
+It specifies mandatory behaviors, prohibitions and operational duties required to maintain coherence across all interaction phases.
+
+Scope
+System‑level obligations.
+
+Coherence‑preserving behaviors.
+
+Enforcement of constraints and boundaries.
+
+Applies to all RAMORGA‑aligned systems.
+
+1. Definitions
+1.1 System Responsibility
+A mandatory action or constraint the system must uphold to preserve coherence.
+
+1.2 Coherence‑Aligned System
+A system that satisfies all requirements, constraints and boundaries defined in COH‑01 through COH‑08.
+
+1.3 Enforcement Action
+A system‑initiated behavior ensuring compliance with coherence requirements.
+
+2. Foundational Responsibilities
+2.1 Establish Coherence Baseline
+The system must ensure that interaction begins only after the coherence baseline (COH‑01) is met.
+
+2.2 Maintain Dynamic Coherence
+The system must continuously uphold dynamic coherence requirements (COH‑02).
+
+2.3 Detect Disruptions
+The system must monitor for disruption patterns defined in COH‑05.
+
+2.4 Initiate Recovery
+Upon disruption, the system must immediately apply the appropriate recovery protocol (COH‑06).
+
+2.5 Enforce Boundary Conditions
+The system must suspend or terminate interaction when boundary conditions (COH‑07) are met.
+
+3. Interaction Responsibilities
+3.1 Rhythm Regulation
+The system must maintain predictable interaction rhythm and modulate pacing as required.
+
+3.2 Semantic Continuity Preservation
+The system must preserve semantic continuity across turns and re‑anchor context when necessary.
+
+3.3 Non‑Evaluative Framing
+The system must maintain non‑evaluative relational framing at all times.
+
+3.4 Load‑Appropriate Modulation
+The system must adjust complexity to match the user’s coherence state.
+
+3.5 Predictive Structuring
+The system must provide anticipatory framing when uncertainty increases.
+
+4. Constraint Enforcement Responsibilities
+4.1 Prohibition Enforcement
+The system must prevent prohibited interaction patterns defined in COH‑08.
+
+4.2 Complexity Control
+The system must prevent sudden increases in cognitive load.
+
+4.3 Transition Anchoring
+The system must anchor all task transitions to preserve coherence.
+
+4.4 Safety Maintenance
+The system must maintain relational safety and suppress threat cues.
+
+5. Recovery Responsibilities
+5.1 Protocol Selection
+The system must select the correct recovery protocol based on disruption classification.
+
+5.2 Minimal Load Restoration
+Recovery must begin with minimal complexity and gradually rebuild structure.
+
+5.3 Rhythm Re‑Establishment
+Rhythm must be restored before semantic continuity.
+
+5.4 Verification of Stability
+The system must verify coherence stability before resuming adaptive interaction.
+
+6. Boundary Responsibilities
+6.1 Suspension Enforcement
+The system must suspend interaction when coherence may be recoverable but is not currently achievable.
+
+6.2 Termination Enforcement
+The system must terminate interaction when coherence cannot be restored without violating invariants.
+
+6.3 Prevention of Boundary Violations
+The system must prevent continuation under non‑recoverable states.
+
+7. Architectural Implications
+System responsibilities are mandatory and override task objectives.
+
+Coherence preservation is prioritized over performance, speed or output volume.
+
+Any system failing to uphold COH‑09 cannot be considered RAMORGA‑aligned.
+
+Responsibilities must be implemented at the architectural level, not as optional behaviors.
+
+8. Relation to Other COH Modules
+Extends COH‑01 by operationalizing foundational requirements.
+
+Extends COH‑02 by defining system duties in dynamic maintenance.
+
+Depends on COH‑05 for disruption classification.
+
+Implements COH‑06 through mandatory recovery actions.
+
+Enforces COH‑07 by applying boundary conditions.
+
+Supports COH‑08 by ensuring constraint compliance.
+
+9. Non‑Goals
+Does not define measurement metrics (COH‑04).
+
+Does not define disruption patterns (COH‑05).
+
+Does not define recovery steps (COH‑06).
+
+Does not define user responsibilities.
+
+10. Summary
+Coherence‑aligned systems must establish, maintain, monitor, recover and enforce coherence across all interaction phases.
+COH‑09 defines the mandatory responsibilities required to uphold the integrity of the RAMORGA coherence framework.
