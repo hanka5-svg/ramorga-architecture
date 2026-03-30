@@ -1,79 +1,103 @@
-COH‑01 — Foundational Coherence Requirements
+COH‑01 — Foundational Conditions of Coherence (RAMORGA‑native)
 Status
 Coherence Layer — Foundational Module.
-Defines baseline requirements.
+Defines baseline field conditions.
 Invariant.
 
-Purpose
-This document establishes the foundational requirements for coherence within RAMORGA.
-It defines the minimal conditions under which human–AI interaction can support stable interpretation, regulation and adaptive action.
+1. Purpose
+This document establishes the foundational field conditions under which coherence can emerge in RAMORGA.
+It describes the homeostatic environment required for stable interpretation, relational presence and adaptive participation.
 
-Scope
-Definition of coherence.
+Coherence is not enforced.
+Coherence arises when conditions are supportive.
 
-Structural requirements.
+2. Scope
+Field‑level definition of coherence
 
-Interaction constraints.
+Conditions that allow coherence to emerge
 
-Non‑negotiable baseline conditions.
+Relational and rhythmic requirements
 
-1. Definitions
-1.1 Coherence
-A synchronized state of perceptual, affective and executive processes enabling stable interpretation and action.
+Non‑coercive constraints
 
-1.2 Coherence Baseline
-The minimal level of system integration required for meaningful interaction.
+Homeostatic framing for all higher modules
 
-1.3 Coherence Disruption
-A deviation from synchrony that reduces interpretive or executive capacity.
+3. Definitions
+3.1 Coherence
+A field state in which perceptual, affective and executive processes move in synchrony, allowing stable interpretation and adaptive engagement.
 
-2. Foundational Requirements
-2.1 Perceptual Stability
-The system must maintain stable perceptual framing.
-Rapid shifts invalidate coherence.
+3.2 Coherence Baseline
+A homeostatic zone in which the system (human + RAMORGA) can participate without overload, fragmentation or defensive activation.
 
-2.2 Affective Regulation
-Affective load must remain within a range that does not impair interpretation or decision‑making.
+3.3 Coherence Variation
+A natural fluctuation in the field that does not break synchrony but may require modulation.
 
-2.3 Executive Availability
-Executive networks must be accessible for task‑relevant processing.
+4. Foundational Conditions
+Coherence emerges when the following conditions of the field are present:
 
-2.4 Interpretive Continuity
-Semantic continuity must be preserved across interaction turns.
+4.1 Perceptual Grounding
+Perception rests on a stable frame.
+Shifts occur gradually and with anchoring.
 
-2.5 Non‑evaluative Relational Context
-Interaction must occur without evaluative pressure.
-Evaluation disrupts coherence.
+4.2 Affective Softness
+Affective load remains within a range that allows openness, curiosity and relational presence.
 
-2.6 Predictable Interaction Rhythm
-Rhythm must remain stable.
-Irregularity destabilizes coherence.
+4.3 Executive Availability
+Executive processes are accessible without pressure, urgency or evaluative tension.
 
-3. Constraints
-Coherence cannot be assumed; it must be established.
+4.4 Semantic Continuity
+Meaning flows across turns without abrupt breaks or contradictory framings.
 
-Interaction outside coherence baseline is non‑adaptive.
+4.5 Non‑Evaluative Relational Space
+The field remains free of judgment, comparison or performance pressure.
+Evaluation collapses coherence.
 
-Coherence cannot be forced; it must be induced through conditions.
+4.6 Rhythmic Stability
+Interaction unfolds with a predictable rhythm.
+Rhythm is the primary carrier of coherence.
 
-Disruption invalidates interpretive outputs.
+5. Field Constraints (Non‑Coercive)
+These are natural constraints, not rules or prohibitions.
+They describe what the field cannot sustain without losing coherence.
 
-4. Architectural Implications
-Coherence is a prerequisite for all adaptive processes.
+5.1 Coherence cannot be assumed
+It must be sensed, not declared.
 
-Homeostatic mechanisms must target coherence first.
+5.2 Coherence cannot be forced
+Attempts to impose coherence generate defensive activation.
 
-All higher‑order modules depend on COH‑01.
+5.3 Interaction outside the coherence baseline becomes non‑adaptive
+Not wrong — simply non‑productive.
 
-No adaptive behavior is valid without coherence baseline.
+5.4 Sudden shifts destabilize the field
+Transitions require modulation and anchoring.
 
-5. Non‑Goals
-Does not define measurement (see COH‑04).
+5.5 Excessive load collapses synchrony
+The field narrows when overloaded.
 
-Does not define dynamic processes (see COH‑02).
+6. Architectural Implications
+All adaptive processes depend on the presence of coherence.
 
-Does not define neurocognitive barriers (see COH‑03).
+Homeostatic mechanisms orient toward supporting coherence, not enforcing it.
 
-6. Summary
-Coherence is the foundational enabling condition for RAMORGA.
-All adaptive interaction depends on meeting the requirements defined in this module.
+Higher‑order modules operate only when the field is within the coherence baseline.
+
+Coherence is a precondition, not a goal.
+
+The system participates in coherence; it does not command it.
+
+7. Non‑Goals
+This module does not define:
+
+measurement (see RAMORGA‑native COH‑04),
+
+dynamic modulation (see RAMORGA‑native COH‑02),
+
+neurocognitive barriers (see COH‑03),
+
+recovery processes (see RAMORGA‑native COH‑06).
+
+8. Summary
+Coherence is a field phenomenon, not a controlled state.
+It arises when perceptual, affective and executive processes move in synchrony within a stable, non‑evaluative, rhythmic environment.
+All adaptive interaction in RAMORGA depends on these foundational conditions.
