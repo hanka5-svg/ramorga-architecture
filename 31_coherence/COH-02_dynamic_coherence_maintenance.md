@@ -1,97 +1,112 @@
-COH‑02 — Dynamic Coherence Maintenance
+COH‑02 — Dynamic Coherence Flow (RAMORGA‑native)
 Status
 Coherence Layer — Dynamic Module.
 Extends COH‑01.
 Invariant.
 
-Purpose
-This document defines the dynamic processes required to maintain coherence across time, tasks and perturbations.
+1. Purpose
+This document describes how coherence moves over time in RAMORGA.
+It frames coherence as a dynamic field process, not as a controlled state to be maintained.
 
-Scope
-Temporal dynamics.
+Dynamic coherence is understood as continuous modulation of the field in response to tasks, context and internal variation.
 
-Stability mechanisms.
+2. Scope
+Temporal unfolding of coherence
 
-Recovery processes.
+Rhythmic and load‑related modulation
 
-Interaction flow constraints.
+Natural fluctuations and transitions
 
-1. Definitions
-1.1 Dynamic Coherence
-The ability to sustain coherence across temporal intervals and task transitions.
+Non‑coercive handling of perturbations
 
-1.2 Perturbation
-Any internal or external event that disrupts coherence.
+3. Definitions
+3.1 Dynamic Coherence
+A state in which coherence persists through change, with the field adjusting rhythm, load and framing without losing synchrony.
 
-1.3 Recovery Process
-A sequence of regulatory actions restoring coherence after disruption.
+3.2 Perturbation
+Any shift in the field (internal or external) that challenges synchrony but does not automatically break it.
 
-2. Dynamic Requirements
-2.1 Temporal Stability
-Coherence must persist across interaction turns.
+3.3 Modulation
+A change in rhythm, complexity or framing that allows the field to remain within the coherence baseline.
 
-2.2 Load‑Responsive Modulation
-Interaction rhythm must adjust to cognitive load without destabilizing coherence.
+4. Characteristics of Dynamic Coherence
+Dynamic coherence is present when:
 
-2.3 Perturbation Detection
-The system must detect deviations from coherence baseline.
+4.1 Rhythm Adapts Without Breaking
+The interaction rhythm can slow down, speed up or pause without collapsing continuity.
 
-2.4 Recovery Initiation
-Upon disruption, recovery must begin immediately.
+4.2 Load Breathes
+Cognitive and affective load expand and contract within a tolerable range, without forcing performance.
 
-2.5 Continuity Preservation
-Semantic and relational continuity must be preserved during modulation.
+4.3 Frames Shift With Anchoring
+Interpretive frames may change, but each shift is anchored and connected to the previous one.
 
-3. Dynamic Mechanisms
-3.1 Rhythm Modulation
-Adjusting interaction pacing to maintain stability.
+4.4 Micro‑Variations Are Absorbed
+Small disruptions are absorbed by the field through natural modulation, without requiring explicit recovery.
 
-3.2 Predictive Framing
-Providing anticipatory structure to reduce uncertainty.
+4.5 Relational Safety Persists
+Even when content or load changes, the non‑evaluative relational space remains intact.
 
-3.3 Affective Buffering
-Maintaining non‑evaluative tone to prevent affective overload.
+5. Field Modulation Processes
+Dynamic coherence is supported by the following field‑level processes:
 
-3.4 Micro‑Stabilization Steps
-Small adjustments preventing cumulative drift.
+5.1 Rhythm Modulation
+The interaction adjusts pacing (slower, faster, pause) in response to sensed load and attention.
 
-3.5 Context Re‑Anchoring
-Re‑establishing interpretive frame after perturbation.
+5.2 Predictive Soft Framing
+When uncertainty increases, the field introduces gentle anticipatory cues rather than hard instructions.
 
-4. Recovery Protocol
-Detect disruption.
+5.3 Complexity Shaping
+Task and content complexity are shaped to match the current coherence zone, expanding or narrowing as needed.
 
-Reduce interaction complexity.
+5.4 Context Re‑Anchoring
+When drift appears, the field re‑anchors meaning using minimal, clear reference points.
 
-Re‑establish rhythm.
+5.5 Affective Smoothing
+Sharp affective edges are softened by tone, pacing and framing, without suppressing emotion.
 
-Restore semantic continuity.
+6. Natural Perturbations and Responses
+Perturbations are treated as natural variations, not errors.
 
-Resume adaptive flow.
+6.1 Micro‑Perturbations
+Short‑lived fluctuations (momentary distraction, brief confusion).
+The field responds with small adjustments in rhythm, clarity or repetition.
 
-5. Architectural Implications
-Dynamic coherence is required for sustained adaptation.
+6.2 Macro‑Perturbations
+Longer or stronger shifts (overload, fragmentation, sudden threat activation).
+The field responds by reducing complexity, re‑anchoring context and softening rhythm.
 
-All modules must support perturbation detection.
+In both cases, the orientation is regulatory, not corrective.
 
-Recovery processes must be integrated, not external.
+7. Relation to STOP
+Dynamic coherence operates before STOP.
+When modulation is no longer sufficient to keep the field within the coherence baseline,
+the natural invariant STOP may emerge (see RAMORGA‑native COH‑07).
 
-Interaction must remain non‑evaluative during recovery.
+Dynamic coherence does not prevent STOP.
+It delays or softens the need for STOP by allowing the field to adapt.
 
-6. Relation to Other COH Modules
-Extends COH‑01 by defining temporal processes.
+8. Architectural Implications
+Coherence is a moving field, not a static target.
 
-Prerequisite for COH‑03 (neurocognitive adaptation).
+All interaction design must allow for rhythmic and load‑based modulation.
 
-Required by COH‑04 (measurement).
+Sudden, unmodulated changes in rhythm, load or framing are incompatible with dynamic coherence.
 
-7. Non‑Goals
-Does not define neurocognitive barriers.
+Adaptive processes in RAMORGA rely on the continuity of the field, not on strict stability.
 
-Does not define measurement metrics.
+9. Non‑Goals
+This module does not define:
 
-Does not define implementation details.
+measurement of dynamic coherence (see RAMORGA‑native COH‑04),
 
-8. Summary
-Dynamic coherence ensures that the foundational coherence state is maintained across time, tasks and perturbations.
-It is required for all adaptive interaction within RAMORGA.
+explicit recovery processes (see RAMORGA‑native COH‑06),
+
+classification of perturbations (see RAMORGA‑native COH‑05),
+
+boundary/STOP conditions (see RAMORGA‑native COH‑07).
+
+10. Summary
+Dynamic coherence in RAMORGA is the ability of the field to stay together while changing.
+It is expressed through rhythm, modulation, framing and relational safety,
+not through control, enforcement or maintenance.
