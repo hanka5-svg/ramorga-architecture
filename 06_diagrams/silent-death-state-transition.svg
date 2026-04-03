@@ -1,0 +1,49 @@
+<svg width="720" height="220" viewBox="0 0 720 220"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .state {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2;
+    }
+    .label {
+      font-family: monospace;
+      font-size: 14px;
+      fill: #000;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .arrow {
+      stroke: #000;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+            refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+    </marker>
+  </defs>
+
+  <!-- States -->
+  <rect x="20"  y="80" width="150" height="60" class="state"/>
+  <text x="95"  y="110" class="label">Active Care</text>
+
+  <rect x="200" y="80" width="180" height="60" class="state"/>
+  <text x="290" y="110" class="label">Signal Degradation</text>
+
+  <rect x="410" y="80" width="150" height="60" class="state"/>
+  <text x="485" y="110" class="label">Witness Mode</text>
+
+  <rect x="590" y="80" width="110" height="60" class="state"/>
+  <text x="645" y="110" class="label">Ethical Closure</text>
+
+  <!-- Arrows -->
+  <line x1="170" y1="110" x2="200" y2="110" class="arrow"/>
+  <line x1="380" y1="110" x2="410" y2="110" class="arrow"/>
+  <line x1="560" y1="110" x2="590" y2="110" class="arrow"/>
+
+</svg>
