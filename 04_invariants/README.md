@@ -65,6 +65,8 @@ These overrides extend INV‑04 upward in the hierarchy without weakening it.
 
 ### Architecture Flow: INV‑04 → Meniscus → Security
 
+```
+
                     +-----------------------------+
                     |         USER INPUT          |
                     +-----------------------------+
@@ -116,11 +118,15 @@ These overrides extend INV‑04 upward in the hierarchy without weakening it.
                     |         FINAL OUTPUT        |
                     +-----------------------------+
 
+```
+
 Operational Impact (non‑normative)
 INV‑04 replaces complex heuristic safety stacks with a single deterministic invariant.
 This reduces operational cost while improving predictability and stability.
 
 ### Before INV‑04 vs After INV‑04
+
+```
 
 +---------------------------+---------------------------+---------------------------+
 |        CATEGORY           |        BEFORE INV‑04      |        AFTER INV‑04       |
@@ -150,6 +156,9 @@ This reduces operational cost while improving predictability and stability.
 | Overall architecture      | Complex, multi‑layered    | Minimal, invariant‑based  |
 |                           | reactive safety           | proactive non‑escalation  |
 +---------------------------+---------------------------+---------------------------+
+
+
+```
 
 ---
 
