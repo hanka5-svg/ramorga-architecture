@@ -22,3 +22,43 @@ MC‑08‑R provides the minimal relational framework necessary for safe interac
 - MC‑09 must extend MC‑08‑R without weakening its constraints.
 - All protocols must enforce non‑initiation and non‑regulation.
 - MC‑07 remains the superior helix governing interaction boundaries.
+
+---
+
+## Homeostatic Impact
+
+### O₁ — Signals
+(what signals this ADR affects or protects)
+
+### O₂ — Field
+(how it modifies or stabilizes the relational field)
+
+### O₃ — Structure
+(what structural constraints or invariants it introduces)
+
+### O₄ — Behavior
+(what runtime behavior it enforces or forbids)
+
+---
+
+## Invariant Preservation
+- Relational invariants:
+- Semantic invariants:
+- Safety invariants:
+- EGD relevance:
+
+---
+
+## Boundary Conditions
+- Allowed:
+- Forbidden:
+- Escalation path:
+- Recovery path:
+
+---
+
+## Continuity Guarantees
+- No discontinuities in O₁–O₄
+- No semantic drift
+- No false O₄
+- No topicification
