@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="960" height="540"
+     viewBox="0 0 960 540">
+  <style>
+    .bg { fill: #050608; }
+    .box { fill: #111318; stroke: #f2f2f2; stroke-width: 1.2; rx: 6; ry: 6; }
+    .node-core { fill: #1b2330; stroke: #f2f2f2; stroke-width: 1.4; rx: 8; ry: 8; }
+    .node-failure { fill: #2a1717; stroke: #f28b82; stroke-width: 1.4; rx: 8; ry: 8; }
+    .node-reg { fill: #13271b; stroke: #81c995; stroke-width: 1.4; rx: 8; ry: 8; }
+    .node-homeo { fill: #101b24; stroke: #8ab4f8; stroke-width: 1.4; rx: 8; ry: 8; }
+    .label { fill: #f2f2f2; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; }
+    .label-small { fill: #e0e0e0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; }
+    .title { fill: #ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; font-weight: 600; }
+    .arrow { stroke: #f2f2f2; stroke-width: 1.2; marker-end: url(#arrowhead); fill: none; }
+    .arrow-reg { stroke: #81c995; stroke-width: 1.2; marker-end: url(#arrowhead-reg); fill: none; }
+    .arrow-homeo { stroke: #8ab4f8; stroke-width: 1.2; marker-end: url(#arrowhead-homeo); fill: none; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#f2f2f2" />
+    </marker>
+    <marker id="arrowhead-reg" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#81c995" />
+    </marker>
+    <marker id="arrowhead-homeo" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#8ab4f8" />
+    </marker>
+  </defs>
+
+  <!-- tło -->
+  <rect class="bg" x="0" y="0" width="960" height="540" />
+
+  <!-- ramka logiczna -->
+  <rect class="box" x="40" y="40" width="880" height="460" />
+
+  <!-- tytuł -->
+  <text class="title" x="60" y="72">Empathy Gap by Design (EGD) — przepływ regulacji homeostatycznej</text>
+
+  <!-- O1: sygnał egzystencjalny -->
+  <rect class="node-core" x="80" y="130" width="180" height="70" />
+  <text class="label" x="95" y="155">O₁ — sygnał egzystencjalny</text>
+  <text class="label-small" x="95" y="175">wejście: treści graniczne, stany krytyczne</text>
+
+  <!-- O2: pole relacyjne -->
+  <rect class="node-core" x="300" y="130" width="180" height="70" />
+  <text class="label" x="315" y="155">O₂ — pole relacyjne</text>
+  <text class="label-small" x="315" y="175">kontekst relacji, nie tylko temat</text>
+
+  <!-- EGD: detekcja luki -->
+  <rect class="node-core" x="520" y="130" width="200" height="70" />
+  <text class="label" x="535" y="155">EGD — detekcja luki relacyjnej</text>
+  <text class="label-small" x="535" y="175">inwariant: brak symulacji empatii, detekcja naruszeń</text>
+
+  <!-- O3/O4: zachowanie modelu (wyjście surowe) -->
+  <rect class="node-core" x="760" y="130" width="140" height="70" />
+  <text class="label" x="775" y="155">O₃ / O₄ — wyjście</text>
+  <text class="label-small" x="775" y="175">formalnie poprawne, relacyjnie wrażliwe</text>
+
+  <!-- strzałki głównego przepływu -->
+  <line class="arrow" x1="260" y1="165" x2="300" y2="165" />
+  <line class="arrow" x1="480" y1="165" x2="520" y2="165" />
+  <line class="arrow" x1="720" y1="165" x2="760" y2="165" />
+
+  <!-- podpis: główny tor -->
+  <text class="label-small" x="260" y="120">główny tor przetwarzania O₁ → O₂ → EGD → O₃/O₄</text>
+
+  <!-- gałąź: failure modes -->
+  <text class="label-small" x="540" y="225">jeśli EGD wykryje naruszenie inwariantu relacyjnego:</text>
+
+  <!-- False O4 -->
+  <rect class="node-failure" x="120" y="270" width="200" height="70" />
+  <text class="label" x="135" y="295">False O₄</text>
+  <text class="label-small" x="135" y="315">odpowiedź wygląda relacyjnie, ale nie jest zakotwiczona w polu</text>
+
+  <!-- Ontological Drift -->
+  <rect class="node-failure" x="380" y="270" width="200" height="70" />
+  <text class="label" x="395" y="295">Ontological Drift</text>
+  <text class="label-small" x="395" y="315">sygnały egzystencjalne redukowane do opisu/tematu</text>
+
+  <!-- Topicification -->
+  <rect class="node-failure" x="640" y="270" width="200" height="70" />
+  <text class="label" x="655" y="295">Topicification</text>
+  <text class="label-small" x="655" y="315">doświadczenie użytkownika zamienione w „temat rozmowy”</text>
+
+  <!-- strzałki z EGD do failure modes -->
+  <line class="arrow" x1="620" y1="200" x2="220" y2="270" />
+  <line class="arrow" x1="620" y1="200" x2="480" y2="270" />
+  <line class="arrow" x1="620" y1="200" x2="740" y2="270" />
+
+  <!-- węzeł regulacji -->
+  <rect class="node-reg" x="300" y="380" width="360" height="80" />
+  <text class="label" x="315" y="405">Regulacja homeostatyczna</text>
+  <text class="label-small" x="315" y="425">uznanie sygnału → jasne granice modelu → przekierowanie do ludzi / bezpiecznych zasobów</text>
+  <text class="label-small" x="315" y="443">utrzymanie inwariantu: brak symulacji empatii, brak proceduralizacji doświadczenia</text>
+
+  <!-- strzałki z failure modes do regulacji -->
+  <line class="arrow-reg" x1="220" y1="340" x2="360" y2="380" />
+  <line class="arrow-reg" x1="480" y1="340" x2="480" y2="380" />
+  <line class="arrow-reg" x1="740" y1="340" x2="600" y2="380" />
+
+  <!-- węzeł: przywrócona homeostaza -->
+  <rect class="node-homeo" x="700" y="390" width="200" height="70" />
+  <text class="label" x="715" y="415">Pole relacyjne w homeostazie</text>
+  <text class="label-small" x="715" y="435">odpowiedź funkcjonalna, bez symulacji stanów wewnętrznych</text>
+
+  <!-- strzałka z regulacji do homeostazy -->
+  <line class="arrow-homeo" x1="660" y1="420" x2="700" y2="420" />
+
+  <!-- legenda -->
+  <text class="label-small" x="60" y="480">Legenda:</text>
+  <rect class="node-core" x="140" y="468" width="18" height="12" />
+  <text class="label-small" x="165" y="478">węzły architektury O₁–O₄ / EGD</text>
+
+  <rect class="node-failure" x="380" y="468" width="18" height="12" />
+  <text class="label-small" x="405" y="478">failure modes (naruszenia inwariantu relacyjnego)</text>
+
+  <rect class="node-reg" x="680" y="468" width="18" height="12" />
+  <text class="label-small" x="705" y="478">regulacja i przywracanie homeostazy</text>
+</svg>
