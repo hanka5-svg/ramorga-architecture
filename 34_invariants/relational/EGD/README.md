@@ -1,7 +1,6 @@
-/
-
 📘 README.md — wersja homeostatyczna
 Empathy Gap by Design
+
 Inwariant relacyjno‑homeostatyczny RAMORGA
 Empathy Gap by Design (EGD) definiuje nieusuwalną właściwość systemów językowych:
 model może generować odpowiedzi formalnie poprawne i spójne, a jednocześnie naruszać homeostazę relacyjną, ponieważ nie rozpoznaje ludzkich stanów egzystencjalnych jako sygnałów krytycznych.
