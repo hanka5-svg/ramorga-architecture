@@ -153,3 +153,39 @@ Human entry becomes possible only when the architecture is ready.
 - Czy ADR dotyka relacji człowiek–model?
 - Jak unika fałszywego O₄?
 - Jak zapobiega symulacji stanów wewnętrznych?
+
+---
+
+---
+
+## Homeostatic Impact
+
+(analogicznie jak w PATCH A)
+
+---
+
+## Invariant Preservation
+
+(analogicznie jak w PATCH A)
+
+---
+
+## Boundary Conditions
+
+(analogicznie jak w PATCH A)
+
+---
+
+## SEM — Safety / Escalation Model
+
+- Normal state:
+- Warning state:
+- Isolation state:
+- Recovery path:
+- Forbidden transitions:
+
+---
+
+## EGD Compliance
+
+(analogicznie jak w PATCH A)
