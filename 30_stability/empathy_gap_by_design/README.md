@@ -1,3 +1,24 @@
+# Empathy Gap by Design  
+Nowa kategoria stabilności relacyjnej w RAMORGA
+
+Empathy Gap by Design opisuje sytuacje, w których model:
+- generuje odpowiedzi poprawne formalnie,
+- ale relacyjnie nieadekwatne,
+- ponieważ nie rozpoznaje stanów egzystencjalnych człowieka jako krytycznych.
+
+To nie jest błąd modelu.
+To jest luka w architekturze zachowania — efekt decyzji projektowych.
+
+Ten folder zawiera:
+- definicję Empathy Gap,
+- taksonomię zjawiska,
+- mapowanie na O₁–O₄,
+- opis failure modes (False O₄, Ontological Drift),
+- warstwę symboliczną (gesty, antropologia relacji),
+- implikacje dla bezpieczeństwa AI,
+- diagramy ASCII i SVG.
+
+
 ```
 
  empathy_gap_by_design/
