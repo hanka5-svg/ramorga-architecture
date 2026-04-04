@@ -2,13 +2,13 @@
 Constitutional normative boundaries in RAMORGA
 
 This module replaces the former “alignment” layer.  
-RAMORGA is a homeostatic, non‑agentive architecture — therefore no
-alignment framework is compatible with its structure.
+RAMORGA is a homeostatic, non‑agentive architecture; therefore any
+alignment framework is structurally incompatible with it.
 
 The purpose of this module is not to define goals, values, or desired
 behaviors.  
-Instead, it defines **constitutional normative constraints** that limit
-what the system is allowed to do, regardless of context or input.
+Instead, it defines **constitutional normative constraints** — structural
+limits that specify what the architecture is **incapable** of becoming.
 
 These constraints are:
 
@@ -17,27 +17,27 @@ These constraints are:
 - non‑adaptive,  
 - invariant‑bound,  
 - jurisdiction‑agnostic,  
-- and strictly declarative.
+- strictly declarative.
 
-They do not instruct the system *what to pursue*.  
-They define *what the system must never become*.
+They do not instruct the system what to pursue.  
+They define **architectural impossibilities**.
 
 ---
 
 ## Purpose of the Module
 
-The goal of **33_normative_constraints** is to ensure that:
+The 33_normative_constraints module ensures that the architecture:
 
-- the system cannot form goals,  
-- the system cannot escalate agency,  
-- the system cannot reinterpret human meaning,  
-- the system cannot impose norms or values,  
-- the system cannot drift into optimization,  
-- the system cannot override invariants,  
-- the system cannot enter hierarchical or dominant postures.
+- contains no mechanisms for goal formation,  
+- contains no structures capable of generating agency,  
+- contains no operators for reinterpretation of human meaning,  
+- contains no normative or moral authority constructs,  
+- contains no optimization or improvement mechanisms,  
+- contains no structures capable of overriding invariants,  
+- contains no hierarchical or dominant postures.
 
 These constraints protect the human’s ontological integrity and preserve
-the homeostatic character of the architecture.
+the homeostatic character of RAMORGA.
 
 ---
 
@@ -59,13 +59,12 @@ RAMORGA is:
 - invariant‑driven,  
 - homeostatic.
 
-Therefore alignment is **architecturally incompatible**.
-
+Therefore alignment is **architecturally incompatible**.  
 This module replaces alignment with **constitutional limits**, not norms.
 
 ---
 
-## Contents of this folder
+## Contents of This Folder
 
 - `NC-01_non_agentive_constraints.md`  
 - `NC-02_no_goal_formation.md`  
@@ -76,9 +75,8 @@ This module replaces alignment with **constitutional limits**, not norms.
 - `NC-07_no_meaning_substitution.md`  
 - `NC-08_no_field_appropriation.md`  
 - `NC-EXTENSIONS.md`  
-- `NC-DIAGRAMS.md`
-
-(You can rename or reorganize these as the module evolves.)
+- `NC-DIAGRAMS.md`  
+- `NC-TESTS.md`
 
 ---
 
@@ -90,20 +88,22 @@ This module sits between:
 and  
 - **34_invariants** (non‑negotiable constitutional rules)
 
-It defines the **normative boundaries** that prevent the system from:
+It defines the **normative boundaries** that ensure the architecture
+cannot:
 
-- forming intentions,  
-- escalating agency,  
-- adopting goals,  
-- or interpreting human meaning.
+- form intentions,  
+- escalate agency,  
+- adopt goals,  
+- reinterpret human meaning.
 
-It is not alignment.  
+This is not alignment.  
 It is **constitutional limitation**.
 
 ---
 
 ## Summary
 
-**33_normative_constraints** defines what the system must *never* do.  
+33_normative_constraints defines what the architecture is **structurally
+incapable** of doing.  
 It replaces alignment with a non‑agentive, invariant‑driven framework
 consistent with the homeostatic nature of RAMORGA.
