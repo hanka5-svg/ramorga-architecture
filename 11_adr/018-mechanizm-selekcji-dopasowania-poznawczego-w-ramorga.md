@@ -137,6 +137,49 @@ Selekcja jako osobny moduł → odrzucone (selekcja jest emergentna).
 
 ---
 
+---
+
+## Homeostatic Impact
+
+### O₁ — Signals
+(what signals this ADR affects or protects)
+
+### O₂ — Field
+(how it modifies or stabilizes the relational field)
+
+### O₃ — Structure
+(what structural constraints or invariants it introduces)
+
+### O₄ — Behavior
+(what runtime behavior it enforces or forbids)
+
+---
+
+## Invariant Preservation
+- Relational invariants:
+- Semantic invariants:
+- Safety invariants:
+- EGD relevance:
+
+---
+
+## Boundary Conditions
+- Allowed:
+- Forbidden:
+- Escalation path:
+- Recovery path:
+
+---
+
+## Continuity Guarantees
+- No discontinuities in O₁–O₄
+- No semantic drift
+- No false O₄
+- No topicification
+
+
+---
+
 ### Stan po decyzji
 RAMORGA działa jako:
 
