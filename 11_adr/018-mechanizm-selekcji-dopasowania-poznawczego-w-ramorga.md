@@ -177,7 +177,6 @@ Selekcja jako osobny moduł → odrzucone (selekcja jest emergentna).
 - No false O₄
 - No topicification
 
-
 ---
 
 ### Stan po decyzji
@@ -194,3 +193,50 @@ z pełną odpornością na moduły degenerujące (np. GROK → VAM).
         |         v
       VAM       META-HOMEOSTASIS
      (Grok)   (Cognitive-Fit Selection)
+
+---
+---
+
+## Homeostatic Impact
+
+### O₁ — Signals
+(Opisz, jakie sygnały ten ADR wprowadza / ogranicza / chroni.)
+
+### O₂ — Field
+(Opisz, jak ADR wpływa na pole relacyjne: stabilizacja, brak eskalacji, brak dryfu.)
+
+### O₃ — Structure
+(Opisz, jakie struktury / kontrakty / ograniczenia wprowadza ADR.)
+
+### O₄ — Behavior
+(Opisz, jakie zachowania runtime są wymagane / zabronione.)
+
+---
+
+## Invariant Preservation
+
+- Relational invariants:
+- Semantic invariants:
+- Safety invariants:
+- Other invariants:
+
+---
+
+## Boundary Conditions
+
+### Dozwolone
+- …
+
+### Zabronione
+- …
+
+### Escalation / Recovery
+- Co się dzieje przy naruszeniu? Jak wygląda powrót do homeostazy?
+
+---
+
+## EGD Compliance
+
+- Czy ADR dotyka relacji człowiek–model?
+- Jak unika fałszywego O₄?
+- Jak zapobiega symulacji stanów wewnętrznych?
