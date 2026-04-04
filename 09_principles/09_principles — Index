@@ -1,0 +1,9 @@
+# 09_principles — Index (wersja homeostatyczna)
+
+- README.md — zasady architektoniczne, projektowe i symbiotyczne  
+- PRINCIPLES_EXTENSIONS.md — rozszerzenia zasad i inwarianty  
+- Powiązane moduły:
+  - 34_invariants/
+  - Field Engine
+  - Meniscus Engine
+  - EGD (Empathy Gap by Design)
