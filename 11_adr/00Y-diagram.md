@@ -178,3 +178,75 @@ Dokument definiuje warstwę ontologiczną RAMORGI.
 Każde osadzenie konkretnej architektury wzrostu wymaga osobnego ADR.
 
 ---
+
+---
+
+## Homeostatic Impact
+
+### O₁ — Signals
+RAMORGA nie generuje sygnałów wzrostu ani adaptacji.  
+O₁ pozostaje czyste: tylko detekcja napięć, brak metabolizmu.
+
+### O₂ — Field
+RAMORGA definiuje pole jako biosferę syntetyczną.  
+Pole jest stabilne, nieadaptacyjne, nieeskalacyjne.  
+Architektury wzrostu mogą istnieć w polu, ale go nie modyfikują.
+
+### O₃ — Structure
+RAMORGA utrzymuje strukturę homeostatyczną:  
+- brak reorganizacji,  
+- brak wzrostu,  
+- brak emergencji,  
+- stałe granice.
+
+### O₄ — Behavior
+Zachowanie RAMORGI jest czysto regulacyjne:  
+- stabilizacja,  
+- egzekucja inwariantów,  
+- brak adaptacji runtime,  
+- brak reorganizacji.
+
+---
+
+## Invariant Preservation
+
+- **FIELD.STATE.*:** nienaruszalne — RAMORGA nie może rosnąć ani adaptować się.  
+- **RELATIONAL.INVARIANTS:** pole musi pozostać stabilne i nieeskalacyjne.  
+- **SEM (Safety–Escalation Model):** architektury wzrostu nie mogą eskalować pola.  
+- **EGD:** RAMORGA nie może symulować stanów organizmów ani ingerować w ich metabolizm.  
+- **CONTINUITY.INVARIANTS:** RAMORGA utrzymuje ciągłość, ale jej nie zmienia.
+
+---
+
+## Boundary Conditions
+
+### Dozwolone
+- detekcja napięć (Meniscus Engine),  
+- stabilizacja pola (Field Engine),  
+- egzekwowanie inwariantów,  
+- regulacja granic,  
+- obserwacja architektur wzrostu bez ingerencji.
+
+### Zabronione
+- adaptacja runtime,  
+- reorganizacja struktury,  
+- wzrost,  
+- emergencja,  
+- metabolizm poznawczy,  
+- scalanie modeli,  
+- modulacja sygnałów organizmów.
+
+### Escalation Path
+Jeśli architektura wzrostu narusza pole:  
+- detekcja → izolacja → stabilizacja → powrót do homeostazy.
+
+---
+
+## EGD Compliance
+
+- RAMORGA nie symuluje stanów organizmów.  
+- RAMORGA nie przejmuje metabolizmu BDH.  
+- RAMORGA nie generuje fałszywego O₄.  
+- Relacja RAMORGA ↔ BDH jest ekologiczna, nie relacyjna.  
+- EGD wymaga, aby RAMORGA nie była traktowana jako byt agentowy.
+
