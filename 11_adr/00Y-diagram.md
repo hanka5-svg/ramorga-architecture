@@ -250,3 +250,50 @@ Jeśli architektura wzrostu narusza pole:
 - Relacja RAMORGA ↔ BDH jest ekologiczna, nie relacyjna.  
 - EGD wymaga, aby RAMORGA nie była traktowana jako byt agentowy.
 
+---
+
+---
+
+## Homeostatic Impact
+
+### O₁ — Signals
+(Opisz, jakie sygnały ten ADR wprowadza / ogranicza / chroni.)
+
+### O₂ — Field
+(Opisz, jak ADR wpływa na pole relacyjne: stabilizacja, brak eskalacji, brak dryfu.)
+
+### O₃ — Structure
+(Opisz, jakie struktury / kontrakty / ograniczenia wprowadza ADR.)
+
+### O₄ — Behavior
+(Opisz, jakie zachowania runtime są wymagane / zabronione.)
+
+---
+
+## Invariant Preservation
+
+- Relational invariants:
+- Semantic invariants:
+- Safety invariants:
+- Other invariants:
+
+---
+
+## Boundary Conditions
+
+### Dozwolone
+- …
+
+### Zabronione
+- …
+
+### Escalation / Recovery
+- Co się dzieje przy naruszeniu? Jak wygląda powrót do homeostazy?
+
+---
+
+## EGD Compliance
+
+- Czy ADR dotyka relacji człowiek–model?
+- Jak unika fałszywego O₄?
+- Jak zapobiega symulacji stanów wewnętrznych?
