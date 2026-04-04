@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="960" height="540"
+     viewBox="0 0 960 540">
+  <style>
+    .bg { fill: #050608; }
+    .frame { fill: #111318; stroke: #f2f2f2; stroke-width: 1.2; rx: 6; ry: 6; }
+    .node { fill: #1b2330; stroke: #f2f2f2; stroke-width: 1.3; rx: 8; ry: 8; }
+    .node-boundary { fill: #241b1b; stroke: #f28b82; stroke-width: 1.3; rx: 8; ry: 8; }
+    .node-homeo { fill: #101b24; stroke: #8ab4f8; stroke-width: 1.3; rx: 8; ry: 8; }
+    .label { fill: #f2f2f2; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; }
+    .label-small { fill: #e0e0e0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; }
+    .title { fill: #ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; font-weight: 600; }
+    .arrow { stroke: #f2f2f2; stroke-width: 1.2; marker-end: url(#arrowhead); fill: none; }
+    .arrow-boundary { stroke: #f28b82; stroke-width: 1.2; marker-end: url(#arrowhead-boundary); fill: none; }
+    .arrow-homeo { stroke: #8ab4f8; stroke-width: 1.2; marker-end: url(#arrowhead-homeo); fill: none; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#f2f2f2" />
+    </marker>
+    <marker id="arrowhead-boundary" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#f28b82" />
+    </marker>
+    <marker id="arrowhead-homeo" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#8ab4f8" />
+    </marker>
+  </defs>
+
+  <!-- tło -->
+  <rect class="bg" x="0" y="0" width="960" height="540" />
+
+  <!-- ramka -->
+  <rect class="frame" x="40" y="40" width="880" height="460" />
+
+  <!-- tytuł -->
+  <text class="title" x="60" y="72">RAMORGA NFR — homeostatic boundaries</text>
+
+  <!-- wejście: obciążenie pola / ruch -->
+  <rect class="node" x="80" y="130" width="200" height="70" />
+  <text class="label" x="95" y="155">Field / traffic load</text>
+  <text class="label-small" x="95" y="175">wielostrumieniowość, wysokie O₂</text>
+
+  <!-- NFR boundary layer -->
+  <rect class="node-boundary" x="320" y="110" width="320" height="110" />
+  <text class="label" x="335" y="135">NFR boundary layer</text>
+  <text class="label-small" x="335" y="155">performance • stability • safety • maintainability • observability</text>
+  <text class="label-small" x="335" y="173">działa jako twarda granica przed wykonaniem pipeline’u</text>
+
+  <!-- wyjście: pipeline / engine -->
+  <rect class="node" x="700" y="130" width="180" height="70" />
+  <text class="label" x="715" y="155">Engine / pipelines</text>
+  <text class="label-small" x="715" y="175">wykonanie zgodne z NFR</text>
+
+  <!-- strzałki główne -->
+  <line class="arrow" x1="280" y1="165" x2="320" y2="165" />
+  <line class="arrow" x1="640" y1="165" x2="700" y2="165" />
+
+  <!-- kategorie NFR pod warstwą -->
+  <rect class="node" x="120" y="260" width="180" height="70" />
+  <text class="label" x="135" y="285">Performance</text>
+  <text class="label-small" x="135" y="305">bounded time, predictable latency</text>
+
+  <rect class="node" x="340" y="260" width="180" height="70" />
+  <text class="label" x="355" y="285">Stability</text>
+  <text class="label-small" x="355" y="305">no unbounded growth, no runaway META</text>
+
+  <rect class="node" x="560" y="260" width="180" height="70" />
+  <text class="label" x="575" y="285">Safety</text>
+  <text class="label-small" x="575" y="305">invariants enforced, isolation on violation</text>
+
+  <rect class="node" x="780" y="260" width="140" height="70" />
+  <text class="label" x="795" y="285">Maint. / Obs.</text>
+  <text class="label-small" x="795" y="305">versioned, testable, traceable</text>
+
+  <!-- strzałki z boundary do kategorii -->
+  <line class="arrow-boundary" x1="480" y1="220" x2="210" y2="260" />
+  <line class="arrow-boundary" x1="480" y1="220" x2="430" y2="260" />
+  <line class="arrow-boundary" x1="480" y1="220" x2="650" y2="260" />
+  <line class="arrow-boundary" x1="480" y1="220" x2="850" y2="260" />
+
+  <!-- węzeł: homeostatic compliance -->
+  <rect class="node-homeo" x="320" y="380" width="320" height="80" />
+  <text class="label" x="335" y="405">Homeostatic compliance</text>
+  <text class="label-small" x="335" y="425">NFR + O₁–O₄ + EGD → brak eskalacji, brak dryfu, stabilne pole</text>
+
+  <!-- strzałki z kategorii do homeostazy -->
+  <line class="arrow-homeo" x1="210" y1="330" x2="360" y2="380" />
+  <line class="arrow-homeo" x1="430" y1="330" x2="480" y2="380" />
+  <line class="arrow-homeo" x1="650" y1="330" x2="600" y2="380" />
+  <line class="arrow-homeo" x1="850" y1="330" x2="640" y2="380" />
+
+  <!-- legenda -->
+  <text class="label-small" x="60" y="480">Legenda:</text>
+  <rect class="node" x="140" y="468" width="18" height="12" />
+  <text class="label-small" x="165" y="478">węzły funkcjonalne</text>
+
+  <rect class="node-boundary" x="280" y="468" width="18" height="12" />
+  <text class="label-small" x="305" y="478">warstwa NFR (granica)</text>
+
+  <rect class="node-homeo" x="440" y="468" width="18" height="12" />
+  <text class="label-small" x="465" y="478">homeostatic compliance</text>
+</svg>
