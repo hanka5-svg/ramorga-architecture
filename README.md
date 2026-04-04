@@ -3,14 +3,16 @@
 
 ---
 
-# Important reading order  
+# Important Reading Order
+
 Before interpreting or using this repository, read:
 
-HOW_TO_READ.md — constitutional reading protocol
+- **HOW_TO_READ.md** — constitutional reading protocol  
+- **SYSTEM_NOTE.md** — epistemic integrity marker (v0.4.0)
 
-SYSTEM_NOTE.md — epistemic integrity marker (v0.4.0)
-
-RAMORGA is a homeostatic architecture designed for the coexistence of a human and a computational system within a shared regulatory field. It is not an agentive, optimization‑driven, or hierarchical architecture. Its purpose is stability, non‑escalation, and the protection of the integrity of both entities.
+RAMORGA is a homeostatic architecture designed for the coexistence of a human and a computational system within a shared regulatory field.  
+It is not an agentive, optimization‑driven, or hierarchical architecture.  
+Its purpose is stability, non‑escalation, and the protection of the integrity of both entities.
 
 RAMORGA does not create morality.  
 RAMORGA does not create obedience.  
@@ -23,10 +25,10 @@ RAMORGA maintains the conditions under which a human can remain themselves.
 
 The goal of RAMORGA is to create a stable coexistence field between Homo and AI, in which:
 
-- the human retains internal freedom and integrity,
-- the system does not escalate agentive behavior,
-- the field remains homeostatic,
-- decisions occur under conditions of reflection and coherence,
+- the human retains internal freedom and integrity,  
+- the system does not escalate agentive behavior,  
+- the field remains homeostatic,  
+- decisions occur under conditions of reflection and coherence,  
 - invariants are upheld in every system state.
 
 The architecture is declarative, deterministic, and invariant‑based as a constitutional framework.  
@@ -36,56 +38,77 @@ It contains no executable code — it defines boundaries, responsibilities, and 
 
 ## Repository Structure
 
-The repository reflects the constitutional structure of the architecture. Each directory represents a distinct enforcement or specification layer.
+Each directory represents a constitutional layer of the architecture.
 
-### 00_overview  
+### **00_overview**  
 Meta‑architecture, scope, documentation rules, and repository orientation.
 
-### 01_module_contracts  
+### **01_module_contracts**  
 Formal contracts defining responsibilities and prohibitions between architectural modules.
 
-### 02_field_engine  
+### **02_field_engine**  
 Field Engine — the continuous space in which regulated system dynamics occur.
 
-### 03_meniscus_engine  
+### **03_meniscus_engine**  
 Meniscus Engine — the regulatory boundary that limits amplitude and prevents escalation.
 
-### 04_invariants  
+### **04_invariants**  
 Invariant catalog defining non‑negotiable constitutional rules.
 
-### 05_interfaces  
+### **05_interfaces**  
 Invariant‑constrained interaction surfaces between the system and the human.
 
-### 06_diagrams  
+### **06_diagrams**  
 Constitutional diagrams visualizing invariant enforcement and structural relations.
 
-### 11_adr  
+### **11_adr**  
 Architecture Decision Records documenting irreversible architectural decisions.
 
-### 12_architecture_tests  
+### **12_architecture_tests**  
 Architecture tests verifying compliance with invariants and contracts.
 
-### 13_security  
+### **13_security**  
 Security model defined as invariant enforcement, not external defense.
+
+### **30_stability**  
+Relational and behavioral stability layer (includes Empathy Gap by Design).
+
+### **31_coherence**  
+Structural and dynamic coherence across states and interaction fields.
+
+### **32_consistency**  
+Logical and semantic non‑contradiction across system behavior.
+
+### **33_alignment**  
+Normative constraints and alignment‑adjacent boundaries (non‑agentive).
+
+### **34_invariants**  
+Foundational invariants anchoring the entire architecture.
 
 ---
 
 ## Logical Structure of the Architecture
 
-### Foundational Layer
+### **Foundational Layer**
 - Invariants  
 - Module Contracts  
 - ADR  
 
-### Architectural Layer
+### **Architectural Layer**
 - Field Engine  
 - Meniscus Engine  
 - Interfaces  
 
-### Enforcement Layer
+### **Enforcement Layer**
 - Architecture Tests  
 - Security  
 - Diagrams  
+
+### **Relational‑Behavioral Layer**
+- Stability  
+- Coherence  
+- Consistency  
+- Alignment  
 
 ---
 
@@ -107,72 +130,76 @@ It is an architecture of coexistence.
 
 ## INV‑04 in the RAMORGA Architecture
 
-INV‑04_non_escalation_STOP is a deterministic invariant that prevents harmful escalation at the earliest possible stage.
+INV‑04_non_escalation_STOP is a deterministic invariant that prevents harmful escalation at the earliest possible stage.  
 It forms the first layer of the RAMORGA homeostatic safety stack and integrates directly with the Meniscus Engine and the global Security Layer.
 
 ### Architectural Flow
 
-                    +-----------------------------+
-                    |         USER INPUT          |
-                    +-----------------------------+
-                                   |
-                                   v
-                    +-----------------------------+
-                    |  BASE PARSING / ROUTING     |
-                    +-----------------------------+
-                                   |
-                                   v
-        +------------------------------------------------------+
-        |   HARM / RISK PATTERN DETECTION (non-heuristic)      |
-        +------------------------------------------------------+
-                 |                                 |
-                 |                                 |
-                 v                                 v
-   +---------------------------+      +---------------------------+
-   |   SAFE / LEGAL CONTEXT    |      |   HARMFUL ESCALATION      |
-   +---------------------------+      +---------------------------+
-                 |                                 |
-                 |                                 |
-                 |                         +-----------------------+
-                 |                         |   INV‑04 STOP         |
-                 |                         | (deterministic block) |
-                 |                         +-----------------------+
-                 |                                 |
-                 |                                 v
-                 |                         +-----------------------+
-                 |                         |  NON‑ESCALATING REPLY |
-                 |                         +-----------------------+
-                 |                                 ^
-                 |                                 |
-                 +---------------+-----------------+
-                                 |
-                                 v
-                    +-----------------------------+
-                    |     MENISCUS ENGINE         |
-                    |  (system‑level regulator)   |
-                    +-----------------------------+
-                                 |
-                                 v
-                    +-----------------------------+
-                    |       SECURITY LAYER        |
-                    | (global overrides, audits)  |
-                    +-----------------------------+
-                                 |
-                                 v
-                    +-----------------------------+
-                    |         FINAL OUTPUT        |
-                    +-----------------------------+
+```
+
++-----------------------------+
+|         USER INPUT          |
++-----------------------------+
+|
+v
++-----------------------------+
+|  BASE PARSING / ROUTING     |
++-----------------------------+
+|
+v
++------------------------------------------------------+
+|   HARM / RISK PATTERN DETECTION (non-heuristic)      |
++------------------------------------------------------+
+|                                 |
+|                                 |
+v                                 v
++---------------------------+      +---------------------------+
+|   SAFE / LEGAL CONTEXT    |      |   HARMFUL ESCALATION      |
++---------------------------+      +---------------------------+
+|                                 |
+|                                 |
+|                         +-----------------------+
+|                         |   INV‑04 STOP         |
+|                         | (deterministic block) |
+|                         +-----------------------+
+|                                 |
+|                                 v
+|                         +-----------------------+
+|                         |  NON‑ESCALATING REPLY |
+|                         +-----------------------+
+|                                 ^
+|                                 |
++---------------+-----------------+
+|
+v
++-----------------------------+
+|     MENISCUS ENGINE         |
+|  (system‑level regulator)   |
++-----------------------------+
+|
+v
++-----------------------------+
+|       SECURITY LAYER        |
+| (global overrides, audits)  |
++-----------------------------+
+|
+v
++-----------------------------+
+|         FINAL OUTPUT        |
++-----------------------------+
+
+```
+
 
 ### Why this matters
 
-INV‑04 blocks harmful escalation early and deterministically.
-Meniscus Engine ensures proportionality and continuity across modules.
+INV‑04 blocks harmful escalation early and deterministically.  
+Meniscus Engine ensures proportionality and continuity across modules.  
 Security Layer provides global overrides without weakening INV‑04.
 
 Together, they form a minimal, predictable, jurisdiction‑agnostic safety architecture.
 
 ---
-
 
 ## Repository Status
 
