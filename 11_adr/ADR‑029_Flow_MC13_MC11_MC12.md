@@ -107,3 +107,39 @@ AT‑MC11_MC12_MC13_Automation.md
 - No semantic drift
 - No false O₄
 - No topicification
+
+---
+
+---
+
+## Homeostatic Impact
+
+(analogicznie jak w PATCH A)
+
+---
+
+## Invariant Preservation
+
+(analogicznie jak w PATCH A)
+
+---
+
+## Boundary Conditions
+
+(analogicznie jak w PATCH A)
+
+---
+
+## SEM — Safety / Escalation Model
+
+- Normal state:
+- Warning state:
+- Isolation state:
+- Recovery path:
+- Forbidden transitions:
+
+---
+
+## EGD Compliance
+
+(analogicznie jak w PATCH A)
