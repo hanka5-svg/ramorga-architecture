@@ -1,0 +1,10 @@
+ empathy_gap_by_design/
+      README.md
+      EGD-01_overview.md
+      EGD-02_taxonomy.md
+      EGD-03_failure_modes.md
+      EGD-04_mapping_to_O1_O4.md
+      EGD-05_symbolic_layer.md
+      EGD-06_design_implications.md
+      EGD-07_diagram_ascii.md
+      EGD-08_diagram_svg.svg
