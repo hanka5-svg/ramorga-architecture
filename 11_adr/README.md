@@ -5,6 +5,21 @@ Each ADR captures context, decision, and consequences.
 
 ---
 
+## Homeostatic Layer Integration
+
+All ADRs in this module must explicitly define:
+
+- **Homeostatic Impact** (O₁–O₄ mapping)
+- **Invariant Preservation**
+- **Boundary Conditions**
+- **EGD Compliance**
+- **Continuity Guarantees**
+- **Stability / Safety / Escalation Model (SEM)**
+
+ADRs without these sections are considered incomplete.
+
+---
+
 ## ADR-001: Field-Based Architecture
 
 **Decision:**  
