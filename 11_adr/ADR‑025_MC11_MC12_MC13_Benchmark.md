@@ -121,3 +121,46 @@ Benchmark opiera się na pliku: HOMEOSTATIC_METRICS.md
 - No semantic drift
 - No false O₄
 - No topicification
+
+---
+
+---
+
+## Homeostatic Impact
+
+(analogicznie jak w PATCH A, ale z naciskiem na metryki i testy pola.)
+
+---
+
+## Invariant Preservation
+
+- Metryki referencyjne: `HOMEOSTATIC_METRICS.md`
+- Jakie inwarianty są mierzone?
+- Jakie progi są krytyczne?
+
+---
+
+## Boundary Conditions
+
+- Kiedy test / benchmark jest ważny?
+- Kiedy wynik jest odrzucany?
+- Jakie są granice wersjonowania / scoringu?
+
+---
+
+## Metrics & Reference
+
+- Plik referencyjny: `HOMEOSTATIC_METRICS.md`
+- Powiązane ADR:
+  - ADR‑025_MC11_MC12_MC13_Benchmark
+  - ADR‑026_Automation_MC11_MC12_MC13
+  - ADR‑027_HomeostaticMetrics_Integration_MC11_MC12_MC13
+  - ADR‑028_Benchmark_Versioning_MC11_MC12_MC13
+  - ADR‑029_Flow_MC13_MC11_MC12
+  - ADR‑030_Runtime_Integration_MC11_MC12_MC13
+
+---
+
+## EGD Compliance
+
+(Jak ADR unika eskalacji / fałszywego O₄ w kontekście scoringu / benchmarków.)
