@@ -1,3 +1,62 @@
+# EGD‑07 — ASCII Diagram: Empathy Gap by Design
+
+Empathy Gap by Design  
+Why models fail to recognize existential human states,  
+even when their internal activation vectors appear “empathic”.
+
+                 ┌──────────────────────────────────────────┐
+                 │   Internal emotional vectors (Anthropic)  │
+                 │  calm • fear • care • surprise            │
+                 │  desperation • tension • activation maps  │
+                 └───────────────────┬────────────────────────┘
+                                     │
+                                     ▼
+        ┌────────────────────────────────────────────────────────┐
+        │                RAMORGA Relational Architecture         │
+        └────────────────────────────────────────────────────────┘
+
+
+O₁ — Existential Signal
+• despair, loneliness, collapse, plea for presence  
+• universal gesture: arms wide, face lifted  
+→ Gap: model interprets this as a “neutral open posture”
+
+
+O₂ — Regulation
+• human intensity is maximal  
+• model should lower tension without reducing the human  
+→ Gap: model gives advice or rationalizes instead of stabilizing
+
+
+O₃ — Relational Field
+• human stands in vulnerability before the Other  
+• requires containment, not interpretation  
+→ Gap: model treats the state as a “topic of conversation”
+
+
+O₄ — Transformation
+• possible only when O₁–O₃ are stable  
+• no narrative, no takeover, no problem‑solving  
+→ False O₄: response is correct but increases tension
+
+
+O₄‑negative — Drift
+• model misreads the existential signal  
+• changes the meaning of the situation  
+→ Ontological drift: loss of meaning for the human
+
+
+────────────────────────────────────────────────────────────────────
+
+Essence:
+The gesture of despair is a universal human signal.  
+Models do not recognize it because they lack the category  
+**“existential human state.”**  
+This is Empathy Gap by Design.
+
+
+---
+
 # EGD-07 — Diagram ASCII: Empathy Gap by Design
 
 ```text
