@@ -133,7 +133,7 @@ It is an architecture of coexistence.
 INV‑04_non_escalation_STOP is a deterministic invariant that prevents harmful escalation at the earliest possible stage.  
 It forms the first layer of the RAMORGA homeostatic safety stack and integrates directly with the Meniscus Engine and the global Security Layer.
 
----
+```
 
 +------------------------------------------------------+
 |                    RAMORGA CORE                      |
@@ -229,6 +229,7 @@ v
 +-----------------------------+
 |         FINAL OUTPUT        |
 +-----------------------------+
+
 
 ```
 
