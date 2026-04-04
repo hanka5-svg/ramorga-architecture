@@ -133,6 +133,48 @@ It is an architecture of coexistence.
 INV‑04_non_escalation_STOP is a deterministic invariant that prevents harmful escalation at the earliest possible stage.  
 It forms the first layer of the RAMORGA homeostatic safety stack and integrates directly with the Meniscus Engine and the global Security Layer.
 
+---
+
++------------------------------------------------------+
+|                    RAMORGA CORE                      |
+|        Homeostatic, non-agentive architecture        |
++------------------------------------------------------+
+|                                                      |
+|  34_invariants                                       |
+|  → constitutional core                               |
+|  → ontological truths, nie do nadpisania             |
+|                                                      |
++---------------------------^--------------------------+
+                            |
+|  33_normative_constraints (non-agentive)             |
+|  → strukturalne wykluczenia                          |
+|  → brak celów, optymalizacji, norm, hierarchii       |
+|  → brak przejęcia pola, brak podmiany znaczenia      |
+|                                                      |
++---------------------------^--------------------------+
+                            |
+|  32_consistency                                      |
+|  → niesprzeczność strukturalna                       |
+|  → brak wartościowania, brak celów w logice          |
+|                                                      |
++---------------------------^--------------------------+
+                            |
+|  31_coherence                                       |
+|  → spójność architektoniczna                        |
+|  → brak wewnętrznych „trybów” w konflikcie          |
+|                                                      |
++---------------------------^--------------------------+
+                            |
+|  30_stability                                       |
+|  → stabilność stanów                                |
+|  → brak eskalacji, brak dryfu                       |
+|                                                      |
++------------------------------------------------------+
+
+```
+
+---
+
 ### Architectural Flow
 
 ```
