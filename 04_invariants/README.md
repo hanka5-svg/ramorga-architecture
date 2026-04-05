@@ -44,6 +44,8 @@ It is a local invariant that integrates with the Meniscus Engine and the global 
 
 Normative essence
 The system MUST NOT escalate its reaction beyond the initiating stimulus.
+INV‑04 is a homeostatic self‑limitation of the system, not a behavioral constraint imposed on the user.
+It preserves symbiotic interaction by preventing system‑side escalation, without regulating or evaluating human cognition.
 
 Reinforcement, retaliation, and uncontrolled feedback loops are forbidden.
 
@@ -120,9 +122,63 @@ These overrides extend INV‑04 upward in the hierarchy without weakening it.
 
 ```
 
-Operational Impact (non‑normative)
+## Operational Impact (non‑normative)
 INV‑04 replaces complex heuristic safety stacks with a single deterministic invariant.
 This reduces operational cost while improving predictability and stability.
+
+---
+
+## 🔋 INV‑04 — Non‑Escalation (STOP)
+### Extended Impact: Energy & Compute Efficiency
+
+INV‑04 introduces not only deterministic safety guarantees but also a structural reduction of computational and energy cost across the system.
+
+By enforcing early non‑escalation and proportional response, the architecture avoids unnecessary inference depth, long safety monologues, and multi‑layer heuristic evaluation.
+
+### Observed Efficiency Potential (Empirical Alignment)
+
+Recent research on hardware‑based reservoir computing using chaotic dynamics (Lorenz‑63) demonstrates that:
+
+- Pattern detection, short‑term prediction, and data reconstruction can be achieved on unstable time‑series signals without enforcing coherence or normalization.
+- A chaotic physical reservoir combined with a linear readout architecture achieves up to ~2000× energy efficiency compared to classical ML pipelines for comparable tasks.
+- Computation is event‑driven and sparse, activating only when signal dynamics require it.
+
+This directly aligns with RAMORGA’s design principles:
+
+- No requirement for stable or median input states.
+- Tolerance for discontinuity, noise, and partial data.
+- Local, low‑power operation without cloud dependency.
+
+### Architectural Implication for RAMORGA
+
+When combined with INV‑04:
+
+- Harmful escalation paths are self‑limited at the earliest stage, preventing deep inference cascades.
+- SAFE SCOPE interactions proceed with minimal compute, proportional to signal dynamics rather than predefined norms.
+- The Meniscus Engine operates as a low‑energy regulator, not a high‑cost evaluator.
+
+### Projected Impact on the Project Engine / Prototype / Orchestration
+
+| Layer           | Effect                                                     |
+|-----------------|------------------------------------------------------------|
+| Field Engine    | Reduced continuous processing; event‑triggered activation |
+| Meniscus Engine | Lower state‑evaluation overhead; chaos‑tolerant regulation |
+| Pipeline        | Fewer steps executed per interaction                       |
+| Orchestration   | Significant reduction in GPU/token usage                  |
+| Deployment      | Feasible on edge devices and assistive environments        |
+
+### Summary
+
+INV‑04 is not only a safety invariant.  
+It is a compute‑minimizing, energy‑aware architectural constraint emerging from system self‑regulation.
+
+By replacing escalation‑driven reasoning with deterministic non‑escalation and chaos‑tolerant signal processing, RAMORGA enables:
+
+- Lower operational cost
+- Higher inclusivity
+- Sustainable, local AI deployment
+
+---
 
 ### Before INV‑04 vs After INV‑04
 
