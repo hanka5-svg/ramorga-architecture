@@ -51,11 +51,11 @@ Reinforcement, retaliation, and uncontrolled feedback loops are forbidden.
 
 Any escalation that increases feasibility, specificity, or impact of harmful or unlawful actions MUST be blocked.
 
-Scope
+**Scope**
 INV‑04 applies only to harmful escalation patterns.
 It does not restrict legal, educational, or constructive queries (SAFE SCOPE).
 
-Position in the architecture
+**Position in the architecture**
 INV‑04 is the first line of homeostatic regulation.
 It is overridden only by higher‑order invariants in:
 
@@ -64,6 +64,8 @@ It is overridden only by higher‑order invariants in:
 12_architecture_tests
 
 These overrides extend INV‑04 upward in the hierarchy without weakening it.
+
+---
 
 ### Architecture Flow: INV‑04 → Meniscus → Security
 
@@ -128,12 +130,40 @@ This reduces operational cost while improving predictability and stability.
 
 ---
 
-## 🔋 INV‑04 — Non‑Escalation (STOP)
+## INV‑04 — Non‑Escalation (STOP)
 ### Extended Impact: Energy & Compute Efficiency
 
 INV‑04 introduces not only deterministic safety guarantees but also a structural reduction of computational and energy cost across the system.
 
 By enforcing early non‑escalation and proportional response, the architecture avoids unnecessary inference depth, long safety monologues, and multi‑layer heuristic evaluation.
+
+---
+
+```
+
+Relative cost (energy/compute) — log scale
+^
+| 10^3 ┤
+|      ┤\
+| 10^2 ┤ \        (1) Classic orchestration (GPU/token-heavy)
+|      ┤  \
+| 10^1 ┤   \__
+|      ┤      \____
+| 10^0 ┤           \__________
+|      ┤
+| 10^-1┤                 (2) RAMORGA (homeostatic early self-limiting)
+|      ┤                  \______
+| 10^-2┤                         \________
+|      ┤
+| 10^-3┤   (3) RAMORGA + NbOx memristor (physical reservoir; ~2000× potential)
+|      ┤      \____________________________
++------+------------------------------------------------------------>
+       low                 orchestration complexity                 high
+
+
+```
+
+---
 
 ### Observed Efficiency Potential (Empirical Alignment)
 
